@@ -1,0 +1,9 @@
+# 构建疆域数据所需（只看成品不需要安装任何东西）
+numpy>=1.24
+scipy>=1.10
+shapely>=2.0
+scikit-image>=0.21
+# 可选：tools/preview.py 画草图
+matplotlib>=3.7
+# 可选：tools/screenshot.py 截图检查（另需 python -m playwright install chromium）
+# playwright>=1.40
