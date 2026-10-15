@@ -13,7 +13,7 @@ GEODATA = ROOT / "geodata"          # 底图数据
 NE_DIR = GEODATA / "ne"             # Natural Earth 1:10m GeoJSON
 PROV_JSON = GEODATA / "prov.json"   # 今省界（简化）
 BUILD = ROOT / "build"              # 中间产物 geo.json / data.json
-DIST = ROOT / "docs"                # 成品 HTML
+DIST = ROOT / "docs"                # 成品：docs/index.html（GitHub Pages 可直接从 /docs 发布）
 TEMPLATE = ROOT / "src" / "template.html"
 
 # ---------------------------------------------------------------- 底图来源

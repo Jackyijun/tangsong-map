@@ -30,6 +30,7 @@ def main():
     t = t.replace('\n<div class="app">', '\n</head>\n<body>\n<div class="app">', 1)
     html = HEAD + t + "\n</body>\n</html>\n"
     C.DIST.mkdir(exist_ok=True)
+    (C.DIST / ".nojekyll").write_text("", encoding="utf8")   # 让 GitHub Pages 原样发布，不经 Jekyll 处理
     out = C.DIST / "index.html"
     out.write_text(html, encoding="utf8")
     print("wrote", out, out.stat().st_size // 1024, "KB")

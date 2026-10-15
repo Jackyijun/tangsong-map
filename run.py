@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """唐宋之际形势图 · 一键构建。
 
-    python run.py               底图缺失则下载 → 计算疆域 → 生成 docs/index.html
+  python run.py               底图缺失则下载 → 计算疆域 → 生成 docs/index.html
   python run.py --html        只重新拼装 HTML（改了 src/template.html 时用，几秒钟）
   python run.py --open        构建完成后用浏览器打开
   python run.py --preview 755,820,907

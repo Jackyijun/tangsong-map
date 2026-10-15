@@ -511,10 +511,54 @@ for nm, mod, lo, la, y, yt, note in IM.EVENTS:
 for nm, lo, la, y0, y1, note in IM.PEOPLES:
     add_item(dict(c="people", old=nm, mod="", lon=lo, lat=la, y0=y0, y1=y1, note=note))
 
+# 重要地域（如燕云十六州）：由成员州的栅格并集描出范围线，分区之间画分界线
+from scipy.ndimage import map_coordinates
+REG_OUT = []
+for R in getattr(IM, "REGIONS", []):
+    ids = lambda names: [SID[n] for n in names]
+    for n in R["members"] + R.get("extra", []): assert n in SID, ("地域成员不在 seeds.txt", n)
+    allm = np.isin(label, ids(R["members"] + R.get("extra", [])))
+    rsh, rlab = shapes_for(extend_to_sea(np.where(allm, 1, -1)), [1])
+    su = ndimage.gaussian_filter(allm.astype(float), C.SMOOTH_SIGMA)
+    groups = []
+    for g in R.get("groups", []):
+        gm = np.isin(label, ids(g["members"] + g.get("extra", [])))
+        _, glab = shapes_for(np.where(gm, 1, -1), [1])
+        # 分区注记避开地域总名：离总名不足 1.2° 的格子不参与选点
+        ml = gm & LAND
+        lab_, n_ = ndimage.label(ml)
+        if n_:
+            big = lab_ == (int(np.argmax(ndimage.sum(ml, lab_, range(1, n_ + 1)))) + 1)
+            dt = ndimage.distance_transform_edt(np.pad(big, 1))[1:-1, 1:-1]
+            lo0, la0 = rlab[1][0], rlab[1][1]
+            near = np.hypot((lons[None, :] - lo0) * np.cos(np.radians(la0)), lats[:, None] - la0) < 1.2
+            dt2 = np.where(near, 0, dt)
+            if dt2.max() > 0:
+                r_, c_ = np.unravel_index(np.argmax(dt2), dt2.shape)
+                glab[1] = [round(LON0 + c_ * RES, 2), round(LAT0 + r_ * RES, 2), glab[1][2], round(float(dt2[r_, c_]) * RES, 2)]
+        lines = []
+        if g.get("line"):
+            sg = ndimage.gaussian_filter(gm.astype(float), C.SMOOTH_SIGMA)
+            for cnt in measure.find_contours(sg, 0.5):
+                inside = map_coordinates(su, cnt.T, order=1) > 0.8   # 只保留并集内部的那段，即两区分界
+                run = []
+                for (r, c), ok in zip(cnt, inside):
+                    if ok: run.append((LON0 + c * RES, LAT0 + r * RES))
+                    elif run:
+                        if len(run) > 3: lines.append(run)
+                        run = []
+                if len(run) > 3: lines.append(run)
+            lines = [enc_ring(list(LineString(l).simplify(C.SIMPLIFY_TERR).coords)) for l in lines]
+        groups.append(dict(n=g["name"], y0=g.get("y0", R["y0"]), lab=glab.get(1), lines=lines))
+    it = add_item(dict(c="region", old=R["name"], mod=R["mod"], note=R["note"], y0=R["y0"],
+                       members=ids(R["members"]), anc=rlab[1][:2], lab=rlab[1]))
+    REG_OUT.append(dict(it=it, y0=R["y0"], rings=rsh[1], groups=groups))
+print("regions", [(ITEMS[r["it"]]["old"], len(r["rings"]), [(g["n"], len(g["lines"])) for g in r["groups"]]) for r in REG_OUT])
+
 # ======================================================================
 # 输出
 # ======================================================================
-GEO = dict(land=LAND_OUT, prov=PROV, border=BORDER, rivers=RIV_OUT, lakes=LAKES, canals=CAN, deserts=DES, snaps=OUTSN,
+GEO = dict(land=LAND_OUT, prov=PROV, border=BORDER, rivers=RIV_OUT, lakes=LAKES, canals=CAN, deserts=DES, snaps=OUTSN, regions=REG_OUT,
            ext=[LON0, LON1, LAT0, LAT1])
 UOUT = [dict(k=u["k"], n=u["n"], kind=u["kind"], note=u["note"], cl=LIGHT[i], cd=DARK[i]) for i, u in enumerate(UNITS)]
 SOUT = [dict(id=s["id"], n=s["n"], mod=s["mod"], lon=s["lon"], lat=s["lat"], t=s["t"], **({"nm": s["names"]} if s["names"] else {})) for s in SEEDS]
