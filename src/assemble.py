@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """把 build/geo.json、build/data.json 和每个单位的颜色注入 src/template.html，
-生成一个不依赖任何外部文件的 dist/tangsong.html。"""
+生成一个不依赖任何外部文件的 docs/tangsong.html。"""
 import json, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))

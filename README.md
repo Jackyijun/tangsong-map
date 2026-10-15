@@ -6,7 +6,7 @@
 
 ## 一、直接看
 
-双击 **`dist/tangsong.html`**，用任意现代浏览器（Chrome、Edge、Safari、Firefox）打开即可。
+双击 **`docs/tangsong.html`**，用任意现代浏览器（Chrome、Edge、Safari、Firefox）打开即可。
 
 这个文件约 810 KB，数据、样式、脚本全部内嵌：不联网、不需要服务器、不依赖任何外部库。可以直接拷到 U 盘、发给别人，或者放到自己的网站上。
 
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 python run.py --open
 ```
 
-完整构建约 1 分钟，完成后会用浏览器打开新生成的 `dist/tangsong.html`。
+完整构建约 1 分钟，完成后会用浏览器打开新生成的 `docs/tangsong.html`。
 
 > 没有 Python？macOS 可用 `brew install python` 或到 python.org 下载；Windows 从 python.org 安装时勾选 “Add python.exe to PATH”。
 > PowerShell 若提示禁止运行脚本，先执行 `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`，或者跳过虚拟环境，直接 `py -m pip install -r requirements.txt` 再 `py run.py --open`。
@@ -57,7 +57,7 @@ python run.py --open
 想用本地服务器预览（可选，不是必需的）：
 
 ```bash
-python -m http.server -d dist 8000
+python -m http.server -d docs 8000
 # 浏览器打开 http://localhost:8000/tangsong.html
 ```
 
@@ -69,7 +69,7 @@ python -m http.server -d dist 8000
 tangsong-map/
 ├── run.py                 一键构建入口
 ├── requirements.txt
-├── dist/
+├── docs/
 │   └── tangsong.html      ★ 成品，单文件
 ├── content/               ★ 史料内容（手写，主要改这里）
 │   ├── seeds.txt          456 个点（311 州府、70 城邑、75 区域辅助点）：古名、经纬度、今地、名称沿革
@@ -80,7 +80,7 @@ tangsong-map/
 │   ├── config.py          ★ 全部可调参数（栅格、代价、平滑、配色……）
 │   ├── fetch_data.py      下载 Natural Earth 底图
 │   ├── build.py           计算疆域，输出 build/geo.json、build/data.json
-│   ├── assemble.py        把数据注入模板，输出 dist/tangsong.html
+│   ├── assemble.py        把数据注入模板，输出 docs/tangsong.html
 │   └── template.html      前端：页面结构、样式、交互脚本
 ├── geodata/
 │   ├── prov.json          今省界（简化）
@@ -97,7 +97,7 @@ tangsong-map/
 
 ```
 content/*.txt, *.py ─┐
-                     ├─► build.py ─► build/geo.json + data.json ─► assemble.py ─► dist/tangsong.html
+                     ├─► build.py ─► build/geo.json + data.json ─► assemble.py ─► docs/tangsong.html
 geodata/ (底图) ─────┘                                              ▲
                                                      src/template.html
 ```
