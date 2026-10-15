@@ -9,7 +9,7 @@ from pathlib import Path
 from playwright.async_api import async_playwright
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGE = (ROOT / "docs" / "tangsong.html").as_uri()
+PAGE = (ROOT / "docs" / "index.html").as_uri()
 OUT = ROOT / "build"
 
 async def main():

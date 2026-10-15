@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """把 build/geo.json、build/data.json 和每个单位的颜色注入 src/template.html，
-生成一个不依赖任何外部文件的 docs/tangsong.html。"""
+生成一个不依赖任何外部文件的 docs/index.html。"""
 import json, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -30,7 +30,7 @@ def main():
     t = t.replace('\n<div class="app">', '\n</head>\n<body>\n<div class="app">', 1)
     html = HEAD + t + "\n</body>\n</html>\n"
     C.DIST.mkdir(exist_ok=True)
-    out = C.DIST / "tangsong.html"
+    out = C.DIST / "index.html"
     out.write_text(html, encoding="utf8")
     print("wrote", out, out.stat().st_size // 1024, "KB")
 
