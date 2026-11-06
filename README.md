@@ -10,6 +10,8 @@
 
 这个文件约 820 KB，数据、样式、脚本全部内嵌：不联网、不需要服务器、不依赖任何外部库。可以直接拷到 U 盘、发给别人，或者放到自己的网站上。
 
+线上地址：https://jackyijun.github.io/tangsong-map/
+
 ---
 
 ## 二、本地重新构建
@@ -60,6 +62,8 @@ python run.py --open
 python -m http.server -d docs 8000
 # 浏览器打开 http://localhost:8000/
 ```
+
+构建完成后，把 `docs/index.html` 一起提交并推送到 `main`，线上网页会自动更新。
 
 ---
 
@@ -245,17 +249,3 @@ geodata/ (底图) ─────┘                                            
   - 只有 18 个节点，节点之间的变化没有画出来。
   - 古河道是按文献走向手绘的近似线。
   - 有争议的事项在条目说明里注了“一说”：8 世纪末 9 世纪初西域各城的归属，784 年义武、横海的辖州，947 年辽军在中原的实际控制范围等。
-
----
-
-## 七、放到网上
-
-成品是纯静态单文件，不需要后端。
-
-**GitHub Pages**：把整个项目推到 GitHub 仓库，然后在仓库的 Settings → Pages 里：
-- Source 选 **Deploy from a branch**；
-- Branch 选 **main**，目录选 **/docs**，保存。
-
-以后每次改完运行 `python run.py`，把 `docs/index.html` 一起提交推送，网页就会自动更新。
-
-也可以上传到 Netlify、Cloudflare Pages 或任何网页空间。
