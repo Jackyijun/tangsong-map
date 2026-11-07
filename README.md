@@ -1,6 +1,8 @@
 # 唐宋之际形势图
 
-安史之乱至宋初（755–979）的交互历史地图：18 个时间节点的藩镇与政权疆域，382 处州府城邑的古今地名对照，燕云十六州的专门标注，以及 62 处都城行在、53 场战役、26 处关隘、32 项事件、44 条山脉、百余条河湖与周边诸族。
+[![中文](https://img.shields.io/badge/lang-%E4%B8%AD%E6%96%87-red.svg)](README.md) [![English](https://img.shields.io/badge/lang-English-blue.svg)](README.en.md)
+
+安史之乱至宋初（755–979）的交互历史地图：18 个时间节点的藩镇与政权疆域，382 处州府城邑的古今地名对照，燕云十六州的专门标注，以及 62 处都城行在、53 场战役、26 处关隘、32 项事件、44 条山脉、百余条河湖与周边诸族。界面中英双语，地图右上角「中 | EN」切换。
 
 ---
 
@@ -8,13 +10,19 @@
 
 双击 **`docs/index.html`**，用任意现代浏览器（Chrome、Edge、Safari、Firefox）打开即可。
 
-这个文件约 820 KB，数据、样式、脚本全部内嵌：不联网、不需要服务器、不依赖任何外部库。可以直接拷到 U 盘、发给别人，或者放到自己的网站上。
+这个文件约 1 MB，数据、样式、脚本全部内嵌：不联网、不需要服务器、不依赖任何外部库。可以直接拷到 U 盘、发给别人，或者放到自己的网站上。
 
-线上地址：https://jackyijun.github.io/tangsong-map/
+默认中文；点地图右上角的「EN」切到英文，网址末尾加 `#en` 可直接打开英文版。
 
 ---
 
-## 二、本地重新构建
+## 二、线上地址
+
+https://jackyijun.github.io/tangsong-map/
+
+---
+
+## 三、本地构建
 
 改了史料内容（`content/`）或参数（`src/config.py`）之后才需要重新构建。需要 **Python 3.9 或更新版本**。
 
@@ -47,9 +55,11 @@ python run.py --open
 |---|---|
 | `python run.py` | 底图缺失则下载 → 计算疆域 → 拼装 HTML |
 | `python run.py --html` | 只重新拼装 HTML（只改了 `src/template.html` 时用，不到 1 秒） |
+| `python run.py --draft` | 英文有缺译或过期时也照常生成（缺译处显示中文）；默认会报错停下，见“七、英文版” |
 | `python run.py --open` | 构建完后在浏览器中打开 |
 | `python run.py --preview 805,820` | 额外画出这几个节点的疆域草图到 `build/preview.png`，便于检查归属是否填错 |
 | `python tools/preview.py 895,907 100,125,20,42` | 只画草图，可指定经纬范围 |
+| `python tools/i18n.py status` | 查英文缺译、过期的条数 |
 | `python tools/screenshot.py` | （可选，需 playwright）无头浏览器截图并检查脚本错误 |
 
 压缩包里已经带了底图数据（`geodata/ne/`，约 31 MB），离线也能构建。如果删掉了，`run.py` 会自动从 GitHub 下载固定版本。
@@ -67,12 +77,14 @@ python -m http.server -d docs 8000
 
 ---
 
-## 三、目录结构
+## 四、目录结构
 
 ```
 tangsong-map/
 ├── run.py                 一键构建入口
 ├── requirements.txt
+├── README.md              说明（中文，GitHub 首页默认显示）
+├── README.en.md           英文说明
 ├── docs/
 │   ├── index.html         ★ 成品，单文件（GitHub Pages 直接从 /docs 发布）
 │   └── .nojekyll          让 GitHub Pages 原样发布
@@ -80,31 +92,34 @@ tangsong-map/
 │   ├── seeds.txt          457 个点（312 州府、70 城邑、75 区域辅助点）：古名、经纬度、今地、名称沿革
 │   ├── snaps.txt          18 个时间节点：每个州在该年属哪个藩镇、哪个政权
 │   ├── units.py           141 个政权、藩镇、部族的名称与介绍
-│   └── items.py           都城、战役、关隘、事件、诸族、山脉、水系、运河、荒漠、重要地域（燕云十六州）
+│   ├── items.py           都城、战役、关隘、事件、诸族、山脉、水系、运河、荒漠、重要地域（燕云十六州）
+│   └── en/                英文译文（*.json）、中文指纹 zh.lock.json、译名体例 GLOSSARY.md
 ├── src/
 │   ├── config.py          ★ 全部可调参数（栅格、代价、平滑、配色……）
 │   ├── fetch_data.py      下载 Natural Earth 底图
 │   ├── build.py           计算疆域，输出 build/geo.json、build/data.json
-│   ├── assemble.py        把数据注入模板，输出 docs/index.html
+│   ├── i18n.py            并入英文、检查缺译与过期
+│   ├── assemble.py        把数据和英文注入模板，输出 docs/index.html
 │   └── template.html      前端：页面结构、样式、交互脚本
 ├── geodata/
 │   ├── prov.json          今省界（简化）
 │   └── ne/                Natural Earth 1:10m GeoJSON
 ├── tools/
 │   ├── preview.py         matplotlib 疆域草图
+│   ├── i18n.py            英文维护：status / todo / lock / table
 │   └── screenshot.py      playwright 截图检查
 └── build/                 中间产物（可随时删除）
 ```
 
 ---
 
-## 四、工作原理
+## 五、工作原理
 
 ```
 content/*.txt, *.py ─┐
                      ├─► build.py ─► build/geo.json + data.json ─► assemble.py ─► docs/index.html
-geodata/ (底图) ─────┘                                              ▲
-                                                     src/template.html
+geodata/ (底图) ─────┘                                              ▲    ▲
+                                              src/template.html ──┘    └── content/en/*.json
 ```
 
 ### 1. 为什么疆域要“算”出来
@@ -153,7 +168,7 @@ geodata/ (底图) ─────┘                                            
 - **交互**：
   - 拖动、滚轮或双指缩放；悬停显示提示，点击选中。
   - 右侧索引与地图联动。
-  - 检索同时匹配古名、今名和名称沿革。
+  - 检索同时匹配古名、今名和名称沿革，中英文都收，英文忽略附加符号（输入 ngo quyen 可找到 Ngô Quyền）。
   - 时间轴可以播放，键盘 ← → 切换节点，Esc 取消选中。
   - 可以切换“藩镇 / 政权”着色，图层可以逐项开关。
   - 另有年表、对照表两个视图。
@@ -165,15 +180,18 @@ geodata/ (底图) ─────┘                                            
   - 范围线由十六个州（加上瓦桥、益津两关一带）的栅格并集描出，算法与疆域相同。
   - 点范围线、时间轴下的“要地”按钮或索引里的“重要地域”可以选中：整片高亮，十六州全部显示州名与今地，右侧给出割让经过和完整名单。
   - 在 `items.REGIONS` 里照格式加一条，就能标注别的地域（如河湟、关南）。
+- **中 / 英**：地图右上角切换，选择记在浏览器里；网址加 `#en` 直接打开英文。英文模式下地图只标英文，悬停说明、索引、年表、对照表在英文名后附小号汉字原名；英文注记按实际字宽避让，长国名在疆域内折成两行。
 - **主题**：颜色全部是 CSS 变量，跟随系统深浅色。每个单位的颜色是 `--u-<序号>`，由 `assemble.py` 注入。
 
 ### 4. `assemble.py`
+
+先检查英文：有缺译或过期（中文改过而英文没跟着改）就报错停下，加 `--draft` 才放行。再把英文并入数据（政权 `ne`、州府 `ne`/`mode`、条目 `e{…}`、节点 `erae`/`te`/`de`），前端按当前语言取字。
 
 模板里有 4 个占位符：`__GEO__`、`__DATA__`、`__UCSS_LIGHT__`、`__UCSS_DARK__`。脚本把它们替换成数据和颜色变量，再包上 `<!doctype html>` 等文档外壳。
 
 ---
 
-## 五、常见修改
+## 六、常见修改
 
 **改某州某年的归属**：在 `snaps.txt` 对应年份块里加一行。例如 805 年把宿州划给武宁：
 
@@ -208,6 +226,8 @@ geodata/ (底图) ─────┘                                            
 
 **只改页面样式或交互**：编辑 `src/template.html`，然后运行 `python run.py --html`。
 
+**改了中文以后**：对应的英文要一起改（见“七、英文版”），否则构建会报“过期”停下。
+
 ### `snaps.txt` 语法速查
 
 ```
@@ -224,10 +244,42 @@ geodata/ (底图) ─────┘                                            
 
 “所属政权”缺省时取 `units.py` 里的默认值：藩镇默认属唐，政权、部族属自己。显示名、治所、隶属一经设定，会延续到后面的节点，直到再次改写。
 
-### 主要参数（`src/config.py`）
+---
+
+## 七、英文版
+
+中文是源文本。每一条要显示的中文都有一个键，英文按同样的键写在 `content/en/` 下：
+
+| 文件 | 内容 | 键 |
+|---|---|---|
+| `units.json` | 政权、藩镇、部族：全称 `n`、地图短名 `s`（可省）、说明 `note` | 单位键 |
+| `labels.json` | 节点里的当年别名，如“魏博（罗弘信）” | 中文别名 |
+| `seeds.json` | 州府城邑：今地 `mod`、各时期名称 `n` | 点的 ID |
+| `items.json` | 条目：`old` `mod` `note` `yt` `sides` `cmd`，燕云分区 `g` | `类别:古名`，同名条目后加 `@年份` |
+| `snaps.json` | 时间节点：年号 `era`、标题 `t`、说明 `d` | 年份 |
+| `misc.json` | 今省名 | 中文名 |
+
+`zh.lock.json` 记着每条英文所据中文的指纹（sha1 前 10 位）。改了中文而没改英文，构建时就报“过期”。
+
+改完英文的流程：
+
+```bash
+python run.py --html          # 默认严格：有缺译或过期就停下并列出数量
+python tools/i18n.py todo     # 逐条列出缺译、过期的中文
+# ……补改 content/en/*.json ……
+python tools/i18n.py lock     # 登记新的中文指纹
+python run.py --html
+```
+
+只想先看效果时用 `python run.py --html --draft`，缺译处临时显示中文。`python tools/i18n.py table` 导出中英对照表 `build/i18n-review.tsv` 供审校。译名体例（拼音写法、州府军的分写连写、日期照写农历月序等）见 `content/en/GLOSSARY.md`。
+
+---
+
+## 八、调参（`src/config.py`）
 
 | 参数 | 默认 | 作用 |
 |---|---|---|
+| `FIRST` | 820 | 打开网页时显示的时间节点 |
 | `RES` | 0.08 | 栅格分辨率（°）。调小更精细，计算时间约按平方增长 |
 | `COST_MAJOR_RANGE` | (9.0, 0.28) | 主干山脉的代价峰值与影响半径 |
 | `COST_YANGTZE` 等 | — | 大河的阻隔强度 |
@@ -238,7 +290,7 @@ geodata/ (底图) ─────┘                                            
 
 ---
 
-## 六、数据来源与说明
+## 九、资料与可靠程度
 
 - **底图**：[Natural Earth](https://www.naturalearthdata.com/) 1:10m 矢量数据（公有领域），固定在提交 `ca96624`。
 - **今省界**：沿用此前《河陇西域古今地名对照图》中的简化省界。
@@ -249,3 +301,4 @@ geodata/ (底图) ─────┘                                            
   - 只有 18 个节点，节点之间的变化没有画出来。
   - 古河道是按文献走向手绘的近似线。
   - 有争议的事项在条目说明里注了“一说”：8 世纪末 9 世纪初西域各城的归属，784 年义武、横海的辖州，947 年辽军在中原的实际控制范围等。
+  - 英文照中文翻译，译名体例见 `content/en/GLOSSARY.md`；月份是农历，不换算公历。

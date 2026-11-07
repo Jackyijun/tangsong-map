@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 .venv/
+.DS_Store
 build/
 # 底图约 31 MB，可由 python src/fetch_data.py 重新下载
 geodata/ne/

@@ -417,6 +417,9 @@ def add_item(d): d["i"] = len(ITEMS); ITEMS.append(d); return d["i"]
 # 河流：Natural Earth 河道 + 手绘古河道，按古名合并为条目
 RIVERS = []
 river_item = {}
+# 同一古名的河分几段时，条目的今名与说明取 NE_RIVERS 里写在最前的那一段（而不是底图里先遇到的那段）
+RIVER_PRIMARY = {}
+for _k, _v in IM.NE_RIVERS.items(): RIVER_PRIMARY.setdefault(_v[0], _v)
 for n, sr, ls in NE_RV:
     if n == "Hudi": continue
     pts = list(ls.simplify(C.SIMPLIFY_RIVER).coords)
@@ -445,9 +448,10 @@ for r in RIVERS:
     key = r["nm"]
     if key not in river_item:
         if info is None: info = IM.NE_RIVERS["Huang"]
+        if not r.get("manual"): info = RIVER_PRIMARY.get(key, info)
         mod = info[1]; note = info[2]
         if key == "河": mod, note = "黄河", IM.MANUAL_RIVERS[0][3]
-        if key == "淮水": mod, note = "淮河", "淮水。958 年前后周与南唐以淮为界，此后以长江为界。唐宋时淮河经泗州、楚州独流入海（1194 年后黄河夺淮，下游淤塞形成洪泽湖）。"
+        if key == "淮水": mod, note = "淮河", "淮水。958 年以前，后周与南唐以淮为界，此后以长江为界。唐至北宋时淮河经泗州、楚州独流入海（1194 年后黄河夺淮，下游淤塞形成洪泽湖）。"
         river_item[key] = add_item(dict(c="river", sub="river", old=key, mod=mod, note=note, major=bool(info[3])))
     r["it"] = river_item[key]
 seglen = {}   # 注记锚点：每条河最长一段的中点
@@ -559,7 +563,7 @@ print("regions", [(ITEMS[r["it"]]["old"], len(r["rings"]), [(g["n"], len(g["line
 # 输出
 # ======================================================================
 GEO = dict(land=LAND_OUT, prov=PROV, border=BORDER, rivers=RIV_OUT, lakes=LAKES, canals=CAN, deserts=DES, snaps=OUTSN, regions=REG_OUT,
-           ext=[LON0, LON1, LAT0, LAT1])
+           ext=[LON0, LON1, LAT0, LAT1], first=C.FIRST)
 UOUT = [dict(k=u["k"], n=u["n"], kind=u["kind"], note=u["note"], cl=LIGHT[i], cd=DARK[i]) for i, u in enumerate(UNITS)]
 SOUT = [dict(id=s["id"], n=s["n"], mod=s["mod"], lon=s["lon"], lat=s["lat"], t=s["t"], **({"nm": s["names"]} if s["names"] else {})) for s in SEEDS]
 DATA = dict(units=UOUT, seeds=SOUT, items=ITEMS)

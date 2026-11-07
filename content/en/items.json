@@ -1,0 +1,1924 @@
+{
+ "river:丽水": {
+  "old": "Irrawaddy",
+  "mod": "Irrawaddy",
+  "note": "Nanzhao set up the Lishui military governorship on its upper reaches."
+ },
+ "river:汾水": {
+  "old": "Fen River",
+  "mod": "Fen River",
+  "note": "The central axis of Hedong: Taiyuan, Jinzhou and Jiangzhou all stand on the Fen River."
+ },
+ "river:胪朐河": {
+  "old": "Kherlen River",
+  "mod": "Kherlen River"
+ },
+ "river:中江": {
+  "old": "Zhong River",
+  "mod": "Tuo River"
+ },
+ "river:图们江": {
+  "old": "Tumen River",
+  "mod": "Tumen River"
+ },
+ "river:怒江": {
+  "old": "Nu River",
+  "mod": "Nu River (Salween)"
+ },
+ "river:犁牛河": {
+  "old": "Drichu",
+  "mod": "Tongtian River (upper Yangtze)",
+  "note": "The upper Yangtze."
+ },
+ "river:剑河": {
+  "old": "Kem River",
+  "mod": "upper Yenisei",
+  "note": "Homeland of the Yenisei Kyrgyz."
+ },
+ "river:红水河": {
+  "old": "Hongshui River",
+  "mod": "Hongshui River"
+ },
+ "river:郁水": {
+  "old": "Yu River",
+  "mod": "Xi River",
+  "note": "The main river of Lingnan, flowing past Wuzhou and Duanzhou to Guangzhou."
+ },
+ "river:泸水": {
+  "old": "Lu River",
+  "mod": "Jinsha River",
+  "note": "Called the Lu River under the Tang; one of the boundaries between Nanzhao and Xichuan."
+ },
+ "river:江": {
+  "old": "Yangtze",
+  "mod": "Yangtze",
+  "note": "The Great River. In the later Tang the Jiang–Huai region became the foundation of state revenue."
+ },
+ "river:葱岭河": {
+  "old": "Congling River",
+  "mod": "Yarkand River"
+ },
+ "river:辽水": {
+  "old": "Liao River",
+  "mod": "Liao River"
+ },
+ "river:沅水": {
+  "old": "Yuan River",
+  "mod": "Yuan River"
+ },
+ "river:汉水": {
+  "old": "Han River",
+  "mod": "Han River",
+  "note": "Also called the Mian River; Xiangzhou was the key city on its middle course."
+ },
+ "river:赣水": {
+  "old": "Gan River",
+  "mod": "Gan River"
+ },
+ "river:娑陵水": {
+  "old": "Selenge River",
+  "mod": "Selenge River",
+  "note": "Grazing lands of the Uyghurs and the Yenisei Kyrgyz."
+ },
+ "river:曳咥河": {
+  "old": "Irtysh",
+  "mod": "Irtysh"
+ },
+ "river:富良江": {
+  "old": "Phú Lương River",
+  "mod": "Red River",
+  "note": "The principal river of Annan; Giao Châu stands on its right bank."
+ },
+ "river:大渡水": {
+  "old": "Dadu River",
+  "mod": "Dadu River",
+  "note": "A natural boundary separating Xichuan from Nanzhao and Tibet."
+ },
+ "river:潢水": {
+  "old": "Huang River",
+  "mod": "Xar Moron",
+  "note": "Homeland of the Khitans; the Liao Supreme Capital stood north of it."
+ },
+ "river:孔雀河": {
+  "old": "Kongque River",
+  "mod": "Kongque River"
+ },
+ "river:计戍水": {
+  "old": "Jishu River",
+  "mod": "Tarim River"
+ },
+ "river:粟末水": {
+  "old": "Sumo River",
+  "mod": "Songhua River",
+  "note": "The heartland of Balhae."
+ },
+ "river:汶江": {
+  "old": "Wen River",
+  "mod": "Min River (Sichuan)",
+  "note": "The water source of the Chengdu Plain; the Dujiangyan weir is on this river."
+ },
+ "river:兰沧水": {
+  "old": "Lancang River",
+  "mod": "Lancang (upper Mekong)",
+  "note": "The great river of western Nanzhao."
+ },
+ "river:伊丽水": {
+  "old": "Ili River",
+  "mod": "Ili River"
+ },
+ "river:桑干河": {
+  "old": "Sanggan River",
+  "mod": "Sanggan River",
+  "note": "Runs between Daibei and Youzhou; under the Tang its lower course was called the Lugou River."
+ },
+ "river:臧河": {
+  "old": "Tsangpo",
+  "mod": "Yarlung Tsangpo",
+  "note": "The Yarlung valley, where the Tibetan Empire arose, lies on its south bank."
+ },
+ "river:黔江": {
+  "old": "Qian River",
+  "mod": "Wu River",
+  "note": "Called the Fuling River or Qian River under the Tang."
+ },
+ "river:湘水": {
+  "old": "Xiang River",
+  "mod": "Xiang River"
+ },
+ "river:淮水": {
+  "old": "Huai River",
+  "mod": "Huai River",
+  "note": "The Huai River. Until 958 the Later Zhou and the Southern Tang were divided by the Huai; afterwards by the Yangtze. Under the Tang and the Northern Song the Huai flowed past Sizhou and Chuzhou to the sea on its own (after the Yellow River took over the Huai in 1194, its lower course silted up and Hongze Lake formed)."
+ },
+ "river:湄公河": {
+  "old": "Mekong",
+  "mod": "Mekong"
+ },
+ "river:闽江": {
+  "old": "Min River",
+  "mod": "Min River (Fujian)",
+  "note": "Formed where the Jianxi and Futunxi meet, it flows past Fuzhou to the sea."
+ },
+ "river:嘉陵江": {
+  "old": "Jialing River",
+  "mod": "Jialing River",
+  "note": "Also called the Western Han River; one of the roads into Shu ran along it."
+ },
+ "river:龙川江": {
+  "old": "Longchuan River",
+  "mod": "Dong River"
+ },
+ "river:若水": {
+  "old": "Ruo River",
+  "mod": "Yalong River"
+ },
+ "river:右江": {
+  "old": "You River",
+  "mod": "You River"
+ },
+ "river:溱水": {
+  "old": "Zhen River",
+  "mod": "Bei River",
+  "note": "Flows south past Shaozhou to Guangzhou; the river section of the Dayu Pass route."
+ },
+ "river:乌苏里江": {
+  "old": "Ussuri",
+  "mod": "Ussuri"
+ },
+ "river:卢沟水": {
+  "old": "Lugou River",
+  "mod": "Yongding River"
+ },
+ "river:汉江": {
+  "old": "Han River",
+  "mod": "Han River (Korea)"
+ },
+ "river:河": {
+  "old": "Yellow River",
+  "mod": "Yellow River",
+  "note": "Under the Tang and Song the lower Yellow River roughly followed the channel trained by Wang Jing in the Eastern Han, passing Huazhou, Chanzhou, north of Yunzhou and north of Qizhou, and reaching the sea through Dizhou and Binzhou. The modern lower Yellow River (dashed) took over the course of the Daqing River to the sea after the river shifted at Tongwaxiang in 1855."
+ },
+ "river:鸭渌水": {
+  "old": "Yalu River",
+  "mod": "Yalu River",
+  "note": "The Yalu route, Balhae's tribute road, ran along the river."
+ },
+ "river:黑水": {
+  "old": "Heishui",
+  "mod": "Amur",
+  "note": "The Heishui Mohe lived on its lower course."
+ },
+ "river:沱江": {
+  "old": "Đà River",
+  "mod": "Black River (Đà River), Vietnam"
+ },
+ "river:斡难河": {
+  "old": "Onon River",
+  "mod": "Onon River"
+ },
+ "river:黄山江": {
+  "old": "Hwangsan River",
+  "mod": "Nakdong River"
+ },
+ "river:左江": {
+  "old": "Zuo River",
+  "mod": "Zuo River"
+ },
+ "river:望建河": {
+  "old": "Wangjian River",
+  "mod": "Argun",
+  "note": "The Mengwu Shiwei lived to its east."
+ },
+ "river:渭水": {
+  "old": "Wei River",
+  "mod": "Wei River",
+  "note": "The lifeline of Guanzhong; grain boats reached Chang'an by the Wei River and the Cao Canal."
+ },
+ "river:白玉河": {
+  "old": "White Jade River",
+  "mod": "Yurungkash River",
+  "note": "The jade-bearing river of Khotan."
+ },
+ "river:泾水": {
+  "old": "Jing River",
+  "mod": "Jing River",
+  "note": "The Jingyuan fanzhen took its name from this river."
+ },
+ "river:沁水": {
+  "old": "Qin River",
+  "mod": "Qin River"
+ },
+ "river:拨换河": {
+  "old": "Bohuan River",
+  "mod": "Aksu River"
+ },
+ "river:漳水": {
+  "old": "Zhang River",
+  "mod": "Zhang River",
+  "note": "Flows through the area of Xiangzhou and Weizhou."
+ },
+ "river:嗢昆水": {
+  "old": "Orkhon River",
+  "mod": "Orkhon River",
+  "note": "Site of the Uyghur khagan's camp."
+ },
+ "river:濡水": {
+  "old": "Nuan River",
+  "mod": "Luan River"
+ },
+ "river:潭水": {
+  "old": "Tan River",
+  "mod": "Liu River"
+ },
+ "river:融江": {
+  "old": "Rong River",
+  "mod": "Rong River"
+ },
+ "river:那河": {
+  "old": "Na River",
+  "mod": "Nen River"
+ },
+ "river:丹水": {
+  "old": "Dan River",
+  "mod": "Dan River"
+ },
+ "river:济水（清河）": {
+  "old": "Ji River (Qing River)",
+  "mod": "the ancient Ji River (most of today's lower Yellow River follows its old course)",
+  "note": "Under the Tang the Ji River flowed northeast from Daye Marsh past Yunzhou, Qizhou, Zizhou and Qingzhou to the sea, and was also called the Qing River; the Shandong section of today's Yellow River took over its old course."
+ },
+ "river:洛水": {
+  "old": "Luo River",
+  "mod": "Luo River",
+  "note": "Luoyang, the Eastern Capital, straddles the Luo River."
+ },
+ "river:伊水": {
+  "old": "Yi River",
+  "mod": "Yi River",
+  "note": "Flows through Yique (Longmen)."
+ },
+ "river:洛水（北）": {
+  "old": "Northern Luo River",
+  "mod": "Beiluo River",
+  "note": "Flows through Fuzhou, Fangzhou and Tongzhou."
+ },
+ "river:汝水": {
+  "old": "Ru River",
+  "mod": "Ru River"
+ },
+ "river:颍水": {
+  "old": "Ying River",
+  "mod": "Ying River",
+  "note": "Flows through Xuzhou, Chenzhou and Yingzhou into the Huai."
+ },
+ "river:泗水": {
+  "old": "Si River",
+  "mod": "Si River (the ancient Si)",
+  "note": "Flows through Yanzhou, Xuzhou and Sizhou into the Huai; Xuzhou stands where the Si and the Bian meet."
+ },
+ "river:汶水": {
+  "old": "Wen River",
+  "mod": "Dawen River"
+ },
+ "river:滹沱河": {
+  "old": "Hutuo River",
+  "mod": "Hutuo River",
+  "note": "Flows south of the city of Zhenzhou; the Surrender at Zhongdu Bridge in 946 took place on this river."
+ },
+ "river:易水": {
+  "old": "Yi River",
+  "mod": "Southern Juma River"
+ },
+ "river:淯水": {
+  "old": "Yu River",
+  "mod": "Bai River",
+  "note": "The main river of the Nanyang Basin, joining the Han at Xiangzhou."
+ },
+ "river:澧水": {
+  "old": "Li River",
+  "mod": "Li River (Hunan)"
+ },
+ "river:资水": {
+  "old": "Zi River",
+  "mod": "Zi River",
+  "note": "Flows past Shaozhou into Dongting Lake."
+ },
+ "river:浙江": {
+  "old": "Zhe River",
+  "mod": "Qiantang River"
+ },
+ "river:漓水": {
+  "old": "Li River",
+  "mod": "Li River (Guangxi)",
+  "note": "Linked to the Xiang River by the Lingqu Canal."
+ },
+ "river:湟水": {
+  "old": "Huangshui",
+  "mod": "Huangshui",
+  "note": "Shanzhou stands on the Huangshui."
+ },
+ "river:洮水": {
+  "old": "Tao River",
+  "mod": "Tao River"
+ },
+ "river:弱水": {
+  "old": "Ruoshui",
+  "mod": "Hei River (Ejin)",
+  "note": "Flows past Ganzhou and north into Juyan Lake."
+ },
+ "river:冥水": {
+  "old": "Ming River",
+  "mod": "Shule River"
+ },
+ "river:夷播海": {
+  "old": "Lake Balkhash",
+  "mod": "Lake Balkhash"
+ },
+ "river:北海": {
+  "old": "Lake Baikal",
+  "mod": "Lake Baikal"
+ },
+ "river:破釜塘": {
+  "old": "Pofu Reservoir",
+  "mod": "Hongze Lake (the present lake formed later)",
+  "note": "Under the Tang there were only small lakes here on the south bank of the Huai, such as Pofu Reservoir and Baishui Reservoir. Today's Hongze Lake formed in the Ming and Qing, and the city of Sizhou lies at the bottom of the lake."
+ },
+ "river:库苏古尔湖": {
+  "old": "Lake Khövsgöl",
+  "mod": "Lake Khövsgöl"
+ },
+ "river:湄沱湖": {
+  "old": "Lake Meituo",
+  "mod": "Lake Khanka",
+  "note": "Source of the famous Balhae product, \"the crucian carp of Lake Meituo\"."
+ },
+ "river:俱轮泊": {
+  "old": "Lake Kölün",
+  "mod": "Lake Hulun"
+ },
+ "river:太湖": {
+  "old": "Lake Tai",
+  "mod": "Lake Tai",
+  "note": "Known in antiquity as Zhenze and Juqu."
+ },
+ "river:腾格里海": {
+  "old": "Namtso",
+  "mod": "Namtso"
+ },
+ "river:西海": {
+  "old": "Xihai Lake",
+  "mod": "Bosten Lake",
+  "note": "The lake near Karasahr."
+ },
+ "river:彭蠡湖": {
+  "old": "Lake Pengli",
+  "mod": "Poyang Lake"
+ },
+ "river:色林错": {
+  "old": "Siling Co",
+  "mod": "Siling Co"
+ },
+ "river:哈尔乌苏湖": {
+  "old": "Khar-Us Lake",
+  "mod": "Khar-Us Lake"
+ },
+ "river:柏海@鄂陵湖": {
+  "old": "Baihai Lake",
+  "mod": "Ngoring Lake",
+  "note": "In 641, when Princess Wencheng went to Tibet, Songtsen Gampo came to meet her at Baihai Lake."
+ },
+ "river:樊良湖": {
+  "old": "Fanliang Lake",
+  "mod": "Gaoyou Lake"
+ },
+ "river:柏海@扎陵湖": {
+  "old": "Baihai Lake",
+  "mod": "Gyaring Lake"
+ },
+ "river:阿耨达池": {
+  "old": "Lake Anavatapta",
+  "mod": "Lake Manasarovar"
+ },
+ "river:捕鱼儿海": {
+  "old": "Lake Buir",
+  "mod": "Lake Buir"
+ },
+ "river:羊卓雍错": {
+  "old": "Yamdrok Tso",
+  "mod": "Yamdrok Tso"
+ },
+ "river:巢湖": {
+  "old": "Chao Lake",
+  "mod": "Chao Lake"
+ },
+ "river:微山湖": {
+  "old": "Weishan Lake",
+  "mod": "Weishan Lake (formed in Ming–Qing times)"
+ },
+ "river:乌梁素海": {
+  "old": "Ulansuhai Lake",
+  "mod": "Ulansuhai Lake"
+ },
+ "river:洞庭湖": {
+  "old": "Dongting Lake",
+  "mod": "Dongting Lake"
+ },
+ "river:梁山泊": {
+  "old": "Liangshan Marsh",
+  "mod": "Dongping Lake (remnant of Liangshan Marsh)"
+ },
+ "river:艾比湖": {
+  "old": "Ebinur Lake",
+  "mod": "Ebinur Lake"
+ },
+ "river:热海": {
+  "old": "Issyk-Kul",
+  "mod": "Issyk-Kul",
+  "note": "Xuanzang called it the \"Great Clear Lake\"."
+ },
+ "river:乌布苏湖": {
+  "old": "Uvs Lake",
+  "mod": "Uvs Lake"
+ },
+ "river:青海": {
+  "old": "Qinghai Lake",
+  "mod": "Qinghai Lake",
+  "note": "Contested by Tang and Tibet; former land of the Tuyuhun."
+ },
+ "river:蒲昌海": {
+  "old": "Puchang Lake",
+  "mod": "Lop Nur"
+ },
+ "river:大野泽": {
+  "old": "Daye Marsh",
+  "mod": "north of Juye, Shandong (silted up)",
+  "note": "Called Juye Marsh under the Tang. After the Yellow River broke its banks at Huazhou in 944, it merged with the Wen and Ji rivers to form Liangshan Marsh."
+ },
+ "river:居延海": {
+  "old": "Juyan Lake",
+  "mod": "Ejin Banner, Inner Mongolia (today's Juyan Lake)",
+  "note": "The terminal lake of the Ruoshui; the Tang stationed Ningkou Jun here."
+ },
+ "river:滇池": {
+  "old": "Lake Dian",
+  "mod": "Lake Dian",
+  "note": "Nanzhao's Tuodong City stood by Lake Dian."
+ },
+ "river:洱海": {
+  "old": "Erhai Lake",
+  "mod": "Erhai Lake",
+  "note": "Known in antiquity as the Western Er River; the heartland of Nanzhao."
+ },
+ "river:忽汗海": {
+  "old": "Huhan Lake",
+  "mod": "Jingpo Lake",
+  "note": "Near the Balhae Supreme Capital."
+ },
+ "river:白水塘": {
+  "old": "Baishui Reservoir",
+  "mod": "west of Hongze, Jiangsu"
+ },
+ "canal:通济渠（汴河）": {
+  "old": "Tongji Canal (Bian River)",
+  "mod": "Tongji Canal section of the Sui–Tang Grand Canal",
+  "note": "Dug under Emperor Yang of Sui to link the Yellow River and the Huai, it was the lifeline of grain transport under the Tang and Song. Bianzhou, Songzhou, Suzhou and Sizhou grew up along it, and the Five Dynasties (except the Later Tang) and the Northern Song made Kaifeng their capital because of the easy transport the Bian River offered."
+ },
+ "canal:永济渠（御河）": {
+  "old": "Yongji Canal (Yu River)",
+  "mod": "Wei River – South Canal",
+  "note": "Ran from the mouth of the Qin River north to Zhuo Commandery (Youzhou); dug when the Sui attacked Goguryeo. The Hebei fanzhen of the Tang also used it for transport."
+ },
+ "canal:山阳渎（邗沟）": {
+  "old": "Shanyang Canal (Han Canal)",
+  "mod": "Liyun Canal",
+  "note": "From Yangzhou to Chuzhou, linking the Yangtze and the Huai."
+ },
+ "canal:江南河": {
+  "old": "Jiangnan Canal",
+  "mod": "Jiangnan Canal",
+  "note": "From Runzhou to Hangzhou; the revenue of Jiangnan was shipped north along it."
+ },
+ "canal:漕渠": {
+  "old": "Cao Canal",
+  "mod": "from Xi'an to Tongguan, Shaanxi (course of the Sui Guangtong Canal, long silted up)",
+  "note": "A transport canal from Chang'an to Tong Pass, running parallel to the Wei River."
+ },
+ "canal:灵渠": {
+  "old": "Lingqu Canal",
+  "mod": "Lingqu Canal",
+  "note": "Dug under the Qin to link the Xiang and Li rivers; rebuilt by Li Bo in 825 and by Yu Mengwei in 868."
+ },
+ "range:终南山（秦岭）": {
+  "old": "Zhongnan Mountains (Qinling)",
+  "mod": "Qinling Mountains",
+  "note": "The southern screen of Guanzhong; the Tang called it the Southern Mountains or Zhongnan Mountains. The Ziwu, Tangluo, Baoxie and Chencang valley roads cross it to Hanzhong."
+ },
+ "range:巴山": {
+  "old": "Ba Mountains",
+  "mod": "Daba Mountains",
+  "note": "The barrier between Hanzhong and Ba–Shu, crossed by the Micang and Lizhi roads."
+ },
+ "range:太行山": {
+  "old": "Taihang Mountains",
+  "mod": "Taihang Mountains",
+  "note": "The divide between Hedong and Hebei, crossed by the \"Eight Passes of the Taihang\". In the late Tang Li Keyong held Hedong and Zhu Quanzhong southern Hebei, and the two fought back and forth along the Taihang."
+ },
+ "range:吕梁山": {
+  "old": "Lüliang Mountains",
+  "mod": "Lüliang Mountains",
+  "note": "The mountains of western Hedong, bordered on the west by the Yellow River."
+ },
+ "range:中条山": {
+  "old": "Zhongtiao Mountains",
+  "mod": "Zhongtiao Mountains",
+  "note": "South of Hezhong; the salt lake lies at its northern foot."
+ },
+ "range:恒山": {
+  "old": "Heng Mountains",
+  "mod": "Heng Mountains (Shanxi)",
+  "note": "The Northern Sacred Peak. Under the Tang the Northern Peak was Mount Damao, northwest of Quyang, and the sacrifices were made at the Temple of the Northern Peak in Quyang."
+ },
+ "range:五台山": {
+  "old": "Mount Wutai",
+  "mod": "Mount Wutai",
+  "note": "The seat of the bodhisattva Mañjuśrī, a Buddhist holy site under the Tang."
+ },
+ "range:燕山": {
+  "old": "Yan Mountains",
+  "mod": "Yan Mountains",
+  "note": "The northern barrier of Youzhou, where Juyong Pass, Gubeikou and Songting Pass lie. With the cession of the Sixteen Prefectures of Yan and Yun, the Central Plains lost this line."
+ },
+ "range:阴山": {
+  "old": "Yin Mountains",
+  "mod": "Yin Mountains",
+  "note": "The barrier between the steppe south of the Gobi and the Ordos Loop; the three Shouxiang Cities guarded its southern foot."
+ },
+ "range:贺兰山": {
+  "old": "Helan Mountains",
+  "mod": "Helan Mountains",
+  "note": "The northwestern barrier of Lingzhou."
+ },
+ "range:陇山": {
+  "old": "Long Mountains",
+  "mod": "Liupan Mountains",
+  "note": "The barrier between Guanzhong and Longyou; after Tibet took Longyou it became the Tang–Tibetan front."
+ },
+ "range:祁连山": {
+  "old": "Qilian Mountains",
+  "mod": "Qilian Mountains",
+  "note": "On the south side of the Hexi Corridor; the Tang also called it the Southern Mountains or Snow Mountains."
+ },
+ "range:阿尔金山": {
+  "old": "Altyn-Tagh",
+  "mod": "Altyn-Tagh",
+  "note": "Between the Southern Route of the Western Regions and Qinghai; in the Five Dynasties the Zhongyun tribe lived here."
+ },
+ "range:昆仑山": {
+  "old": "Kunlun Mountains",
+  "mod": "Kunlun Mountains",
+  "note": "The southern mountains of Khotan, a source of jade."
+ },
+ "range:积石山": {
+  "old": "Jishi Mountains",
+  "mod": "Amne Machin",
+  "note": "Called the Great Jishi Mountains under the Tang; the Yellow River bends around them."
+ },
+ "range:唐古拉山": {
+  "old": "Tanggula Mountains",
+  "mod": "Tanggula Mountains",
+  "note": "The old Tang–Tibet road crossed these mountains into northern Tibet. The name is modern."
+ },
+ "range:冈底斯山": {
+  "old": "Gangdise Mountains",
+  "mod": "Gangdise and Nyenchen Tanglha ranges",
+  "note": "The northern edge of the valleys of southern Tibet. The name is modern."
+ },
+ "range:雪山": {
+  "old": "Himalayas",
+  "mod": "Himalayas",
+  "note": "The great snow mountains separating Tibet from India and Nepal."
+ },
+ "range:葱岭": {
+  "old": "Pamirs",
+  "mod": "Pamirs",
+  "note": "The divide between the Western Regions and Central Asia; the Tang set up the Congling Garrison here."
+ },
+ "range:天山": {
+  "old": "Tian Shan",
+  "mod": "Tian Shan",
+  "note": "The Tang called it the Tian Shan or the White Mountains; its eastern section was also called the Zheluoman Mountains. Beiting lay to the north, Anxi to the south."
+ },
+ "range:金山": {
+  "old": "Altai Mountains",
+  "mod": "Altai Mountains",
+  "note": "The Karluks originally lived southwest of the Altai Mountains."
+ },
+ "range:燕然山": {
+  "old": "Yanran Mountains",
+  "mod": "Khangai Mountains",
+  "note": "In the heart of the lands north of the Gobi; the Uyghur khagan's camp lay at its eastern foot."
+ },
+ "range:大兴安岭": {
+  "old": "Greater Khingan",
+  "mod": "Greater Khingan",
+  "note": "Separating the Shiwei and the Khitans from the tribes north of the Gobi. The name is modern."
+ },
+ "range:太白山": {
+  "old": "Taibai Mountains",
+  "mod": "Changbai Mountains",
+  "note": "Called the Taibai or Tutai Mountains under the Tang; a famous mountain in Balhae."
+ },
+ "range:医巫闾山": {
+  "old": "Yiwulü Mountains",
+  "mod": "Yiwulü Mountains",
+  "note": "A famous mountain of Liaoxi, where Yelü Bei, King of Dongdan under the Liao, kept his library."
+ },
+ "range:泰山": {
+  "old": "Mount Tai",
+  "mod": "Mount Tai",
+  "note": "The Eastern Sacred Peak, where Emperor Xuanzong performed the feng and shan sacrifices in 725."
+ },
+ "range:华山": {
+  "old": "Mount Hua",
+  "mod": "Mount Hua",
+  "note": "The Western Sacred Peak, west of Tong Pass."
+ },
+ "range:嵩山": {
+  "old": "Mount Song",
+  "mod": "Mount Song",
+  "note": "The Central Sacred Peak, where Wu Zetian once performed the feng and shan sacrifices."
+ },
+ "range:伏牛山": {
+  "old": "Funiu Mountains",
+  "mod": "Funiu Mountains",
+  "note": "Between Luoyang and the Nanyang Basin."
+ },
+ "range:大别山": {
+  "old": "Dabie Mountains",
+  "mod": "Dabie Mountains",
+  "note": "Between Huainan and Eyue."
+ },
+ "range:巫山": {
+  "old": "Wu Mountains",
+  "mod": "Wu Mountains",
+  "note": "Site of the Three Gorges of the Yangtze."
+ },
+ "range:武陵山": {
+  "old": "Wuling Mountains",
+  "mod": "Wuling Mountains",
+  "note": "Home of the Five Streams tribes."
+ },
+ "range:雪峰山": {
+  "old": "Xuefeng Mountains",
+  "mod": "Xuefeng Mountains",
+  "note": "Between the Zi and Yuan rivers. The name is modern."
+ },
+ "range:五岭": {
+  "old": "Five Ridges",
+  "mod": "Nanling Mountains",
+  "note": "The Five Ridges (Yuecheng, Dupang, Mengzhu, Qitian and Dayu), dividing Lingnan from the Central Plains."
+ },
+ "range:罗霄山": {
+  "old": "Luoxiao Mountains",
+  "mod": "Luoxiao Mountains",
+  "note": "Between Hunan and Jiangxi. The name is modern."
+ },
+ "range:武夷山": {
+  "old": "Wuyi Mountains",
+  "mod": "Wuyi Mountains",
+  "note": "Between Fujian and Jiangxi; the western screen of Min."
+ },
+ "range:仙霞岭": {
+  "old": "Xianxia Range",
+  "mod": "Xianxia Range",
+  "note": "In 878 Huang Chao cut a mountain road of seven hundred li through here into Fujian."
+ },
+ "range:庐山": {
+  "old": "Mount Lu",
+  "mod": "Mount Lu",
+  "note": "Also called Kuanglu; Bai Juyi built a thatched hall here."
+ },
+ "range:衡山": {
+  "old": "Mount Heng",
+  "mod": "Mount Heng (Hunan)",
+  "note": "The Southern Sacred Peak."
+ },
+ "range:岷山": {
+  "old": "Min Mountains",
+  "mod": "Min Mountains",
+  "note": "In northern Xichuan; after Tibet took Songzhou it marked the Tang–Tibetan border."
+ },
+ "range:邛崃山": {
+  "old": "Qionglai Mountains",
+  "mod": "Qionglai Mountains",
+  "note": "The western edge of the Chengdu Plain; the Tang called it the Western Mountains, and it bordered Tibet."
+ },
+ "range:大雪山": {
+  "old": "Daxue Mountains",
+  "mod": "Daxue Mountains",
+  "note": "The eastern edge of the western Sichuan plateau. The name is modern."
+ },
+ "range:点苍山": {
+  "old": "Diancang Mountains",
+  "mod": "Cang Mountains",
+  "note": "On the west shore of Erhai Lake; Tang and Nanzhao concluded the Treaty of Diancang here in 794."
+ },
+ "range:哀牢山": {
+  "old": "Ailao Mountains",
+  "mod": "Ailao Mountains",
+  "note": "Southeast of the Nanzhao heartland. The name is modern."
+ },
+ "desert:大流沙": {
+  "old": "Great Flowing Sands",
+  "mod": "Taklamakan Desert",
+  "note": "The great desert between the southern and northern routes of the Western Regions."
+ },
+ "desert:大碛": {
+  "old": "Great Desert",
+  "mod": "Gobi Desert",
+  "note": "The Gobi between the lands south and north of the desert, which the Tang called the Great Desert or the Sandy Desert."
+ },
+ "desert:普纳沙": {
+  "old": "Puna Sands",
+  "mod": "Mu Us Desert",
+  "note": "Around Xiazhou (Tongwan City); desertification was already evident under the Tang."
+ },
+ "capital:长安": {
+  "old": "Chang'an",
+  "mod": "Xi'an, Shaanxi",
+  "note": "The Tang capital, also called Shangdu (the Upper Capital) or the Western Capital. Its outer walls ran about 36 km (sixty-seven li) around, it had 108 wards, and its population was nearly a million. It fell many times, in 756, 763, 783, 880 and later. In 904 Zhu Quanzhong forced Emperor Zhaozong to move to Luoyang and pulled down the palaces, and Chang'an was never a capital again."
+ },
+ "capital:洛阳（东都）": {
+  "old": "Luoyang (Eastern Capital)",
+  "mod": "Luoyang, Henan",
+  "note": "The Tang Eastern Capital. In 904 Emperor Zhaozong was moved to Luoyang by Zhu Quanzhong and murdered there the same year; in 907 Emperor Ai abdicated here."
+ },
+ "capital:凤翔（西京）": {
+  "old": "Fengxiang (Western Capital)",
+  "mod": "Fengxiang District, Baoji, Shaanxi",
+  "note": "In the 2nd month of 757 Emperor Suzong moved from Pengyuan to Fengxiang, and made it his temporary capital; in the 9th month he sent out from here the army that retook Chang'an, and in the 12th month Fengxiang was named the Western Capital."
+ },
+ "capital:成都（南京）": {
+  "old": "Chengdu (Southern Capital)",
+  "mod": "Chengdu, Sichuan",
+  "note": "Emperor Xuanzong fled to Shu in 756; in the 12th month of 757 Chengdu was made the Southern Capital. At the end of 880 Emperor Xizong, fleeing Huang Chao, again took the court to Chengdu, returning to the capital in 885."
+ },
+ "capital:奉天": {
+  "old": "Fengtian",
+  "mod": "Qian County, Shaanxi",
+  "note": "After the Jingyuan mutiny in the 10th month of 783, Emperor Dezong fled to Fengtian, where Zhu Ci besieged him for over a month."
+ },
+ "capital:兴元（梁州）": {
+  "old": "Xingyuan (Liangzhou)",
+  "mod": "Hanzhong, Shaanxi",
+  "note": "When Li Huaiguang rebelled in the 2nd month of 784, Emperor Dezong fled again, to Liangzhou; in the 6th month he raised Liangzhou to Xingyuan Fu, and in the 7th month he returned to Chang'an."
+ },
+ "capital:洛阳（燕都）": {
+  "old": "Luoyang (Yan capital)",
+  "mod": "Luoyang, Henan",
+  "note": "An Lushan proclaimed himself emperor at Luoyang in the 1st month of 756; Shi Siming took Luoyang again in 759 and made it his capital."
+ },
+ "capital:长安（朱泚）": {
+  "old": "Chang'an (Zhu Ci)",
+  "mod": "Xi'an, Shaanxi",
+  "note": "Zhu Ci held Chang'an as emperor for eight months."
+ },
+ "capital:汴州（大楚）": {
+  "old": "Bianzhou (Great Chu)",
+  "mod": "Kaifeng, Henan",
+  "note": "Li Xilie took Bianzhou at the end of 783, proclaimed himself emperor in the 1st month of 784, and was driven back to Caizhou in the 11th month of the same year."
+ },
+ "capital:长安（大齐）": {
+  "old": "Chang'an (Great Qi)",
+  "mod": "Xi'an, Shaanxi",
+  "note": "Huang Chao took the throne in the Hanyuan Hall and held Chang'an for over two years."
+ },
+ "capital:开封（东都）": {
+  "old": "Kaifeng (Eastern Capital)",
+  "mod": "Kaifeng, Henan",
+  "note": "Zhu Quanzhong raised Bianzhou to Kaifeng Fu and called it the Eastern Capital, with Luoyang as the Western Capital. In 909 he moved to Luoyang; in 913 the last Liang emperor moved the capital back to Kaifeng."
+ },
+ "capital:洛阳（西都）": {
+  "old": "Luoyang (Western Capital)",
+  "mod": "Luoyang, Henan",
+  "note": "The Later Liang made Luoyang its capital for a time (909–913)."
+ },
+ "capital:太原（晋王府）": {
+  "old": "Taiyuan (seat of the Prince of Jin)",
+  "mod": "Taiyuan, Shanxi",
+  "note": "Seat of the Princes of Jin, Li Keyong and his son Li Cunxu; the city of Jinyang was the foundation of their power in Hedong."
+ },
+ "capital:凤翔（岐王府）": {
+  "old": "Fengxiang (seat of the Prince of Qi)",
+  "mod": "Fengxiang District, Baoji, Shaanxi",
+  "note": "Li Maozhen set up his court as Prince of Qi, with Fengxiang as its seat."
+ },
+ "capital:幽州（燕都）": {
+  "old": "Youzhou (Yan capital)",
+  "mod": "Beijing",
+  "note": "Liu Shouguang proclaimed himself emperor of Great Yan at Youzhou in 911."
+ },
+ "capital:镇州（赵王府）": {
+  "old": "Zhenzhou (seat of the Prince of Zhao)",
+  "mod": "Zhengding, Hebei",
+  "note": "Seat of Wang Rong, Prince of Zhao."
+ },
+ "capital:成都（前蜀）": {
+  "old": "Chengdu (Former Shu)",
+  "mod": "Chengdu, Sichuan",
+  "note": "Capital of the Former Shu. Wang Jian's tomb (Yongling) is within today's city of Chengdu."
+ },
+ "capital:洛阳（后唐）": {
+  "old": "Luoyang (Later Tang)",
+  "mod": "Luoyang, Henan",
+  "note": "The Later Tang made Luoyang its capital (Luojing), with Weizhou as the Eastern Capital (Xingtang Fu) and Taiyuan as the Northern Capital."
+ },
+ "capital:开封（东京）@938": {
+  "old": "Kaifeng (Eastern Capital)",
+  "mod": "Kaifeng, Henan",
+  "note": "The Later Jin moved its capital to Kaifeng in 938 and called it the Eastern Capital, Kaifeng Fu; the Later Han, the Later Zhou and the Northern Song all had their capitals here afterwards."
+ },
+ "capital:太原（后汉起兵）": {
+  "old": "Taiyuan (where the Later Han rose)",
+  "mod": "Taiyuan, Shanxi",
+  "note": "Liu Zhiyuan proclaimed himself emperor at Taiyuan in the 2nd month of 947 and entered Kaifeng in the 6th month."
+ },
+ "capital:开封（后汉）": {
+  "old": "Kaifeng (Later Han)",
+  "mod": "Kaifeng, Henan",
+  "note": "Capital of the Later Han."
+ },
+ "capital:开封（后周）": {
+  "old": "Kaifeng (Later Zhou)",
+  "mod": "Kaifeng, Henan",
+  "note": "Emperor Shizong of Later Zhou enlarged the outer city of Kaifeng in 955, setting the scale of the Northern Song Eastern Capital."
+ },
+ "capital:开封（东京）@960": {
+  "old": "Kaifeng (Eastern Capital)",
+  "mod": "Kaifeng, Henan",
+  "note": "Capital of the Northern Song, the Eastern Capital Kaifeng Fu, with Luoyang as the Western Capital."
+ },
+ "capital:太原（北汉）": {
+  "old": "Taiyuan (Northern Han)",
+  "mod": "Taiyuan, Shanxi",
+  "note": "Jinyang, capital of the Northern Han; burned after the Song destroyed the Northern Han in 979."
+ },
+ "capital:广陵（江都）": {
+  "old": "Guangling (Jiangdu)",
+  "mod": "Yangzhou, Jiangsu",
+  "note": "Capital of Wu under the Yang family; Yangzhou was raised to Jiangdu Fu in 919."
+ },
+ "capital:金陵（江宁）": {
+  "old": "Jinling (Jiangning)",
+  "mod": "Nanjing, Jiangsu",
+  "note": "Capital of the Southern Tang, Jiangning Fu (the Western Capital)."
+ },
+ "capital:南昌（南都）": {
+  "old": "Nanchang (Southern Capital)",
+  "mod": "Nanchang, Jiangxi",
+  "note": "In 961 Li Jing, the second ruler of the Southern Tang, moved the capital to Nanchang Fu, called the Southern Capital, and died the same year; the last ruler, Li Yu, moved the capital back to Jinling."
+ },
+ "capital:杭州（西府）": {
+  "old": "Hangzhou (Western Seat)",
+  "mod": "Hangzhou, Zhejiang",
+  "note": "Capital of Wuyue; Qian Liu enlarged its outer walls, and it was known as a \"heavenly palace on earth\"."
+ },
+ "capital:福州（长乐府）": {
+  "old": "Fuzhou (Changle Fu)",
+  "mod": "Fuzhou, Fujian",
+  "note": "Capital of Min; raised to Changle Fu in 933."
+ },
+ "capital:长沙": {
+  "old": "Changsha",
+  "mod": "Changsha, Hunan",
+  "note": "Capital of Chu under the Ma family (seat of the Tiance Mansion)."
+ },
+ "capital:兴王府（广州）": {
+  "old": "Xingwang Fu (Guangzhou)",
+  "mod": "Guangzhou, Guangdong",
+  "note": "Capital of the Southern Han, where Liu Yan built lavish palaces."
+ },
+ "capital:江陵": {
+  "old": "Jiangling",
+  "mod": "Jingzhou, Hubei",
+  "note": "Seat of the Gao family of Jingnan."
+ },
+ "capital:成都（后蜀）": {
+  "old": "Chengdu (Later Shu)",
+  "mod": "Chengdu, Sichuan",
+  "note": "Capital of the Later Shu. Meng Chang planted hibiscus all over the city, which is why Chengdu is called the \"City of Hibiscus\"."
+ },
+ "capital:逻些": {
+  "old": "Rasa",
+  "mod": "Lhasa, Tibet",
+  "note": "Capital of the Tibetan Empire; the Tang–Tibet Treaty Pillar (823) stands in front of the Jokhang Temple."
+ },
+ "capital:斡耳朵八里": {
+  "old": "Ordu-Baliq",
+  "mod": "Kharbalgas, Mongolia",
+  "note": "The city of the Uyghur khagan's camp (Ordu-Baliq) on the Orkhon River, with the stele of the Khagan of the Nine-Clan Uyghurs. Burned by the Yenisei Kyrgyz in 840."
+ },
+ "capital:太和城": {
+  "old": "Taihe City",
+  "mod": "Taihe Village, Dali, Yunnan",
+  "note": "The early capital of Nanzhao, where the Nanzhao Dehua Stele (766) stands."
+ },
+ "capital:阳苴咩城@779": {
+  "old": "Yangjumie City",
+  "mod": "old town of Dali, Yunnan",
+  "note": "Nanzhao moved its capital here in 779; it was later the capital of Dachanghe and of the Dali Kingdom."
+ },
+ "capital:阳苴咩城@902": {
+  "old": "Yangjumie City",
+  "mod": "old town of Dali, Yunnan",
+  "note": "The capital of the Zheng family's Dachanghe, the Zhao family's Datianxing and the Yang family's Dayining."
+ },
+ "capital:羊苴咩城": {
+  "old": "Yangjumie City",
+  "mod": "old town of Dali, Yunnan",
+  "note": "Capital of the Dali Kingdom."
+ },
+ "capital:上京龙泉府": {
+  "old": "Longquan Fu (Supreme Capital)",
+  "mod": "Bohai Town, Ning'an, Heilongjiang",
+  "note": "Capital of Balhae, laid out on the model of Chang'an; its outer wall is 16 km around."
+ },
+ "capital:东京龙原府": {
+  "old": "Longyuan Fu (Eastern Capital)",
+  "mod": "Baliancheng, Hunchun, Jilin",
+  "note": "Balhae moved its capital to the Eastern Capital for a time (785–794)."
+ },
+ "capital:中京显德府": {
+  "old": "Xiande Fu (Central Capital)",
+  "mod": "Xigucheng, Helong, Jilin",
+  "note": "Balhae's capital in its early period."
+ },
+ "capital:忽汗城（天福城）": {
+  "old": "Huhan City (Tianfu City)",
+  "mod": "Ning'an, Heilongjiang",
+  "note": "After destroying Balhae, the Khitans renamed Huhan City Tianfu City and made it the capital of Dongdan."
+ },
+ "capital:东平（辽阳）": {
+  "old": "Dongping (Liaoyang)",
+  "mod": "Liaoyang, Liaoning",
+  "note": "In 928 Dongdan moved south to Liaodong and made Dongping its Southern Capital."
+ },
+ "capital:潢水牙帐 · 上京": {
+  "old": "Huang River camp · Supreme Capital",
+  "mod": "Bairin Left Banner, Inner Mongolia",
+  "note": "Site of the Khitan khagan's camp. In 918 Yelü Abaoji built Huangdu, which was renamed the Supreme Capital, Linhuang Fu, in 938."
+ },
+ "capital:奚王牙帐": {
+  "old": "Xi king's camp",
+  "mod": "Ningcheng, Inner Mongolia",
+  "note": "The Xi king's camp; the Liao Central Capital, Dading Fu, was later built here."
+ },
+ "capital:金城": {
+  "old": "Geumseong",
+  "mod": "Gyeongju, South Korea",
+  "note": "Royal capital of Silla; the Bulguksa temple and the Seokguram grotto were built in the mid-8th century."
+ },
+ "capital:完山州": {
+  "old": "Wansanju",
+  "mod": "Jeonju, South Korea",
+  "note": "Capital of Gyeon Hwon's Later Baekje."
+ },
+ "capital:铁圆": {
+  "old": "Cheorwon",
+  "mod": "Cheorwon, South Korea",
+  "note": "Capital of Gung Ye's Taebong."
+ },
+ "capital:开京（松岳）": {
+  "old": "Gaegyeong (Songak)",
+  "mod": "Kaesong, North Korea",
+  "note": "Capital of Goryeo."
+ },
+ "capital:平安京": {
+  "old": "Heian-kyō",
+  "mod": "Kyoto, Japan",
+  "note": "Emperor Kanmu moved the capital here in 794, laying it out on the model of Tang Chang'an."
+ },
+ "capital:高昌": {
+  "old": "Qocho",
+  "mod": "Turpan, Xinjiang",
+  "note": "Winter capital of the Qocho Uyghurs, who spent the summer at Beiting."
+ },
+ "capital:甘州": {
+  "old": "Ganzhou",
+  "mod": "Zhangye, Gansu",
+  "note": "Camp of the Ganzhou Uyghur khagan."
+ },
+ "capital:于阗": {
+  "old": "Khotan",
+  "mod": "Hotan, Xinjiang",
+  "note": "The Western City, the capital of Khotan."
+ },
+ "capital:八剌沙衮": {
+  "old": "Balasagun",
+  "mod": "Tokmok, Kyrgyzstan",
+  "note": "Seat of the Kara-Khanid great khagan; with Kashgar, the seat of the junior khagan, it was one of the khanate's two capitals."
+ },
+ "capital:沙州": {
+  "old": "Shazhou",
+  "mod": "Dunhuang, Gansu",
+  "note": "Seat of the military governor of Guiyi Jun."
+ },
+ "capital:夏州": {
+  "old": "Xiazhou",
+  "mod": "Tongwan City, Jingbian, Shaanxi",
+  "note": "Seat of Dingnan Jun, on the site of Tongwan City of the Great Xia of the Sixteen Kingdoms."
+ },
+ "capital:古螺": {
+  "old": "Cổ Loa",
+  "mod": "Đông Anh, Hanoi, Vietnam",
+  "note": "Ngô Quyền proclaimed himself king in 939, with his capital at Cổ Loa."
+ },
+ "capital:华闾": {
+  "old": "Hoa Lư",
+  "mod": "Ninh Bình, Vietnam",
+  "note": "Capital of Đinh Bộ Lĩnh's Đại Cồ Việt."
+ },
+ "capital:因陀罗补罗": {
+  "old": "Indrapura",
+  "mod": "Đồng Dương, Da Nang (formerly Quảng Nam province), Vietnam",
+  "note": "Capital of Champa."
+ },
+ "capital:蒲甘": {
+  "old": "Pagan",
+  "mod": "Bagan, Myanmar",
+  "note": "Capital of the Pagan Kingdom."
+ },
+ "capital:室利差呾罗": {
+  "old": "Sri Ksetra",
+  "mod": "Pyay (Prome), Myanmar",
+  "note": "Capital of the Pyu."
+ },
+ "battle:常山之战": {
+  "old": "Battle of Changshan",
+  "mod": "Zhengding, Hebei",
+  "yt": "1st month, 756",
+  "sides": "Yan defeated Tang",
+  "cmd": "Shi Siming vs. Yan Gaoqing",
+  "note": "Yan Gaoqing, governor of Changshan Commandery, rose with his younger cousin Yan Zhenqing, governor of Pingyuan; seventeen commanderies of Hebei answered them, cutting An Lushan's line of retreat. Shi Siming turned back and took Changshan; Yan Gaoqing was taken to Luoyang and died cursing the rebels (Wen Tianxiang's \"Song of the Righteous Spirit\": \"the tongue of Yan of Changshan\")."
+ },
+ "battle:潼关之战": {
+  "old": "Battle of Tong Pass",
+  "mod": "Tongguan, Shaanxi",
+  "yt": "6th month, 756",
+  "sides": "Yan defeated Tang",
+  "cmd": "Cui Qianyou vs. Geshu Han",
+  "note": "Emperor Xuanzong and Yang Guozhong pressed Geshu Han to leave the pass and fight a decisive battle; 200,000 Tang troops were ambushed and routed on the Xiyuan plain at Lingbao, Geshu Han was seized by his own officers and handed over to Yan, and Tong Pass fell. Xuanzong abandoned Chang'an and fled, and on the way came the Mawei Station incident."
+ },
+ "battle:睢阳之战": {
+  "old": "Siege of Suiyang",
+  "mod": "Shangqiu, Henan",
+  "yt": "1st–10th month, 757",
+  "sides": "Yan defeated Tang (city fell)",
+  "cmd": "Yin Ziqi vs. Zhang Xun and Xu Yuan",
+  "note": "Zhang Xun first held Yongqiu, then with Xu Yuan held Suiyang to the death for ten months with fewer than 10,000 men against more than 100,000 Yan troops, until the food ran out, the city fell and they were killed. Suiyang shielded the Jiang–Huai region and so saved the Tang's source of revenue; ten days after it fell the Tang army recovered Luoyang."
+ },
+ "battle:太原之战@757": {
+  "old": "Battle of Taiyuan (757)",
+  "mod": "Taiyuan, Shanxi",
+  "yt": "1st–2nd month, 757",
+  "sides": "Tang defeated Yan",
+  "cmd": "Li Guangbi vs. Shi Siming and Cai Xide",
+  "note": "Li Guangbi held Taiyuan with fewer than 10,000 men, digging trenches and tunnels and building trebuchets; he held out for more than fifty days and killed over 70,000 Yan troops, and Shi Siming withdrew."
+ },
+ "battle:香积寺之战": {
+  "old": "Battle of Xiangji Temple",
+  "mod": "Chang'an District, Xi'an, Shaanxi",
+  "yt": "9th month, 757",
+  "sides": "Tang and the Uyghurs defeated Yan",
+  "cmd": "Li Chu, Guo Ziyi and the Uyghur yabghu vs. An Shouzhong and Li Guiren",
+  "note": "150,000 Tang troops and 4,000 Uyghur horsemen fought the decisive battle north of Xiangji Temple, south of Chang'an. The Uyghurs circled round to strike the Yan rear, the Yan army collapsed and 60,000 were beheaded; Chang'an was recovered the next day."
+ },
+ "battle:新店之战": {
+  "old": "Battle of Xindian",
+  "mod": "Shanzhou District, Sanmenxia, Henan",
+  "yt": "10th month, 757",
+  "sides": "Tang and the Uyghurs defeated Yan",
+  "cmd": "Guo Ziyi vs. Yan Zhuang",
+  "note": "Uyghur horsemen came from behind the southern hills to catch the Yan army in a pincer; the Yan army was routed, An Qingxu abandoned Luoyang and fled north to Yecheng, and the Tang recovered the Eastern Capital."
+ },
+ "battle:邺城之战": {
+  "old": "Battle of Yecheng",
+  "mod": "Anyang, Henan",
+  "yt": "winter 758 – 3rd month, 759",
+  "sides": "Yan defeated Tang",
+  "cmd": "nine military governors (Guo Ziyi, Li Guangbi and others) vs. Shi Siming and An Qingxu",
+  "note": "Emperor Suzong appointed no supreme commander and made the eunuch Yu Chao'en army supervisor instead; 600,000 Tang troops besieged Yecheng for half a year without taking it. Shi Siming came to the rescue; while the armies were fighting a violent storm blew up and the Tang army scattered. Shi Siming then killed An Qingxu and proclaimed himself emperor of Great Yan. Du Fu's \"Three Officers\" and \"Three Partings\" describe the conscription around this campaign."
+ },
+ "battle:邙山之战": {
+  "old": "Battle of Mount Mang",
+  "mod": "north of Luoyang, Henan",
+  "yt": "2nd month, 761",
+  "sides": "Yan defeated Tang",
+  "cmd": "Shi Siming vs. Li Guangbi and Pugu Huai'en",
+  "note": "Pressed by Yu Chao'en to give battle, the Tang army was badly beaten at Mount Mang, and Heyang and Huaizhou were lost again. In the same year Shi Siming was killed by his son Shi Chaoyi."
+ },
+ "battle:吐蕃陷长安": {
+  "old": "Tibetan capture of Chang'an",
+  "mod": "Xi'an, Shaanxi",
+  "yt": "10th month, 763",
+  "sides": "Tibet took the city",
+  "cmd": "Tibet vs. Emperor Daizong of Tang",
+  "note": "200,000 Tibetans advanced east; Emperor Daizong fled to Shanzhou, and the Tibetans entered Chang'an and set up Li Chenghong, Prince of Guangwu, as emperor. Fifteen days later Guo Ziyi recovered the city."
+ },
+ "battle:泾阳之盟": {
+  "old": "Treaty of Jingyang",
+  "mod": "Jingyang, Shaanxi",
+  "yt": "10th month, 765",
+  "sides": "Tang and the Uyghurs defeated Tibet",
+  "cmd": "Guo Ziyi",
+  "note": "Pugu Huai'en rebelled against the Tang and led 300,000 Tibetans, Uyghurs and others in an invasion, but died of illness on the way. Guo Ziyi took off his helmet and rode alone into the Uyghur camp to renew the old friendship; together with the Uyghurs he attacked the Tibetans on the Xiyuan plain at Lingtai, and Guanzhong was relieved."
+ },
+ "battle:洹水之战": {
+  "old": "Battle of the Huan River",
+  "mod": "Wei County, Hebei",
+  "yt": "1st month, 782",
+  "sides": "Tang defeated Weibo",
+  "cmd": "Ma Sui, Li Baozhen and Li Peng vs. Tian Yue",
+  "note": "In the Jianzhong war to curb the fanzhen the Tang army routed Tian Yue on the Huan River and besieged Weizhou; then Zhu Tao and Wang Wujun changed sides, four fanzhen joined forces and their leaders proclaimed themselves kings, and the war turned."
+ },
+ "battle:奉天之围": {
+  "old": "Siege of Fengtian",
+  "mod": "Qian County, Shaanxi",
+  "yt": "10th–11th month, 783",
+  "sides": "Tang held the city",
+  "cmd": "Emperor Dezong of Tang and Hun Jian vs. Zhu Ci",
+  "note": "After the Jingyuan mutiny Emperor Dezong fled to Fengtian; Zhu Ci led a great army in person and besieged the city for more than a month. Hun Jian held it to the end, and Li Huaiguang hurried back from Hebei to break the siege. Lu Zhi drafted for Dezong the \"Great Amnesty on Changing the Reign Title at Fengtian\", the \"edict of self-reproach\"."
+ },
+ "battle:李晟收复长安": {
+  "old": "Li Sheng retakes Chang'an",
+  "mod": "East Wei Bridge, Xi'an, Shaanxi",
+  "yt": "5th month, 784",
+  "sides": "Tang defeated Zhu Ci",
+  "cmd": "Li Sheng vs. Zhu Ci",
+  "note": "Li Sheng camped with an isolated army at the East Wei Bridge and refused to be absorbed by Li Huaiguang; in the 5th month he broke into Chang'an through the Guangtai Gate, and Zhu Ci fled west and was killed."
+ },
+ "battle:平凉劫盟": {
+  "old": "Ambush at the Pingliang treaty",
+  "mod": "Pingliang, Gansu",
+  "yt": "intercalary 5th month, 787",
+  "sides": "Tibet ambushed Tang",
+  "cmd": "Shang Jiezan vs. Hun Jian",
+  "note": "The Tibetan chief minister Shang Jiezan pretended to make a treaty and had hidden troops seize and kill the Tang envoys; Hun Jian barely escaped with his life, and the deputy envoy Cui Hanheng and more than sixty others were captured."
+ },
+ "battle:北庭之战": {
+  "old": "Battle of Beiting",
+  "mod": "Jimsar, Xinjiang",
+  "yt": "790",
+  "sides": "Tibet defeated Tang and the Uyghurs",
+  "cmd": "Tibet and the Karluks vs. Yang Xigu and Jiegan Jiasi",
+  "note": "Tibet, joined by the Karluks and the White-Clad Turks, attacked Beiting; the Uyghur chief minister Jiegan Jiasi failed to relieve it, Beiting fell, and its military governor Yang Xigu fled to Xizhou and was later killed by the Uyghurs."
+ },
+ "battle:维州之战": {
+  "old": "Battle of Weizhou",
+  "mod": "Li County, Sichuan",
+  "yt": "801",
+  "sides": "Tang defeated Tibet",
+  "cmd": "Wei Gao vs. Lun Mangre",
+  "note": "Wei Gao, allied with Nanzhao and the Eastern tribes, attacked in nine columns and routed the Tibetans around Yazhou and Weizhou, capturing the Tibetan inner chief minister Lun Mangre. From then on Tibet declined."
+ },
+ "battle:鹿头关之战": {
+  "old": "Battle of Lutou Pass",
+  "mod": "north of Deyang, Sichuan",
+  "yt": "806",
+  "sides": "Tang defeated Xichuan",
+  "cmd": "Gao Chongwen vs. Liu Pi",
+  "note": "The first campaign after Emperor Xianzong's accession: Gao Chongwen won eight battles out of eight, broke through Lutou Pass, took Chengdu and captured Liu Pi."
+ },
+ "battle:蔡州之战": {
+  "old": "Battle of Caizhou",
+  "mod": "Runan, Henan",
+  "yt": "10th month, 817",
+  "sides": "Tang defeated Huaixi",
+  "cmd": "Li Su vs. Wu Yuanji",
+  "note": "The war in Huaixi had dragged on for three years. Li Su treated the surrendered officer Li You generously, then on a snowy night made a forced march of seventy li to surprise Caizhou and captured Wu Yuanji alive. Huaixi, held independently for more than thirty years, was pacified, and the Hebei fanzhen were struck with fear."
+ },
+ "battle:平淄青": {
+  "old": "Pacification of Ziqing",
+  "mod": "Dongping, Shandong",
+  "yt": "818–819",
+  "sides": "Tang defeated Ziqing",
+  "cmd": "Tian Hongzheng, Li Guangyan and others vs. Li Shidao",
+  "note": "Troops from many fanzhen joined the attack; Liu Wu, Ziqing's chief commander of troops, turned his army back and beheaded Li Shidao and his son. The twelve prefectures were pacified and divided into three fanzhen."
+ },
+ "battle:杀胡山之战": {
+  "old": "Battle of Mount Shahu",
+  "mod": "around Horinger, Inner Mongolia",
+  "yt": "1st month, 843",
+  "sides": "Tang defeated the Uyghurs",
+  "cmd": "Liu Mian and Shi Xiong vs. Wujie Khagan",
+  "note": "After the fall of the Uyghur Khaganate, Wujie Khagan came south to raid the frontier, holding Princess Taihe, given to the Uyghurs in a marriage alliance; Shi Xiong raided his camp by night and brought Princess Taihe back, and Wujie fled far away."
+ },
+ "battle:泽潞之役": {
+  "old": "Zelu campaign",
+  "mod": "Changzhi, Shanxi",
+  "yt": "843–844",
+  "sides": "Tang defeated Zhaoyi",
+  "cmd": "Li Deyu (directing) vs. Liu Zhen",
+  "note": "Liu Zhen of Zhaoyi defied the court and set himself up; the chief minister Li Deyu insisted on a punitive campaign and had Chengde and Weibo send troops. In 844 Liu Zhen was killed by his officer Guo Yi, and Zhaoyi was pacified."
+ },
+ "battle:沙州起义": {
+  "old": "Shazhou uprising",
+  "mod": "Dunhuang, Gansu",
+  "yt": "848",
+  "sides": "Zhang Yichao defeated Tibet",
+  "cmd": "Zhang Yichao",
+  "note": "Zhang Yichao led Chinese and Tibetan inhabitants in a rising, drove out the Tibetan commanders and recovered Shazhou and Guazhou, then fought his way across Hexi; in 851 he sent envoys with the maps and registers of eleven prefectures to submit to the Tang."
+ },
+ "battle:交趾之战": {
+  "old": "Battle of Jiaozhi",
+  "mod": "Hanoi, Vietnam",
+  "yt": "863–866",
+  "sides": "Tang defeated Nanzhao",
+  "cmd": "Gao Pian vs. Yang Sijin of Nanzhao",
+  "note": "Nanzhao took Jiaozhi twice (the second time in 863), killing or carrying off nearly 150,000 people in all. Gao Pian counterattacked from 864, recovered Jiaozhi in 866 and built the citadel of Đại La; Annan was reorganized as the Jinghai Jun."
+ },
+ "battle:庞勋之乱": {
+  "old": "Pang Xun rebellion",
+  "mod": "west of Suzhou, Anhui",
+  "yt": "868–869",
+  "sides": "Tang defeated Pang Xun",
+  "cmd": "Kang Chengxun and Zhuye Chixin of the Shatuo vs. Pang Xun",
+  "note": "Eight hundred Xuzhou soldiers garrisoning Guizhou marched home north without orders, seized Xuzhou and grew to 200,000 men; the Tang put them down with the help of Shatuo cavalry, and Zhuye Chixin was rewarded with the name Li Guochang. As historians put it, \"The Tang fell to Huang Chao, but the root of the disaster lay in Guilin.\""
+ },
+ "battle:成都之围": {
+  "old": "Siege of Chengdu",
+  "mod": "Chengdu, Sichuan",
+  "yt": "869–870",
+  "sides": "Tang held the city",
+  "cmd": "Yan Qingfu and others vs. Shilong of Nanzhao",
+  "note": "Nanzhao invaded Xichuan in force and besieged Chengdu; the soldiers and people in the city held out until relief arrived and Nanzhao withdrew. Gao Pian took up his post in 875 and built Chengdu's outer wall."
+ },
+ "battle:黄巢陷广州": {
+  "old": "Huang Chao takes Guangzhou",
+  "mod": "Guangzhou, Guangdong",
+  "yt": "9th month, 879",
+  "sides": "Huang Chao took the city",
+  "cmd": "Huang Chao",
+  "note": "Huang Chao came south and took Guangzhou; according to Arabic sources he killed great numbers of foreign merchants. Epidemics were raging in Lingnan, and Huang Chao soon turned north."
+ },
+ "battle:黄巢破潼关": {
+  "old": "Huang Chao breaks through Tong Pass",
+  "mod": "Tongguan, Shaanxi",
+  "yt": "12th month, 880",
+  "sides": "Huang Chao defeated Tang",
+  "cmd": "Huang Chao vs. Zhang Chengfan",
+  "note": "Huang Chao's 600,000 men broke through Tong Pass; Emperor Xizong fled to Chengdu and Huang Chao entered Chang'an."
+ },
+ "battle:梁田陂之战": {
+  "old": "Battle of Liangtianpo",
+  "mod": "west of Huazhou District, Weinan, Shaanxi",
+  "yt": "2nd month, 883",
+  "sides": "Tang (Shatuo) defeated Great Qi",
+  "cmd": "Li Keyong vs. Shang Rang",
+  "note": "Li Keyong with his Shatuo \"Raven Army\" routed 150,000 of Huang Chao's troops, and in the 4th month recovered Chang'an. He was twenty-eight, and his name was known throughout the land."
+ },
+ "battle:狼虎谷": {
+  "old": "Langhu Valley",
+  "mod": "Laiwu District, Jinan, Shandong",
+  "yt": "6th month, 884",
+  "sides": "Tang defeated Huang Chao",
+  "cmd": "Shi Pu vs. Huang Chao",
+  "note": "Defeated in Langhu Valley on Mount Tai, Huang Chao was killed by his nephew Lin Yan (one account says he killed himself), ending a rising that had lasted ten years."
+ },
+ "battle:上源驿之变": {
+  "old": "Shangyuan Post Station incident",
+  "mod": "Kaifeng, Henan",
+  "yt": "5th month, 884",
+  "sides": "Zhu Quanzhong ambushed Li Keyong",
+  "cmd": "Zhu Quanzhong vs. Li Keyong",
+  "note": "Returning from the pursuit of Huang Chao, Li Keyong passed through Bianzhou; Zhu Quanzhong gave a banquet for him at the Shangyuan Post Station, then at night sent troops to attack him, and Li Keyong escaped by letting himself down the city wall on a rope. From then on Zhu and Li were sworn enemies, and their feud shaped the wars of the north for the next forty years."
+ },
+ "battle:清口之战": {
+  "old": "Battle of Qingkou",
+  "mod": "southwest of Huai'an, Jiangsu",
+  "yt": "11th month, 897",
+  "sides": "Huainan defeated Xuanwu",
+  "cmd": "Yang Xingmi and Zhu Jin vs. Pang Shigu",
+  "note": "Zhu Quanzhong attacked Huainan in two columns; Yang Xingmi broke the Huai dikes to flood Pang Shigu's camp and killed Pang Shigu, and the Bianzhou army was routed; the other column under Ge Congzhou withdrew on hearing the news. This settled the division between north and south."
+ },
+ "battle:凤翔之围": {
+  "old": "Siege of Fengxiang",
+  "mod": "Fengxiang District, Baoji, Shaanxi",
+  "yt": "902–903",
+  "sides": "Xuanwu defeated Qi",
+  "cmd": "Zhu Quanzhong vs. Li Maozhen",
+  "note": "The eunuch Han Quanhui carried Emperor Zhaozong off to Li Maozhen. Zhu Quanzhong besieged Fengxiang for a year, until people in the city were eating one another and Li Maozhen killed the eunuchs and handed over Zhaozong. From then on Zhu Quanzhong controlled the court."
+ },
+ "battle:潞州之战": {
+  "old": "Battle of Luzhou",
+  "mod": "Changzhi, Shanxi",
+  "yt": "5th month, 908",
+  "sides": "Jin defeated Later Liang",
+  "cmd": "Li Cunxu vs. Fu Daozhao",
+  "note": "The Liang army built a double-walled siege camp and besieged Luzhou for a year. Li Keyong had just died; Li Cunxu used a thick fog to strike the siege camp from Sanchui Ridge and routed the Liang army. Zhu Quanzhong sighed, \"A son should be like Li Yazi.\""
+ },
+ "battle:柏乡之战": {
+  "old": "Battle of Baixiang",
+  "mod": "Baixiang, Hebei",
+  "yt": "1st month, 911",
+  "sides": "Jin and Zhao defeated Later Liang",
+  "cmd": "Li Cunxu and Zhou Dewei vs. Wang Jingren",
+  "note": "The Jin army harassed the enemy with cavalry and counterattacked once the enemy was worn out; Liang's best troops were almost entirely destroyed, and the Hebei fanzhen went over to Jin."
+ },
+ "battle:幽州之围": {
+  "old": "Siege of Youzhou",
+  "mod": "Beijing",
+  "yt": "3rd–8th month, 917",
+  "sides": "Jin held the city",
+  "cmd": "Zhou Dewei vs. Yelü Abaoji",
+  "note": "The Khitans, said to number 300,000, besieged Youzhou for more than two hundred days; Li Siyuan and Li Cunshen relieved it with 70,000 foot and horse."
+ },
+ "battle:胡柳陂之战": {
+  "old": "Battle of Huliupo",
+  "mod": "west of Juancheng, Shandong",
+  "yt": "12th month, 918",
+  "sides": "Jin won a costly victory over Later Liang",
+  "cmd": "Li Cunxu vs. He Gui",
+  "note": "The two armies charged back and forth at Huliupo, each losing tens of thousands; the Jin general Zhou Dewei and his son were killed in battle."
+ },
+ "battle:中都之战": {
+  "old": "Battle of Zhongdu",
+  "mod": "Wenshang, Shandong",
+  "yt": "10th month, 923",
+  "sides": "Later Tang defeated Later Liang",
+  "cmd": "Li Cunxu vs. Wang Yanzhang",
+  "note": "Li Cunxu captured the Liang general Wang Yanzhang; Li Siyuan made a long dash to strike Kaifeng, the last Liang emperor killed himself, and the Later Liang fell."
+ },
+ "battle:灭前蜀之役": {
+  "old": "Conquest of Former Shu",
+  "mod": "Jiange, Sichuan",
+  "yt": "9th–11th month, 925",
+  "sides": "Later Tang defeated Former Shu",
+  "cmd": "Guo Chongtao and Li Jiji vs. Wang Yan",
+  "note": "60,000 Later Tang troops entered Shu from Fengzhou and reached Chengdu in seventy days, and Wang Yan surrendered. Soon afterwards Guo Chongtao was falsely accused by eunuchs and killed."
+ },
+ "battle:忽汗城之战": {
+  "old": "Battle of Huhan City",
+  "mod": "Ning'an, Heilongjiang",
+  "yt": "12th month, 925 – 1st month, 926",
+  "sides": "Khitan defeated Balhae",
+  "cmd": "Yelü Abaoji vs. Dae Inseon",
+  "note": "The Khitans first took Fuyu Fu, then besieged Huhan City; the Balhae king Dae Inseon surrendered, and Balhae, which had lasted 229 years, came to an end."
+ },
+ "battle:晋阳之战": {
+  "old": "Battle of Jinyang",
+  "mod": "south of Taiyuan, Shanxi",
+  "yt": "9th – intercalary 11th month, 936",
+  "sides": "Khitan and Shi Jingtang defeated Later Tang",
+  "cmd": "Yelü Deguang vs. Zhang Jingda",
+  "note": "Shi Jingtang rebelled at Taiyuan; 50,000 Khitan horsemen came to his aid, routed the Later Tang army and besieged it at Jin'an Fort. Zhang Jingda was killed by his own officers and the whole army surrendered to the Khitans; Shi Jingtang proclaimed himself emperor and marched south, and the Later Tang fell."
+ },
+ "battle:白藤江之战": {
+  "old": "Battle of Bạch Đằng (938)",
+  "mod": "Haiphong, Vietnam",
+  "yt": "winter 938",
+  "sides": "Jinghai defeated Southern Han",
+  "cmd": "Ngô Quyền vs. Liu Hongcao",
+  "note": "Ngô Quyền secretly planted iron-tipped stakes in the mouth of the Bạch Đằng River and lured the Southern Han fleet into the river at high tide; when the tide fell the ships were caught on the stakes. Southern Han was badly defeated, and Liu Hongcao, son of the Southern Han ruler and Prince of Jiao, was killed. The next year Ngô Quyền proclaimed himself king, and Vietnam broke free of rule by the dynasties of the Central Plains."
+ },
+ "battle:阳城之战": {
+  "old": "Battle of Yangcheng",
+  "mod": "around Qingyuan District, Baoding, Hebei",
+  "yt": "3rd month, 945",
+  "sides": "Later Jin defeated Khitan",
+  "cmd": "Du Chongwei and Fu Yanqing vs. Yelü Deguang",
+  "note": "Surrounded and short of water at Baituanwei Village, the Jin army broke out in a strong wind under Fu Yanqing and others; the Khitans were badly beaten and Yelü Deguang fled on a camel."
+ },
+ "battle:建州之役": {
+  "old": "Jianzhou campaign",
+  "mod": "Jian'ou, Fujian",
+  "yt": "944–945",
+  "sides": "Southern Tang defeated Min (Yin)",
+  "cmd": "Zha Wenhui vs. Wang Yanzheng",
+  "note": "The Wang brothers of Min were fighting a civil war; Southern Tang seized the chance to send troops and took Jianzhou in the 8th month of 945. Wang Yanzheng surrendered, and Min fell."
+ },
+ "battle:中渡桥之降": {
+  "old": "Surrender at Zhongdu Bridge",
+  "mod": "south of Zhengding, Hebei",
+  "yt": "12th month, 946",
+  "sides": "Khitan defeated Later Jin",
+  "cmd": "Yelü Deguang vs. Du Chongwei",
+  "note": "Du Chongwei, leading the 100,000-strong main army of Later Jin, was surrounded at the Zhongdu Bridge over the Hutuo River and surrendered to the Khitans; Jin lost its best troops, and the same month the Khitan vanguard under Zhang Yanze broke into Kaifeng."
+ },
+ "battle:南唐灭楚": {
+  "old": "Southern Tang conquers Chu",
+  "mod": "Changsha, Hunan",
+  "yt": "10th month, 951",
+  "sides": "Southern Tang defeated Chu",
+  "cmd": "Bian Hao vs. Ma Xichong",
+  "note": "As the sons of the Ma family of Chu fought one another, the Southern Tang general Bian Hao entered Changsha; the whole Ma clan was moved east to Jinling, and Chu fell. The next year Liu Yan and Wang Kui drove out the Southern Tang army."
+ },
+ "battle:高平之战": {
+  "old": "Battle of Gaoping",
+  "mod": "Gaoping, Shanxi",
+  "yt": "3rd month, 954",
+  "sides": "Later Zhou defeated Northern Han and Liao",
+  "cmd": "Chai Rong and Zhao Kuangyin vs. Liu Chong and Yang Gun",
+  "note": "Soon after Emperor Shizong of Later Zhou came to the throne, Northern Han attacked together with Liao. When Fan Aineng's right wing fled from the field, Shizong braved arrows and stones to lead the fight in person, Zhao Kuangyin and others charged, and the Han–Liao army was routed. Afterwards Fan Aineng and more than seventy other officers were executed and the Palace Army was reorganized."
+ },
+ "battle:紫金山之战": {
+  "old": "Battle of Mount Zijin",
+  "mod": "Shou County, Anhui",
+  "yt": "956–957",
+  "sides": "Later Zhou defeated Southern Tang",
+  "cmd": "Chai Rong vs. Liu Renshan and Zhu Yuan",
+  "note": "Liu Renshan, the commander at Shouzhou, held out for more than a year; in 957 Emperor Shizong of Later Zhou led the army himself and routed the Southern Tang relief army at Mount Zijin, and Shouzhou surrendered. In 958 Southern Tang ceded its fourteen prefectures north of the Yangtze."
+ },
+ "battle:收复三关": {
+  "old": "Recovery of the Three Passes",
+  "mod": "Xiong County, Hebei",
+  "yt": "4th–5th month, 959",
+  "sides": "Later Zhou defeated Liao",
+  "cmd": "Chai Rong vs. Liao",
+  "note": "On his northern campaign Emperor Shizong of Later Zhou took Ningzhou, Yijin Pass, Waqiao Pass, Yukou Pass and the prefectures of Mozhou and Yingzhou in forty-two days without a battle; just as he was about to advance on Youzhou he fell seriously ill and turned back."
+ },
+ "battle:宋灭后蜀": {
+  "old": "Song conquers Later Shu",
+  "mod": "Guangyuan, Sichuan",
+  "yt": "11th month, 964 – 1st month, 965",
+  "sides": "Song defeated Later Shu",
+  "cmd": "Wang Quanbin and Liu Guangyi vs. Meng Chang",
+  "note": "The Song army entered Shu in two columns, from Fengzhou and Guizhou, conquered it in sixty-six days, and Meng Chang surrendered."
+ },
+ "battle:韶州之战": {
+  "old": "Battle of Shaozhou",
+  "mod": "Shaoguan, Guangdong",
+  "yt": "970–971",
+  "sides": "Song defeated Southern Han",
+  "cmd": "Pan Mei vs. Li Chengwo",
+  "note": "Pan Mei attacked Hezhou and Shaozhou. Southern Han met him with war elephants; the Song troops shot the elephants with crossbows, the elephants turned and charged their own side, and Southern Han was badly beaten. In the 2nd month of 971 the Song army entered Guangzhou and Liu Chang surrendered."
+ },
+ "battle:采石渡江": {
+  "old": "Crossing at Caishi",
+  "mod": "Caishiji, Ma'anshan, Anhui",
+  "yt": "10th month, 974 – 11th month, 975",
+  "sides": "Song defeated Southern Tang",
+  "cmd": "Cao Bin and Pan Mei vs. Li Yu",
+  "note": "Using Fan Ruoshui's measurements of the width of the river, the Song army built a pontoon bridge at Caishiji and crossed the Yangtze; it besieged Jinling for nearly a year, the city fell in the 11th month of 975, and Li Yu surrendered."
+ },
+ "battle:太原之战@979": {
+  "old": "Battle of Taiyuan (979)",
+  "mod": "Taiyuan, Shanxi",
+  "yt": "2nd–5th month, 979",
+  "sides": "Song defeated Northern Han",
+  "cmd": "Emperor Taizong of Song vs. Liu Jiyuan",
+  "note": "The Song army first drove back a Liao relief army at Shiling Pass; Emperor Taizong of Song came to the walls himself to direct the assault, and Liu Jiyuan surrendered. Taizong ordered the old city of Jinyang burned."
+ },
+ "battle:高梁河之战": {
+  "old": "Battle of the Gaoliang River",
+  "mod": "outside Xizhimen, Beijing",
+  "yt": "7th month, 979",
+  "sides": "Liao defeated Song",
+  "cmd": "Yelü Xiuge and Yelü Xiezhen vs. Emperor Taizong of Song",
+  "note": "After destroying Northern Han the Song army pressed on to attack Youzhou but could not take it; when Liao reinforcements arrived it was badly beaten at the Gaoliang River, and Emperor Taizong of Song, wounded by an arrow, fled south in a donkey cart. From then on Song and Liao faced each other for a long time."
+ },
+ "pass:潼关": {
+  "old": "Tong Pass",
+  "mod": "Gangkou, Tongguan, Shaanxi",
+  "note": "The eastern gate of Guanzhong. It fell twice, in the An Lushan Rebellion and in Huang Chao's rebellion, and each time Chang'an fell with it."
+ },
+ "pass:蒲津关": {
+  "old": "Pujin Pass",
+  "mod": "Puzhou, Yongji, Shanxi",
+  "note": "A Yellow River crossing joining Guanzhong and Hedong; in the Kaiyuan era the Tang cast iron oxen to anchor its pontoon bridge."
+ },
+ "pass:武关": {
+  "old": "Wu Pass",
+  "mod": "Wuguan, Danfeng, Shaanxi",
+  "note": "The southeastern gate of Chang'an, leading through Shangzhou to Xiangzhou and Dengzhou."
+ },
+ "pass:大散关": {
+  "old": "Dasan Pass",
+  "mod": "south of Baoji, Shaanxi",
+  "note": "The northern entrance of the Qinling, commanding the Chencang road (Jialing road) into Hanzhong and Shu."
+ },
+ "pass:陇关": {
+  "old": "Long Pass",
+  "mod": "west of Long County, Shaanxi",
+  "note": "Also called Dazhen Pass, the main road over the Long Mountains; after Tibet took Longyou it became a Tang–Tibetan frontier pass."
+ },
+ "pass:萧关": {
+  "old": "Xiao Pass",
+  "mod": "southeast of Guyuan, Ningxia",
+  "note": "The northwestern gate of Guanzhong; with the Seven Passes of Yuanzhou, a key point of the frontier defense."
+ },
+ "pass:六盘关": {
+  "old": "Liupan Pass",
+  "mod": "south of Guyuan, Ningxia",
+  "note": "One of the \"Seven Passes\" of Yuanzhou (Shimen, Yizang, Zhisheng, Liupan, Shixia, Mujing and Muxia), recovered together with Yuanzhou in 849."
+ },
+ "pass:剑门关": {
+  "old": "Jianmen Pass",
+  "mod": "Jiange, Sichuan",
+  "note": "A natural fortress on the Jinniu road: \"one man holding the pass can stop ten thousand\"."
+ },
+ "pass:瞿塘关": {
+  "old": "Qutang Pass",
+  "mod": "Baidicheng, Fengjie, Chongqing",
+  "note": "The western mouth of the Three Gorges, the eastern gate of Shu."
+ },
+ "pass:虎牢关": {
+  "old": "Hulao Pass",
+  "mod": "Sishui, Xingyang, Henan",
+  "note": "The eastern gate of Luoyang, commanding the main road between Bianzhou and Luoyang."
+ },
+ "pass:天井关": {
+  "old": "Tianjing Pass",
+  "mod": "south of Jincheng, Shanxi",
+  "note": "A pass on the Taihang Xing, linking Zelu and Heyang."
+ },
+ "pass:井陉口": {
+  "old": "Jingxing Pass",
+  "mod": "Jingxing, Hebei",
+  "note": "Also called Tumen Pass, one of the Eight Passes of the Taihang, linking Hedong and Hebei (Chengde)."
+ },
+ "pass:飞狐口": {
+  "old": "Feihu Pass",
+  "mod": "north of Laiyuan, Hebei",
+  "note": "One of the Eight Passes of the Taihang, the route from Yuzhou to Yizhou and Dingzhou."
+ },
+ "pass:雁门关": {
+  "old": "Yanmen Pass",
+  "mod": "Dai County, Shanxi",
+  "note": "Called Xixing Pass under the Tang; the northern barrier of Hedong, and later on the Song–Liao border."
+ },
+ "pass:居庸关": {
+  "old": "Juyong Pass",
+  "mod": "Changping, Beijing",
+  "note": "The Jundu Xing of the Eight Passes of the Taihang; the northern gate of Youzhou."
+ },
+ "pass:古北口": {
+  "old": "Gubeikou",
+  "mod": "Miyun, Beijing",
+  "note": "The main road northeast from Youzhou to the Xi and the Khitans."
+ },
+ "pass:松亭关": {
+  "old": "Songting Pass",
+  "mod": "Xifengkou, Kuancheng, Hebei",
+  "note": "Site of the Lulong Fortress, the main road from Pingzhou into the Xi lands."
+ },
+ "pass:渝关": {
+  "old": "Yu Pass",
+  "mod": "east of Funing, Hebei",
+  "note": "Also called Linyu Pass (the Yu is also written with a different character); at the western end of the Liaoxi Corridor, lost to the Khitans early in the Five Dynasties, while Zhou Dewei governed Youzhou."
+ },
+ "pass:瓦桥关": {
+  "old": "Waqiao Pass",
+  "mod": "Xiong County, Hebei",
+  "note": "Recovered by Emperor Shizong of Later Zhou in 959, who set up Xiongzhou here; with Yijin and Yukou it formed the \"Three Passes\", key fortresses on the Song–Liao border."
+ },
+ "pass:益津关": {
+  "old": "Yijin Pass",
+  "mod": "Bazhou, Hebei",
+  "note": "Recovered in 959; Bazhou was set up here."
+ },
+ "pass:淤口关": {
+  "old": "Yukou Pass",
+  "mod": "Xin'an, Bazhou, Hebei",
+  "note": "One of the Three Passes."
+ },
+ "pass:大庾岭": {
+  "old": "Dayu Pass",
+  "mod": "Dayu, Jiangxi – Nanxiong, Guangdong",
+  "note": "One of the Five Ridges. In the Kaiyuan era Zhang Jiuling opened the Meiling road, the most important route between Lingnan and the Central Plains."
+ },
+ "pass:玉门关": {
+  "old": "Yumen Pass",
+  "mod": "east of Guazhou, Gansu",
+  "note": "The Tang Yumen Pass lay east of Jinchang City in Guazhou; Xuanzang left through it on his journey west."
+ },
+ "pass:阳关": {
+  "old": "Yang Pass",
+  "mod": "southwest of Dunhuang, Gansu",
+  "note": "The pass southwest of Shazhou onto the Southern Route of the Western Regions: \"west of Yang Pass you will meet no old friends\"."
+ },
+ "pass:铁门关": {
+  "old": "Tiemen Pass",
+  "mod": "north of Korla, Xinjiang",
+  "note": "A gorge pass on the road from Karasahr to Kucha."
+ },
+ "pass:石堡城": {
+  "old": "Shibao Fortress",
+  "mod": "southwest of Huangyuan, Qinghai",
+  "note": "A fortress fought over again and again by Tang and Tibet. Geshu Han took it in 749 at a cost of tens of thousands of casualties; it was later lost again."
+ },
+ "event:范阳起兵": {
+  "old": "Rising at Fanyang",
+  "mod": "Beijing",
+  "yt": "11th month, 755",
+  "note": "Under the pretext of \"punishing Yang Guozhong\", An Lushan marched south from Fanyang with 150,000 men (claimed as 200,000) from his own troops and Tongra, Xi, Khitan and Shiwei soldiers. The An Lushan Rebellion had begun."
+ },
+ "event:马嵬驿之变": {
+  "old": "Mawei Station incident",
+  "mod": "Mawei, Xingping, Shaanxi",
+  "yt": "6th month, 756",
+  "note": "Fleeing west, Emperor Xuanzong reached Mawei Station, where the Palace Army mutinied, killed Yang Guozhong and forced Xuanzong to have Yang Guifei strangled. The crown prince Li Heng went north, while Xuanzong went on to Shu."
+ },
+ "event:灵武即位": {
+  "old": "Accession at Lingwu",
+  "mod": "Lingwu, Ningxia",
+  "yt": "7th month, 756",
+  "note": "The crown prince Li Heng took the throne at Lingwu (Emperor Suzong), honored Xuanzong as Retired Emperor, and relied on the Shuofang army to put down the rebellion."
+ },
+ "event:杜甫草堂": {
+  "old": "Du Fu's Thatched Cottage",
+  "mod": "Chengdu, Sichuan",
+  "yt": "759–765",
+  "note": "Living as a refugee in Chengdu, Du Fu built a thatched cottage by the Huanhua Stream, where he wrote \"My Thatched Hut Torn by the Autumn Wind\", \"Good Rain on a Spring Night\" and other poems."
+ },
+ "event:陆羽著《茶经》": {
+  "old": "Lu Yu writes The Classic of Tea",
+  "mod": "Huzhou, Zhejiang",
+  "yt": "c. 780",
+  "note": "Living as a recluse by the Tiao Stream in Huzhou, Lu Yu wrote The Classic of Tea, and tea drinking spread across the country; in 793 the Tang began to tax tea."
+ },
+ "event:两税法": {
+  "old": "Two-Tax Law",
+  "mod": "Xi'an, Shaanxi",
+  "yt": "780",
+  "note": "The chief minister Yang Yan introduced the Two-Tax Law, levied in summer and autumn according to household grade and landholding, in place of the zu-yong-diao system: a major turning point in China's tax system."
+ },
+ "event:景教碑": {
+  "old": "Nestorian Stele",
+  "mod": "Xi'an, Shaanxi",
+  "yt": "781",
+  "note": "The Stele of the Propagation of the Luminous Religion of Daqin in China stood at the Daqin Monastery in the Yining Ward of Chang'an. It records 150 years of the Luminous Religion (Nestorian Christianity) in China."
+ },
+ "event:点苍山会盟": {
+  "old": "Treaty of Diancang",
+  "mod": "Dali, Yunnan",
+  "yt": "1st month, 794",
+  "note": "The Tang envoy Cui Zuoshi and the Nanzhao king Yimouxun swore a covenant at the shrine on the Diancang Mountains; Nanzhao broke with Tibet and returned to Tang allegiance."
+ },
+ "event:永州八记": {
+  "old": "Eight Records of Yongzhou",
+  "mod": "Yongzhou, Hunan",
+  "yt": "805–815",
+  "note": "After the failure of the Yongzhen Reform, Liu Zongyuan spent ten years banished as adjutant of Yongzhou, where he wrote the Eight Records of Yongzhou and \"The Snake Catcher\"."
+ },
+ "event:江州司马": {
+  "old": "Adjutant of Jiangzhou",
+  "mod": "Jiujiang, Jiangxi",
+  "yt": "815–818",
+  "note": "Banished as adjutant of Jiangzhou, Bai Juyi wrote \"Song of the Pipa\" and built a thatched hall on Mount Lu."
+ },
+ "event:韩愈贬潮州": {
+  "old": "Han Yu banished to Chaozhou",
+  "mod": "Chaozhou, Guangdong",
+  "yt": "819",
+  "note": "When Emperor Xianzong had the Buddha's bone from Famen Temple brought into the palace, Han Yu submitted his \"Memorial on the Buddha's Bone\" and was demoted to prefect of Chaozhou, where he founded schools and drove off the crocodiles; the local hills and rivers were later all named \"Han\" after him."
+ },
+ "event:唐蕃会盟碑": {
+  "old": "Tang–Tibet Treaty Pillar",
+  "mod": "Lhasa, Tibet",
+  "yt": "821–823",
+  "note": "Tang and Tibet swore treaties first at Chang'an and then at Rasa (the Treaty of Changqing), agreeing that \"each shall keep to its own territory and neither shall invade the other\"; the text was carved in Chinese and Tibetan in front of the Jokhang Temple."
+ },
+ "event:清海镇": {
+  "old": "Cheonghae Garrison",
+  "mod": "Wando, South Korea",
+  "yt": "828",
+  "note": "The Silla man Jang Bogo set up the Cheonghae Garrison on Wando, controlling the Yellow Sea trade route and sailing between Dengzhou, Chuzhou and Hakata in Japan."
+ },
+ "event:维州受降": {
+  "old": "Surrender of Weizhou",
+  "mod": "Li County, Sichuan",
+  "yt": "831",
+  "note": "Xidamou, the Tibetan deputy commander at Weizhou, surrendered the city to Li Deyu, military governor of Xichuan; the chief minister Niu Sengru ordered it returned on the grounds of the treaty, and Xidamou and his men were killed by the Tibetans. It became a famous case in the factional struggle between Niu and Li."
+ },
+ "event:甘露之变": {
+  "old": "Sweet Dew Incident",
+  "mod": "Xi'an, Shaanxi",
+  "yt": "11th month, 835",
+  "note": "Emperor Wenzong plotted with Li Xun and Zheng Zhu to kill the eunuchs, luring Qiu Shiliang with the pretext of viewing \"sweet dew\"; the plot leaked, and the eunuchs led the Shence Army in slaughtering more than a thousand court officials, clerks, guards and townspeople. After this the eunuchs were more overbearing than ever."
+ },
+ "event:圆仁入唐": {
+  "old": "Ennin in Tang China",
+  "mod": "Huai'an, Jiangsu",
+  "yt": "838–847",
+  "note": "The Japanese monk Ennin came to Tang China with the last Japanese embassy to the Tang, made pilgrimages to Mount Wutai and Chang'an, lived through the Huichang persecution of Buddhism, and returned home with the help of the Silla communities in Chuzhou and Dengzhou. He wrote the Record of a Pilgrimage to China in Search of the Law."
+ },
+ "event:会昌灭佛": {
+  "old": "Huichang persecution of Buddhism",
+  "mod": "Mount Wutai, Shanxi",
+  "yt": "845",
+  "note": "Emperor Wuzong ordered more than 4,600 monasteries destroyed and more than 260,000 monks and nuns returned to lay life. Mount Wutai was then a holy place of Buddhism; Ennin had made a pilgrimage there five years earlier."
+ },
+ "event:裘甫起事": {
+  "old": "Qiu Fu rising",
+  "mod": "Shengzhou, Zhejiang",
+  "yt": "859–860",
+  "note": "Qiu Fu rose in Zhedong with up to 30,000 followers and was put down by Wang Shi; it was the prelude to the popular risings of the late Tang."
+ },
+ "event:《金刚经》刻本": {
+  "old": "Printed Diamond Sutra",
+  "mod": "Mogao Caves, Dunhuang, Gansu",
+  "yt": "868",
+  "note": "The Diamond Sutra printed in Xiantong 9 (868), found in the Dunhuang Library Cave, is the earliest surviving woodblock print with a precise date. The cave was sealed around the early 11th century and discovered in 1900; it yielded more than 50,000 documents."
+ },
+ "event:法门寺地宫": {
+  "old": "Famen Temple crypt",
+  "mod": "Fufeng, Shaanxi",
+  "yt": "874",
+  "note": "After Emperor Yizong had the Buddha's finger relic brought to the court, Emperor Xizong sealed the crypt in 874; its excavation in 1987 uncovered Tang palace gold and silver ware, \"secret-color\" porcelain and other treasures."
+ },
+ "event:黄巢起事": {
+  "old": "Huang Chao rises",
+  "mod": "southwest of Heze, Shandong (Yuanqu)",
+  "yt": "874–875",
+  "note": "Wang Xianzhi rose at Changyuan and Huang Chao at Yuanqu; starving people joined them, and they fought their way across Shandong, Henan and Huainan."
+ },
+ "event:长沙窑": {
+  "old": "Changsha kilns",
+  "mod": "Tongguan, Changsha, Hunan",
+  "yt": "9th century",
+  "note": "The Changsha kilns pioneered underglaze painting; their wares were shipped through Yangzhou and Guangzhou to West Asia and Southeast Asia, and more than 50,000 pieces were recovered from the Batu Hitam (Belitung) shipwreck."
+ },
+ "event:越窑秘色瓷": {
+  "old": "Yue ware “secret-color” porcelain",
+  "mod": "Shanglin Lake, Cixi, Zhejiang",
+  "yt": "9th–10th centuries",
+  "note": "Yue ware celadon was \"like jade, like ice\"; in the late Tang it was called \"secret color\", and the Qian family of Wuyue sent it as tribute. Fourteen pieces were found in the crypt of Famen Temple."
+ },
+ "event:邢窑白瓷": {
+  "old": "Xing ware white porcelain",
+  "mod": "Neiqiu, Hebei",
+  "yt": "Tang",
+  "note": "Xing ware white porcelain was \"like silver, like snow\"; together with Yue ware it made up \"celadon in the south, white in the north\"."
+ },
+ "event:长安毁城": {
+  "old": "Destruction of Chang'an",
+  "mod": "Xi'an, Shaanxi",
+  "yt": "1st month, 904",
+  "note": "Zhu Quanzhong forced Emperor Zhaozong to move the capital to Luoyang and pulled down the palaces and houses of Chang'an, floating the timber down the Wei and Yellow rivers to Luoyang. Chang'an was never a capital again."
+ },
+ "event:白马驿之祸": {
+  "old": "Baima Station massacre",
+  "mod": "Hua County, Henan",
+  "yt": "6th month, 905",
+  "note": "At Baima Station Zhu Quanzhong killed Pei Shu and more than thirty other court officials and threw their bodies into the Yellow River, to turn the \"pure stream\" into a \"muddy stream\"."
+ },
+ "event:捍海石塘": {
+  "old": "Stone seawall",
+  "mod": "Hangzhou, Zhejiang",
+  "yt": "910",
+  "note": "Qian Liu built a seawall of stones packed in bamboo cages to protect the city of Hangzhou and its farmland (the legend of \"King Qian shooting the tide\")."
+ },
+ "event:契丹大字": {
+  "old": "Khitan large script",
+  "mod": "Bairin Left Banner, Inner Mongolia",
+  "yt": "920",
+  "note": "Yelü Abaoji had the Khitan large script created on the model of Chinese characters; a little later Yelü Diela created the Khitan small script."
+ },
+ "event:冯道刻九经": {
+  "old": "Feng Dao prints the Nine Classics",
+  "mod": "Luoyang, Henan",
+  "yt": "932–953",
+  "note": "Feng Dao, chief minister of Later Tang, asked for the Nine Classics to be printed from the text of the Tang Kaicheng Stone Classics; the work took twenty-two years under four dynasties and began the large-scale woodblock printing of the Confucian classics."
+ },
+ "event:《花间集》": {
+  "old": "Among the Flowers",
+  "mod": "Chengdu, Sichuan",
+  "yt": "940",
+  "note": "Zhao Chongzuo of Later Shu compiled Among the Flowers, the earliest anthology of ci lyrics by literati; the Later Shu chief minister Wu Zhaoyi paid to have the Nine Classics and other books printed."
+ },
+ "event:梁山泊": {
+  "old": "Liangshan Marsh",
+  "mod": "Liangshan, Shandong",
+  "yt": "944",
+  "note": "The Yellow River broke its banks at Huazhou and flooded the five prefectures of Kaifeng, Caozhou, Shanzhou, Puzhou and Yunzhou, gathering around Mount Liang into a great marsh: Liangshan Marsh."
+ },
+ "event:陈桥兵变": {
+  "old": "Chenqiao mutiny",
+  "mod": "Chenqiao, Fengqiu, Henan",
+  "yt": "1st month, 960",
+  "note": "Sent north to resist Liao and Northern Han, Zhao Kuangyin reached Chenqiao Station, where his men draped a yellow robe on him; he led the army back to Kaifeng, Emperor Gong of Later Zhou abdicated in his favor, and the Song dynasty was founded."
+ },
+ "people:沙陀@755": {
+  "old": "Shatuo",
+  "note": "A branch of the Western Turks, originally living around Jinman Zhou near Beiting; in 808 they led their people east and submitted to the Tang."
+ },
+ "people:沙陀@808": {
+  "old": "Shatuo",
+  "note": "After moving east in 808 they were settled at Yanzhou, then moved to Daibei (around Shenwuchuan in today's northern Shanxi). Their chief Zhuye Chixin was given the name Li Guochang; his son Li Keyong built up his dominance in Hedong. The Later Tang, Later Jin and Later Han all came from the Shatuo."
+ },
+ "people:党项": {
+  "old": "Tanguts",
+  "note": "A Qiang people originally living in Qinghai and northwestern Sichuan. Pressed by Tibet, they moved into the area of Qingzhou, Xiazhou and Yinzhou and divided into the Pingxia, Dongshan and other groups. The Tuoba clan of the Pingxia group later founded Western Xia."
+ },
+ "people:退浑": {
+  "old": "Tuihun",
+  "note": "That is, the Tuyuhun. After their state fell in 663 their people moved into Tang territory; in the late Tang they lived scattered across Daibei and Hedong, mixed with the Shatuo and the Tatars."
+ },
+ "people:吐谷浑": {
+  "old": "Tuyuhun",
+  "note": "After 663 the Tuyuhun lands were annexed by Tibet, and their people became Tibetan subjects."
+ },
+ "people:鞑靼": {
+  "old": "Tatars",
+  "note": "Originally the Shiwei–Tatar tribes under Turkic and Uyghur rule; after the fall of the Uyghurs they moved south into the Yin Mountains. Li Keyong took refuge with the Tatars after his defeat in 880."
+ },
+ "people:嗢末": {
+  "old": "Wamo",
+  "note": "The bonded tribes of the Tibetans during their rule of Hexi and Longyou. After Tibet collapsed they rose around 861 and gathered around Liangzhou."
+ },
+ "people:仲云": {
+  "old": "Zhongyun",
+  "note": "A tribe of the Southern Mountains (Altyn-Tagh) who called themselves descendants of the Lesser Yuezhi; they fought and made peace with Guiyi Jun by turns."
+ },
+ "people:蒙兀室韦": {
+  "old": "Mengwu Shiwei",
+  "note": "Lived east of the Wangjian River (Argun); ancestors of the Mongols."
+ },
+ "people:骨利干": {
+  "old": "Quriqan",
+  "note": "Lived north of the Northern Sea (Lake Baikal); they bred fine horses and were known for their \"long days and short nights\"."
+ },
+ "people:东女国": {
+  "old": "Eastern Women's Kingdom",
+  "note": "A people of the western Sichuan plateau ruled by a queen; they submitted to the Tang in 793."
+ },
+ "people:两林蛮": {
+  "old": "Lianglin tribes",
+  "note": "A people south of the Dadu River (the Eastern tribes) who wavered between Tang and Nanzhao."
+ },
+ "people:牂牁蛮": {
+  "old": "Zangke tribes",
+  "note": "A people of today's central Guizhou; the Tang set up loose-rein prefectures for them, and they often sent tribute missions."
+ },
+ "people:溪洞诸蛮": {
+  "old": "Xidong tribes",
+  "note": "The peoples of the Five Streams region (today's western Hunan and eastern Guizhou). In the Five Dynasties the Peng family of Xizhou rose to power; it fought Chu at Xizhou in 939–940, and in 940 a bronze pillar was set up to seal the peace."
+ },
+ "people:黄洞蛮": {
+  "old": "Huangdong tribes",
+  "note": "The Huang, Nong and other clans southwest of Yongzhou, who rose repeatedly in the later Tang; Nong Zhigao of the Song came from them."
+ },
+ "people:黎": {
+  "old": "Li people",
+  "note": "The Li peoples (俚 and 黎) of central Hainan."
+ },
+ "people:乌蛮": {
+  "old": "Wuman",
+  "note": "The Wuman tribes on the eastern border of Nanzhao (today's northeastern Yunnan and western Guizhou)."
+ },
+ "people:样磨": {
+  "old": "Yaghma",
+  "note": "One of the tribes that made up the Kara-Khanid Khanate."
+ },
+ "region:燕云十六州": {
+  "old": "Sixteen Prefectures of Yan and Yun",
+  "mod": "today's Beijing, northern Tianjin, northern Hebei and northern Shanxi",
+  "g": {
+   "山前七州": "Seven prefectures south of the mountains",
+   "山后九州": "Nine prefectures north of the mountains",
+   "瀛莫 959 归周": "Ying and Mo, to Later Zhou in 959"
+  },
+  "note": "In 936 Shi Jingtang, military governor of Hedong, rose against the Later Tang and asked the Khitans for help, promising them \"the whole of Lulong and the prefectures north of Yanmen Pass\" and agreeing to be their subject and \"son emperor\"; the handover was completed in 938 (Tianfu 3 of Later Jin).\nSeven prefectures south of the mountains (southeast of the northern branch of the Taihang Mountains): Youzhou (today's Beijing), Jizhou (Jizhou, Tianjin), Yingzhou (Hejian, Hebei), Mozhou (Renqiu, Hebei), Zhuozhou (Zhuozhou, Hebei), Tanzhou (Miyun, Beijing), Shunzhou (Shunyi, Beijing).\nNine prefectures north of the mountains (northwest of the mountains): Xinzhou (Zhuolu, Hebei), Guizhou (Huailai, Hebei), Ruzhou (Yanqing, Beijing), Wuzhou (Xuanhua, Zhangjiakou, Hebei), Yunzhou (Datong, Shanxi), Yingzhou (Ying County, Shanxi), Huanzhou (east of Shuozhou, Shanxi), Shuozhou (Shuozhou, Shanxi), Yuzhou (Yu County, Hebei).\nThe Central Plains thus lost the barrier of the Yan Mountains, the Great Wall and Yanmen, and Khitan cavalry could ride straight down onto the North China Plain. Liao made Youzhou Youdu Fu (Southern Capital) in 938, and later made Yunzhou its Western Capital in 1044.\nIn 959 Emperor Shizong of Later Zhou campaigned north and recovered Yingzhou and Mozhou and the three passes of Waqiao, Yijin and Yukou, setting up Xiongzhou and Bazhou; after Emperor Taizong of Song's defeat at the Gaoliang River in 979, the Northern Song never truly recovered the remaining prefectures (in 1123 it bought back Yanjing and other places from Jin, only to lose them again in 1125).\nHuanzhou was created in Tiancheng 1 (926) of Later Tang, with its seat at Huanqing County; it was abolished after passing to Liao."
+ }
+}
