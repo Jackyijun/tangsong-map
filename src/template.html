@@ -8,7 +8,7 @@
     --accent:#2B5F87;
     --sea:#D5DCDB; --land:#ECEBE3; --coast:#A9AFAE; --border:#ADAA9A;
     --water:#7F9FB2; --water-fill:#B4C8D2; --range:#9C8F78; --desert:#C9B98F;
-    --c-battle:#A3473A; --c-pass:#3B3B40; --c-city:#55575E; --c-culture:#2F7470; --c-capital:#1D1E23; --c-yanyun:#8E3324;
+    --c-battle:#A3473A; --c-pass:#3B3B40; --c-city:#55575E; --c-culture:#2F7470; --c-capital:#1D1E23; --c-yanyun:#8E3324; --c-route:#4A4C86;
     --s-op:.5; --s-op-hi:.66; --hatch:rgba(29,30,35,.32);
     __UCSS_LIGHT__
     --shadow: 0 1px 2px rgba(29,30,35,.07), 0 8px 24px -12px rgba(29,30,35,.22);
@@ -30,7 +30,7 @@
       --accent:#78ADD8;
       --sea:#111417; --land:#1C1E22; --coast:#3A4046; --border:#454951;
       --water:#4F7A93; --water-fill:#2A4352; --range:#6E6453; --desert:#5A5038;
-      --c-battle:#E07A68; --c-pass:#C9C7BF; --c-city:#A6A79F; --c-culture:#5CBAB3; --c-capital:#E7E5DC; --c-yanyun:#F0957B;
+      --c-battle:#E07A68; --c-pass:#C9C7BF; --c-city:#A6A79F; --c-culture:#5CBAB3; --c-capital:#E7E5DC; --c-yanyun:#F0957B; --c-route:#AEB0EC;
       --s-op:.34; --s-op-hi:.5; --hatch:rgba(231,229,220,.3);
       __UCSS_DARK__
       --shadow: 0 1px 2px rgba(0,0,0,.5), 0 10px 28px -14px rgba(0,0,0,.8);
@@ -43,7 +43,7 @@
     --accent:#78ADD8;
     --sea:#111417; --land:#1C1E22; --coast:#3A4046; --border:#454951;
     --water:#4F7A93; --water-fill:#2A4352; --range:#6E6453; --desert:#5A5038;
-    --c-battle:#E07A68; --c-pass:#C9C7BF; --c-city:#A6A79F; --c-culture:#5CBAB3; --c-capital:#E7E5DC; --c-yanyun:#F0957B;
+    --c-battle:#E07A68; --c-pass:#C9C7BF; --c-city:#A6A79F; --c-culture:#5CBAB3; --c-capital:#E7E5DC; --c-yanyun:#F0957B; --c-route:#AEB0EC;
     --s-op:.34; --s-op-hi:.5; --hatch:rgba(231,229,220,.3);
     __UCSS_DARK__
     --shadow: 0 1px 2px rgba(0,0,0,.5), 0 10px 28px -14px rgba(0,0,0,.8);
@@ -84,8 +84,11 @@
   /* 时间轴 */
   .timebar { display:grid; grid-template-columns:auto minmax(0,1fr); align-items:stretch; background:var(--paper); border-bottom:1px solid var(--rule); }
   .timebar[hidden] { display:none; }
-  .play { width:44px; border:0; border-right:1px solid var(--rule-soft); background:none; cursor:pointer; color:var(--ink-2); display:grid; place-items:center; }
-  .play:hover { background:var(--paper-2); color:var(--ink); }
+  .pcol { width:44px; display:grid; grid-template-rows:minmax(0,1fr) auto; border-right:1px solid var(--rule-soft); }
+  .play { border:0; background:none; cursor:pointer; color:var(--ink-2); display:grid; place-items:center; min-height:34px; }
+  .play:hover, .speed:hover { background:var(--paper-2); color:var(--ink); }
+  .speed { border:0; border-top:1px solid var(--rule-soft); background:none; cursor:pointer; color:var(--ink-3); font-family:var(--f-mono); font-size:10.5px; letter-spacing:.02em; padding:3px 0 4px; }
+  .speed[aria-pressed="true"] { color:var(--ink); font-weight:600; }
   .tb-main { min-width:0; display:grid; grid-template-rows:auto auto; }
   .ticks { display:flex; overflow-x:auto; scrollbar-width:thin; padding:6px 10px 0; position:relative; }
   .ticks::before { content:""; position:absolute; left:10px; right:10px; top:26px; height:1px; background:var(--rule); }
@@ -110,6 +113,8 @@
   .caption .pl.gap { margin-left:10px; }
   .caption .chip.rg { border-color:color-mix(in srgb, var(--c-yanyun) 55%, transparent); background:color-mix(in srgb, var(--c-yanyun) 9%, transparent); font-weight:600; }
   .caption .chip.rg:hover, .caption .chip.rg[aria-pressed="true"] { background:color-mix(in srgb, var(--c-yanyun) 20%, transparent); }
+  .caption .chip.rt { border-color:color-mix(in srgb, var(--c-route) 50%, transparent); background:color-mix(in srgb, var(--c-route) 8%, transparent); }
+  .caption .chip.rt:hover, .caption .chip.rt[aria-pressed="true"] { background:color-mix(in srgb, var(--c-route) 20%, transparent); }
   .caption .y { font-family:var(--f-mono); font-size:11px; color:var(--ink-3); margin-right:8px; }
 
   /* 主区 */
@@ -300,9 +305,12 @@
   </header>
 
   <div class="timebar" id="timebar">
-    <button class="play" id="play" aria-label="播放时间轴" title="播放">
-      <svg id="playicon" width="14" height="14" viewBox="0 0 14 14"><path d="M3 2 12 7 3 12Z" fill="currentColor"/></svg>
-    </button>
+    <div class="pcol">
+      <button class="play" id="play" aria-label="播放时间轴" title="播放">
+        <svg id="playicon" width="14" height="14" viewBox="0 0 14 14"><path d="M3 2 12 7 3 12Z" fill="currentColor"/></svg>
+      </button>
+      <button class="speed" id="speed" aria-pressed="false" title="播放速度：1×（点击切换 2×）">1×</button>
+    </div>
     <div class="tb-main">
       <div class="ticks" id="ticks" role="group" aria-label="年代"></div>
       <div class="caption" id="caption"></div>
@@ -323,9 +331,9 @@
         <div class="body" id="legbody">
           <div class="sub" id="legsub">本时期政权</div>
           <div class="states" id="legstates"></div>
-          <div class="key"><span><svg width="14" height="12"><rect x="1" y="1" width="12" height="10" fill="none" stroke="var(--ink)" stroke-width="1.8"/></svg><span id="key1">政权疆界</span></span><span><svg width="14" height="12"><rect x="1" y="1" width="12" height="10" fill="url(#lgh)" stroke="var(--ink-3)" stroke-width=".8"/><defs><pattern id="lgh" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="var(--hatch)" stroke-width="1.6"/></pattern></defs></svg><span id="key2">割据藩镇</span></span></div>
+          <div class="key"><span><svg width="14" height="12"><rect x="1" y="1" width="12" height="10" fill="none" stroke="var(--ink)" stroke-width="1.8"/></svg><span id="key1">政权疆界</span></span><span><svg width="14" height="12"><rect x="1" y="1" width="12" height="10" fill="url(#lgh)" stroke="var(--ink-3)" stroke-width=".8"/><defs><pattern id="lgh" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="var(--hatch)" stroke-width="1.6"/></pattern></defs></svg><span id="key2">割据藩镇</span></span><span><svg width="16" height="12"><path d="M1 9 L8 5 L15 3" stroke="var(--c-route)" stroke-width="2" fill="none" stroke-linecap="round"/></svg><span id="key3">行军路线</span></span></div>
           <ul id="legend"></ul>
-          <div class="foot" id="legfoot">疆域据两《唐书》《资治通鉴》《新五代史》及谭其骧《中国历史地图集》第五册大意推定，以州为单位、沿山川划界，仅为示意。战役与事件只显示当前节点所涵盖的年份（上一节点之后至本节点）。红色虚线为燕云十六州（938 年起）。点击疆域、城邑、战役、山川均可查看说明。</div>
+          <div class="foot" id="legfoot">疆域据两《唐书》《资治通鉴》《新五代史》及谭其骧《中国历史地图集》第五册大意推定，以州为单位、沿山川划界，仅为示意。战役、事件与行军路线只显示当前节点所涵盖的年份（上一节点之后至本节点）。红色虚线为燕云十六州（938 年起）。点击疆域、城邑、战役、山川均可查看说明。</div>
         </div>
       </div>
       <div class="float inset"><svg id="inset" width="140" height="100" aria-label="索引图"></svg><div class="cap" id="insetcap">索引</div></div>
@@ -372,7 +380,7 @@
   // 检索：中英文都收，英文去掉附加符号、统一大小写（Đại Việt、Kaesŏng 可直接输入 dai viet、kaesong）
   const FOLD = { "ı": "i", "ł": "l", "đ": "d", "ð": "d", "ø": "o", "æ": "ae", "œ": "oe", "ß": "ss", "ʼ": "'", "’": "'", "‘": "'", "ʿ": "'", "ʾ": "'", "–": "-", "—": "-" };
   const fold = s => String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[ıłđðøæœßʼ’‘ʿʾ–—]/g, c => FOLD[c]);
-  const K_OF = { capital: "var(--c-capital)", battle: "var(--c-battle)", pass: "var(--c-pass)", event: "var(--c-culture)", pref: "var(--c-city)", range: "var(--range)", river: "var(--water)", canal: "var(--water)", desert: "var(--desert)", people: "var(--ink-3)", region: "var(--c-yanyun)" };
+  const K_OF = { capital: "var(--c-capital)", battle: "var(--c-battle)", pass: "var(--c-pass)", event: "var(--c-culture)", pref: "var(--c-city)", range: "var(--range)", river: "var(--water)", canal: "var(--water)", desert: "var(--desert)", people: "var(--ink-3)", region: "var(--c-yanyun)", route: "var(--c-route)" };
   // 预处理各节点
   for (const sn of SNAPS) {
     sn.units = Object.keys(sn.pol).map(Number);
@@ -528,6 +536,9 @@
   const REGIONS = (GEO.regions || []).map(r => ({ ...r, item: ITEMS[r.it], k: "i:" + r.it, d: ringsD(r.rings),
     groups: r.groups.map(g => ({ ...g, xy: g.lab ? proj(g.lab[0], g.lab[1]) : null, d: g.lines.map(l => P(decode(l), false)).join(" ") })) }));
   const REGION_KEYS = new Set(REGIONS.map(R => R.k));
+  // 行军路线
+  const ROUTES = (GEO.routes || []).map(R => ({ ...R, item: ITEMS[R.it], k: "i:" + R.it, xy: R.pts.map(p => proj(p[0], p[1])) }));
+  const ptName = (RT, j) => LANG === "en" && RT.pe && RT.pe[j] ? RT.pe[j] : RT.pts[j][3];
   const needsTerr = k => !!k && (k.startsWith("u:") || REGION_KEYS.has(k));
 
   /* ---------------- 状态 ---------------- */
@@ -542,10 +553,10 @@
   const perText = j => j > 0 ? `${perLo(j)}${DASH()}${perHi(j)}` : LZ(`${perHi(j)} 年以前`, `up to ${perHi(j)}`);
   const snapOfYear = y => { const j = SNAPS.findIndex(s => s.y >= y); return j < 0 ? SNAPS.length - 1 : j; };
   const inPeriod = (it, j) => it.y <= perHi(j) && (it.y1 ?? it.y) >= perLo(j);
-  const timed = it => it.c === "battle" || it.c === "event";
+  const timed = it => it.c === "battle" || it.c === "event" || it.c === "route";
   const LAYERS = [
     { id: "terr", name: "疆域", en: "Territories" }, { id: "region", name: "燕云十六州", en: "Sixteen Prefectures" }, { id: "capital", name: "都城行在", en: "Capitals" }, { id: "seat", name: "藩镇治所", en: "Fanzhen seats" }, { id: "pref", name: "州府城邑", en: "Prefectures" },
-    { id: "battle", name: "本期战役", en: "Battles" }, { id: "pass", name: "关隘", en: "Passes" }, { id: "event", name: "本期事件", en: "Events" }, { id: "people", name: "诸族", en: "Peoples" },
+    { id: "battle", name: "本期战役", en: "Battles" }, { id: "route", name: "行军路线", en: "Campaigns" }, { id: "pass", name: "关隘", en: "Passes" }, { id: "event", name: "本期事件", en: "Events" }, { id: "people", name: "诸族", en: "Peoples" },
     { id: "range", name: "山脉", en: "Mountains" }, { id: "river", name: "水系湖泽", en: "Rivers & lakes" }, { id: "canal", name: "运河", en: "Canals" }, { id: "desert", name: "荒漠", en: "Deserts" },
     { id: "prov", name: "今省界", en: "Modern provinces" }, { id: "border", name: "今国界", en: "Modern borders" }
   ];
@@ -724,6 +735,41 @@
     let nShown = 0;
     const inView = (x, y) => x > -40 && x < W + 40 && y > -30 && y < H + 30;
 
+    // 行军路线：本期走过的一段实线加箭头，此前走过的虚线
+    if (layerOn.route) for (const RT of ROUTES) {
+      const it = RT.item;
+      if (!match(RT.k)) continue;
+      const on = isOn(RT.k), lo = perLo(si), hi = perHi(si);
+      if (!(it.y <= hi && it.y1 >= lo) && !on) continue;
+      const past = [], cur = [];
+      for (let i = 0; i < RT.pts.length - 1; i++) {
+        const b = RT.pts[i + 1];
+        if (b[2] > hi && !on) break;
+        (b[2] >= lo && b[2] <= hi ? cur : past).push([RT.xy[i], RT.xy[i + 1]]);
+      }
+      const seg = list => list.map(([a, b]) => `M${sx(a).toFixed(1)} ${sy(a).toFixed(1)}L${sx(b).toFixed(1)} ${sy(b).toFixed(1)}`).join("");
+      if (past.length) gMark.append(el("path", { d: seg(past), fill: "none", stroke: "var(--c-route)", "stroke-width": on ? 1.8 : 1.3, "stroke-dasharray": "4 3", opacity: on ? .85 : .55, "stroke-linecap": "round", "pointer-events": "none" }));
+      if (cur.length) {
+        gMark.append(el("path", { d: seg(cur), fill: "none", stroke: "var(--land)", "stroke-width": 5, opacity: .75, "stroke-linecap": "round", "stroke-linejoin": "round", "pointer-events": "none" }));
+        gMark.append(el("path", { d: seg(cur), fill: "none", stroke: "var(--c-route)", "stroke-width": on ? 3 : 2.2, "stroke-linecap": "round", "stroke-linejoin": "round", "pointer-events": "none" }));
+        for (const [a, b] of cur) {
+          const x1 = sx(a), y1 = sy(a), x2 = sx(b), y2 = sy(b), L = Math.hypot(x2 - x1, y2 - y1);
+          if (L < 22) continue;
+          const ux = (x2 - x1) / L, uy = (y2 - y1) / L, mx = x1 + (x2 - x1) * .55, my = y1 + (y2 - y1) * .55, s = 5.5;
+          gMark.append(el("path", { d: `M${(mx + ux * s).toFixed(1)} ${(my + uy * s).toFixed(1)}L${(mx - ux * s - uy * s * .8).toFixed(1)} ${(my - uy * s + ux * s * .8).toFixed(1)}L${(mx - ux * s + uy * s * .8).toFixed(1)} ${(my - uy * s - ux * s * .8).toFixed(1)}Z`, fill: "var(--c-route)", "pointer-events": "none" }));
+        }
+      }
+      const all = past.concat(cur);
+      if (all.length) {
+        gMark.append(el("path", { d: seg(all), class: "hit", "data-k": RT.k, fill: "none", stroke: on ? "color-mix(in srgb, var(--c-route) 22%, transparent)" : "transparent", "stroke-width": 10, "stroke-linecap": "round", "pointer-events": "stroke" }));
+        // 路线名标在本期最后一段（或全线最后一段）的终点旁
+        const last = (cur.length ? cur : all)[(cur.length ? cur : all).length - 1][1];
+        const x = sx(last), y = sy(last);
+        const rt = iF(it, "old"), rs = on ? 13 : 11.5;
+        if (inView(x, y)) items.push({ kind: "route", it, x, y, size: rs, text: rt, on, w: (isEN() ? mw(rt, rs, "d", on ? 700 : 600) : textW(rt, rs)) + 4, h: 14, pri: on ? -940 : 36 });
+      }
+    }
+
     // 都城（同址只画一个）
     const capAt = new Map();
     for (const it of ITEMS) if (it.c === "capital") {
@@ -897,6 +943,7 @@
       let cands;
       if (it.kind === "site") cands = [[it.r + 5, 0, "start"], [-it.r - 5, 0, "end"], [0, -it.r - 6, "middle"], [0, it.r + it.h - 1, "middle"], [it.r + 4, -it.h * .7, "start"], [-it.r - 4, -it.h * .7, "end"], [it.r + 4, it.h * .8, "start"], [-it.r - 4, it.h * .8, "end"]];
       else if (it.kind === "state" || it.kind === "region") cands = [[0, 0, "middle"], [0, -it.size * .9, "middle"], [0, it.size * .9, "middle"], [-it.size * 1.2, 0, "middle"], [it.size * 1.2, 0, "middle"]];
+      else if (it.kind === "route") cands = [[8, 0, "start"], [-8, 0, "end"], [0, -12, "middle"], [0, 16, "middle"], [8, -14, "start"], [-8, -14, "end"], [8, 14, "start"], [-8, 14, "end"]];
       else if (it.kind === "regsub") cands = [[0, 0, "middle"], [0, -16, "middle"], [0, 16, "middle"], [0, -30, "middle"], [0, 30, "middle"], [-48, 0, "middle"], [48, 0, "middle"], [-40, -22, "middle"], [40, -22, "middle"], [-40, 22, "middle"], [40, 22, "middle"]];
       else cands = [[0, 0, "middle"], [0, -14, "middle"], [0, 14, "middle"], [-30, 0, "middle"], [30, 0, "middle"]];
       let put = null;
@@ -924,6 +971,8 @@
         const u = it.L.u;
         txt({ class: "map-text lbl-state", x: X, y: YP + it.size * .36, "text-anchor": "middle", "font-size": it.size, "letter-spacing": it.ls + "px",
           style: `fill:color-mix(in srgb, ${uVar(u)} ${it.zhen ? 38 : 45}%, var(--ink))`, opacity: it.zhen ? .85 : .92, stroke: "var(--land)", "stroke-width": 3, "stroke-opacity": .55, "paint-order": "stroke", "stroke-linejoin": "round", "font-weight": it.zhen ? 600 : 700 }, it.text, it.lines);
+      } else if (it.kind === "route") {
+        txt({ class: "map-text lbl-site", x: X, y: YP + 4, "text-anchor": put.anchor, "font-size": it.size, fill: "var(--c-route)", ...halo, "font-weight": it.on ? 700 : 600 }, it.text);
       } else if (it.kind === "river" || it.kind === "canal") {
         txt({ class: "map-text lbl-riv", x: X, y: YP + 4, "text-anchor": "middle", "font-size": it.size, fill: "var(--water)", ...halo, "font-weight": it.on ? 700 : 500 }, it.text);
       } else if (it.kind === "range") {
@@ -1065,6 +1114,12 @@
     if (it.c === "capital") meta = `<span class="tag st" style="--k:${uVar(it.st)}">${esc(uShort(it.st))}</span><span class="mono">${yrsText(it.yrs)}</span>` + (capActive(it, YY) ? LZ("时为都城", "capital at this date") : "");
     else if (it.c === "battle") meta = `<span class="mono">${esc(iF(it, "yt"))}</span>${esc(iF(it, "sides"))}` + (it.cmd ? `<br><span class="mono">${LZ("主将", "Commanders")}</span>${esc(iF(it, "cmd"))}` : "");
     else if (it.c === "event") meta = `<span class="mono">${esc(iF(it, "yt"))}</span>`;
+    else if (it.c === "route") {
+      const RT = ROUTES.find(r => r.it === it.i), lo = perLo(si), hi = perHi(si);
+      const pl = RT ? RT.pts.map((p, j) => [p, ptName(RT, j)]).filter(([p]) => p[2] >= lo && p[2] <= hi).map(x => x[1]) : [];
+      meta = `<span class="mono">${esc(iF(it, "yt"))}</span>` + (inPeriod(it, si) ? `<br><span class="mono">${LZ("本期", "This period")}</span>` + (pl.length ? esc(pl.join(" → ")) : LZ("无行军", "no movement")) : "");
+      if (mode === "row" && RT) return { old: iF(it, "old"), zh: it.old, mod: iF(it, "mod"), meta, note: iF(it, "note"), k: K_OF.route, chain: `<span class="mono">${LZ("全程", "Full route")}</span>` + RT.pts.map((p, j) => `${esc(ptName(RT, j))}<span class="mono">${LZ(`（${p[2]}）`, ` (${p[2]})`)}</span>`).join(" → ") };
+    }
     if (timed(it) && !inPeriod(it, si)) meta += `<br><span class="mono">${LZ("不在本期", "Not in this period")}</span>` + LZ(`见 ${SNAPS[snapOfYear(it.y)].y} 年节点（${perText(snapOfYear(it.y))}）`, `see the ${SNAPS[snapOfYear(it.y)].y} snapshot (${perText(snapOfYear(it.y))})`);
     else if (it.c === "people") meta = `<span class="mono">${LZ(`约 ${it.y0}—${it.y1 >= 979 ? "宋初" : it.y1}`, `c. ${it.y0}–${it.y1 >= 979 ? "early Song" : it.y1}`)}</span>`;
     if (it.c === "region") {
@@ -1187,11 +1242,17 @@
     if (t === "i") {
       const it = ITEMS[i];
       if (it.c === "capital" && !capActive(it, SNAPS[si].y)) { const j = SNAPS.findIndex(sn => capActive(it, sn.y)); if (j >= 0) { setSnap(j, false); buildIndex(); } }
-      if (timed(it) && !inPeriod(it, si)) { setSnap(snapOfYear(it.y), false); buildIndex(); }
+      if (timed(it) && !inPeriod(it, si)) { setSnap(snapOfYear(it.c === "route" ? it.y1 : it.y), false); buildIndex(); }
       if (it.c === "region" && SNAPS[si].y < it.y0) { setSnap(snapOfYear(it.y0), false); buildIndex(); }
     }
     buildTerr();
-    if (!fromMap) {
+    const RT = t === "i" && ITEMS[i].c === "route" ? ROUTES.find(r => r.it === i) : null;
+    if (!fromMap && RT) {
+      // 行军路线：整条路线收进视野
+      const bb = bboxOf(RT.xy), padL = (!legBody.hidden && W > 820) ? 262 : 0;
+      const kk = Math.min((W - padL) / Math.max(1, bb[2] - bb[0]), H / Math.max(1, bb[3] - bb[1])) * .78;
+      setView((bb[0] + bb[2]) / 2 - padL / 2 / kk, (bb[1] + bb[3]) / 2, Math.min(kk, 8), true);
+    } else if (!fromMap) {
       const p = focusPoint(k);
       if (p) {
         const zk = t === "u" ? Math.max(view.k, 1.4) : (ITEMS[i] && ["range", "river", "canal", "desert", "region"].includes(ITEMS[i].c)) ? Math.max(view.k, 2.4) : Math.max(view.k, 5);
@@ -1235,6 +1296,7 @@
       `<div class="pbs"><span class="pl">${LZ("本期战役", "Battles")} <span class="mono">${perText(j)}</span></span>` +
       (bs.length ? bs.map(it => `<button class="chip" data-k="${keyOf("i", it.i)}" aria-pressed="${selected === keyOf("i", it.i)}">${esc(iF(it, "old"))}<i>${it.y}</i></button>`).join("")
                  : `<span class="none">${LZ("无", "none")}</span>`) +
+      ITEMS.filter(it => it.c === "route" && inPeriod(it, j)).map(it => `<span class="pl gap">${LZ("行军", "Campaign")}</span><button class="chip rt" data-k="${keyOf("i", it.i)}" aria-pressed="${selected === keyOf("i", it.i)}">${esc(iF(it, "old"))}</button>`).join("") +
       ITEMS.filter(it => it.c === "region" && s.y >= it.y0).map(it => `<span class="pl gap">${LZ("要地", "Region")}</span><button class="chip rg" data-k="${keyOf("i", it.i)}" aria-pressed="${selected === keyOf("i", it.i)}">${esc(iF(it, "old"))}</button>`).join("") + `</div>`;
     const tk = ticks.querySelector(`[data-j="${j}"]`);
     if (tk && ticks.scrollWidth > ticks.clientWidth) ticks.scrollTo({ left: tk.offsetLeft - ticks.clientWidth / 2 + tk.offsetWidth / 2, behavior: reduce() ? "auto" : "smooth" });
@@ -1253,7 +1315,16 @@
     if (si === SNAPS.length - 1) setSnap(0);
     document.getElementById("playicon").innerHTML = '<rect x="3" y="2" width="3" height="10" fill="currentColor"/><rect x="8" y="2" width="3" height="10" fill="currentColor"/>';
     playBtn.title = LZ("暂停", "Pause");
-    playT = setInterval(() => { if (si >= SNAPS.length - 1) { stopPlay(); return; } setSnap(si + 1); }, 2600);
+    playT = setInterval(() => { if (si >= SNAPS.length - 1) { stopPlay(); return; } setSnap(si + 1); }, 2600 / speed);
+  });
+  let speed = 1;
+  const speedBtn = document.getElementById("speed");
+  const speedTitle = () => { speedBtn.title = LZ(`播放速度：${speed}×（点击切换 ${speed === 1 ? 2 : 1}×）`, `Playback speed ${speed}× (click for ${speed === 1 ? 2 : 1}×)`); };
+  speedBtn.addEventListener("click", () => {
+    speed = speed === 1 ? 2 : 1;
+    speedBtn.textContent = speed + "×"; speedBtn.setAttribute("aria-pressed", speed === 2 ? "true" : "false");
+    speedTitle();
+    if (playT) { clearInterval(playT); playT = setInterval(() => { if (si >= SNAPS.length - 1) { stopPlay(); return; } setSnap(si + 1); }, 2600 / speed); }
   });
 
   /* ---------------- 图例 ---------------- */
@@ -1285,6 +1356,7 @@
     battle: '<circle cx="7" cy="7" r="5.6" fill="var(--paper)" stroke="var(--c-battle)" stroke-width="1.2"/><path d="M4.6 4.6 9.4 9.4M9.4 4.6 4.6 9.4" stroke="var(--c-battle)" stroke-width="1.7" stroke-linecap="round"/>',
     pass: '<rect x="3.5" y="3.5" width="7" height="7" transform="rotate(45 7 7)" fill="var(--c-pass)"/>',
     event: '<path d="M7 1.8 12 10.6H2Z" fill="var(--c-culture)"/>',
+    route: '<path d="M1.5 11 L6 6 L12.5 3.5" stroke="var(--c-route)" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M12.8 3.4 L8.6 3.2 L10.6 6.6Z" fill="var(--c-route)"/>',
     people: '<text x="7" y="11" text-anchor="middle" font-size="10" font-style="italic" fill="var(--ink-3)">族</text>',
     range: '<path d="M1 9 C4 5, 9 5, 13 8" stroke="var(--range)" stroke-width="5" stroke-linecap="round" fill="none" opacity=".45"/>',
     river: '<path d="M1 9 C4 4, 8 11, 13 5" stroke="var(--water)" stroke-width="1.8" fill="none"/>',
@@ -1372,9 +1444,10 @@
     const periodic = (c, id, name) => {
       const list = ITEMS.filter(it => it.c === c && match(keyOf("i", it.i))).sort((a, b) => a.y - b.y);
       const cur = list.filter(it => inPeriod(it, si)), rest = list.filter(it => !inPeriod(it, si));
-      total += group(id, name, LZ(`本期 ${cur.length} · 共 ${list.length}`, `${cur.length} this period · ${list.length} total`), K_OF[c], [...cur, ...rest].map(it => { const k = keyOf("i", it.i), f = info(k, "row"); return rowEl(k, K_OF[c], f.old, f.mod, f.meta, f.note, null, !inPeriod(it, si), null, f.zh); }));
+      total += group(id, name, LZ(`本期 ${cur.length} · 共 ${list.length}`, `${cur.length} this period · ${list.length} total`), K_OF[c], [...cur, ...rest].map(it => { const k = keyOf("i", it.i), f = info(k, "row"); return rowEl(k, K_OF[c], f.old, f.mod, f.meta, f.note, f.chain || null, !inPeriod(it, si), null, f.zh); }));
     };
     periodic("battle", "battle", LZ("战役", "Battles"));
+    periodic("route", "route", LZ("行军路线", "Campaign routes"));
     simple("pass", "pass", LZ("关隘", "Passes"), "");
     periodic("event", "event", LZ("事件 · 文化", "Events & culture"));
     // 州府
@@ -1392,7 +1465,7 @@
   }
 
   /* ---------------- 对照表 ---------------- */
-  const CATNAME = { region: ["地域", "Region"], capital: ["都城", "Capital"], battle: ["战役", "Battle"], pass: ["关隘", "Pass"], event: ["事件", "Event"], range: ["山脉", "Mountains"], river: ["水系", "Water"], canal: ["运河", "Canal"], desert: ["荒漠", "Desert"], people: ["诸族", "People"] };
+  const CATNAME = { region: ["地域", "Region"], capital: ["都城", "Capital"], battle: ["战役", "Battle"], route: ["行军", "Campaign"], pass: ["关隘", "Pass"], event: ["事件", "Event"], range: ["山脉", "Mountains"], river: ["水系", "Water"], canal: ["运河", "Canal"], desert: ["荒漠", "Desert"], people: ["诸族", "People"] };
   const DATE_NOTE_EN = "Dates give the Chinese lunar month (“11th month, 755”), not a converted Western date; the year is the Western year in which most of that lunar year falls, so a 12th month can reach into January of the next year.";
   function buildTable() {
     const wrap = document.getElementById("tablewrap");
@@ -1432,8 +1505,8 @@
     const wrap = document.getElementById("chronwrap");
     wrap.replaceChildren();
     const intro = document.createElement("div"); intro.className = "intro";
-    intro.innerHTML = LZ(`<p>把战役、事件、都城迁移与地图上的 ${SNAPS.length} 个时间节点排成一条线。灰底为地图节点；点击任一事件，地图会跳到该事件之后最近的节点并定位。</p>`,
-      `<p>Battles, events, capital moves and the map’s ${SNAPS.length} snapshots on a single line. Shaded entries are map snapshots; click any entry to jump to the nearest snapshot after it and locate it on the map.</p><p>${DATE_NOTE_EN}</p>`);
+    intro.innerHTML = LZ(`<p>把战役、事件、行军、都城迁移与地图上的 ${SNAPS.length} 个时间节点排成一条线。灰底为地图节点；点击任一事件，地图会跳到该事件之后最近的节点并定位。</p>`,
+      `<p>Battles, events, campaigns, capital moves and the map’s ${SNAPS.length} snapshots on a single line. Shaded entries are map snapshots; click any entry to jump to the nearest snapshot after it and locate it on the map.</p><p>${DATE_NOTE_EN}</p>`);
     wrap.append(intro);
     const ev = [];
     for (const it of ITEMS) {
@@ -1442,6 +1515,7 @@
       const yt = iF(it, "yt"), t0 = iF(it, "old"), note = iF(it, "note") || "";
       if (it.c === "battle") ev.push({ y: it.y, yt, t: t0, zh: it.old, kd: LZ("战役", "Battle"), p: `${iF(it, "sides")}${LZ("。", ". ")}${note}`, col: "var(--c-battle)", k });
       if (it.c === "event") ev.push({ y: it.y, yt, t: t0, zh: it.old, kd: LZ("事件 · 文化", "Event"), p: note, col: "var(--c-culture)", k });
+      if (it.c === "route") ev.push({ y: it.y, yt, t: t0, zh: it.old, kd: LZ("行军", "Campaign"), p: note, col: "var(--c-route)", k });
       if (it.c === "capital") for (const [a] of it.yrs) if (a >= 750 && a <= 979) ev.push({ y: a, yt: String(a), t: LZ(`${UNITS[it.st].n}都${it.old}`, t0), zh: it.old, kd: LZ("都城", `Capital · ${uShort(it.st)}`), p: note, col: uVar(it.st), k });
     }
     if (!query) for (const s of SNAPS) ev.push({ y: s.y, yt: `${s.y}`, t: snT(s), kd: LZ(`地图节点 · ${s.era}`, `Map snapshot · ${snEra(s)}`), p: snD(s), col: "var(--ink)", snap: true });
@@ -1453,6 +1527,7 @@
       d.innerHTML = `<div class="yr">${esc(e.yt)}</div><div class="ln"><i></i></div><div class="evb"><b>${esc(e.t)}</b>${e.zh ? zhTag(e.zh) + (isEN() ? " " : "") : ""}<span class="k">${esc(e.kd)}</span><p>${esc(e.p)}</p></div>`;
       d.addEventListener("click", () => {
         let j = SNAPS.findIndex(s => s.y >= e.y); if (j < 0) j = SNAPS.length - 1;
+        if (e.k && ITEMS[parseKey(e.k)[1]].c === "route") j = snapOfYear(ITEMS[parseKey(e.k)[1]].y1);
         setMode("map"); setSnap(j);
         if (e.k) requestAnimationFrame(() => select(e.k, false));
       });
@@ -1490,7 +1565,7 @@
 
   /* ---------------- 界面文字（中 / 英） ---------------- */
   const FOOT_ZH = document.getElementById("legfoot").textContent;
-  const FOOT_EN = "Borders are reconstructed from the Old and New Tang Histories, the Zizhi tongjian and the New History of the Five Dynasties, following in outline vol. 5 of Tan Qixiang’s Historical Atlas of China. Territory is assigned prefecture by prefecture and bounded along mountains and rivers, so it is only indicative. Battles and events are shown only for the years covered by the current snapshot (after the previous snapshot, up to this one). The red dashed line marks the Sixteen Prefectures (from 938). Click any territory, city, battle, mountain or river for notes.";
+  const FOOT_EN = "Borders are reconstructed from the Old and New Tang Histories, the Zizhi tongjian and the New History of the Five Dynasties, following in outline vol. 5 of Tan Qixiang’s Historical Atlas of China. Territory is assigned prefecture by prefecture and bounded along mountains and rivers, so it is only indicative. Battles, events and campaign routes are shown only for the years covered by the current snapshot (after the previous snapshot, up to this one). The red dashed line marks the Sixteen Prefectures (from 938). Click any territory, city, battle, mountain or river for notes.";
   const FIT_EN = { cn: "China", all: "Whole map", zy: "Central Plains", gz: "Guanzhong & Hexi-Longyou", hb: "Hebei & Hedong", jh: "Huai & Jiangnan",
     bs: "Sichuan & Qianzhong", ln: "Lingnan & Annan", xy: "Western Regions", db: "Manchuria & Korea", nz: "Tibet & Nanzhao" };
   const FIT_ZH = Object.fromEntries([...document.querySelectorAll("#fit option")].map(o => [o.value, o.textContent]));
@@ -1513,11 +1588,12 @@
     const MODES = { map: ["地图", "Map"], chron: ["年表", "Timeline"], table: ["对照表", "Gazetteer"] };
     document.querySelectorAll("[data-mode]").forEach(b => { b.textContent = pick(MODES[b.dataset.mode]); });
     at($("play"), "aria-label", "播放时间轴", "Play timeline"); $("play").title = playT ? LZ("暂停", "Pause") : LZ("播放", "Play");
+    speedTitle(); at($("speed"), "aria-label", "播放速度", "Playback speed");
     at($("map"), "aria-label", "唐宋之际形势图", "Map of China between the Tang and the Song");
     for (const [id, zh, en] of [["zin", "放大", "Zoom in"], ["zout", "缩小", "Zoom out"], ["zreset", "复位", "Reset view"]]) { at($(id), "title", zh, en); at($(id), "aria-label", zh, en); }
     txt("zreset", "复位", "Reset");
     txt("legtitle", "图例", "Legend"); txt("legsub", "本时期政权", "States in this period");
-    txt("key1", "政权疆界", "State border"); txt("key2", "割据藩镇", "Autonomous fanzhen");
+    txt("key1", "政权疆界", "State border"); txt("key2", "割据藩镇", "Autonomous fanzhen"); txt("key3", "行军路线", "Campaign route");
     $("legfoot").textContent = LZ(FOOT_ZH, FOOT_EN);
     txt("repotxt", "源码", "Source");
     at($("repo"), "title", "在 GitHub 查看源码（新标签页打开）", "View source on GitHub (opens in a new tab)"); at($("repo"), "aria-label", "在 GitHub 查看源码（新标签页打开）", "View source on GitHub (opens in a new tab)");

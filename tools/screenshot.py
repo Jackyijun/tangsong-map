@@ -25,7 +25,8 @@ async def main():
             # 依次切换全部时间节点、两种着色，确保不报错
             n = await pg.locator(".tick").count()
             for j in range(n): await pg.click(f'.tick[data-j="{j}"]')
-            await pg.click('.tick[data-j="5"]'); await pg.wait_for_timeout(500)
+            j = await pg.evaluate("[...document.querySelectorAll('.tick')].findIndex(b => b.querySelector('.yr').textContent === '820')")
+            await pg.click(f'.tick[data-j="{j}"]'); await pg.wait_for_timeout(500)
             path = OUT / f"shot-{name}.png"
             await pg.screenshot(path=str(path)); print("wrote", path)
             await ctx.close()

@@ -816,7 +816,7 @@
  "capital:洛阳（燕都）": {
   "old": "Luoyang (Yan capital)",
   "mod": "Luoyang, Henan",
-  "note": "An Lushan proclaimed himself emperor at Luoyang in the 1st month of 756; Shi Siming took Luoyang again in 759 and made it his capital."
+  "note": "An Lushan proclaimed himself emperor at Luoyang in the 1st month of 756, and the Tang army recovered it in the 10th month of 757; Shi Siming took Luoyang again in the 9th month of 759, and the Yan army held it until the Tang army recovered it once more in the 10th month of 762 (Shi Siming made Fanyang his Yan capital, and Shi Chaoyi made Luoyang his capital)."
  },
  "capital:长安（朱泚）": {
   "old": "Chang'an (Zhu Ci)",
@@ -1920,5 +1920,145 @@
    "瀛莫 959 归周": "Ying and Mo, to Later Zhou in 959"
   },
   "note": "In 936 Shi Jingtang, military governor of Hedong, rose against the Later Tang and asked the Khitans for help, promising them \"the whole of Lulong and the prefectures north of Yanmen Pass\" and agreeing to be their subject and \"son emperor\"; the handover was completed in 938 (Tianfu 3 of Later Jin).\nSeven prefectures south of the mountains (southeast of the northern branch of the Taihang Mountains): Youzhou (today's Beijing), Jizhou (Jizhou, Tianjin), Yingzhou (Hejian, Hebei), Mozhou (Renqiu, Hebei), Zhuozhou (Zhuozhou, Hebei), Tanzhou (Miyun, Beijing), Shunzhou (Shunyi, Beijing).\nNine prefectures north of the mountains (northwest of the mountains): Xinzhou (Zhuolu, Hebei), Guizhou (Huailai, Hebei), Ruzhou (Yanqing, Beijing), Wuzhou (Xuanhua, Zhangjiakou, Hebei), Yunzhou (Datong, Shanxi), Yingzhou (Ying County, Shanxi), Huanzhou (east of Shuozhou, Shanxi), Shuozhou (Shuozhou, Shanxi), Yuzhou (Yu County, Hebei).\nThe Central Plains thus lost the barrier of the Yan Mountains, the Great Wall and Yanmen, and Khitan cavalry could ride straight down onto the North China Plain. Liao made Youzhou Youdu Fu (Southern Capital) in 938, and later made Yunzhou its Western Capital in 1044.\nIn 959 Emperor Shizong of Later Zhou campaigned north and recovered Yingzhou and Mozhou and the three passes of Waqiao, Yijin and Yukou, setting up Xiongzhou and Bazhou; after Emperor Taizong of Song's defeat at the Gaoliang River in 979, the Northern Song never truly recovered the remaining prefectures (in 1123 it bought back Yanjing and other places from Jin, only to lose them again in 1125).\nHuanzhou was created in Tiancheng 1 (926) of Later Tang, with its seat at Huanqing County; it was abolished after passing to Liao."
+ },
+ "capital:邺城（安庆绪）": {
+  "old": "Yecheng (An Qingxu)",
+  "mod": "Anyang, Henan",
+  "note": "In the 10th month of 757 An Qingxu abandoned Luoyang and went north to hold Ye Commandery (Xiangzhou), which he renamed Ancheng Fu; in the winter of 758 nine military governors besieged Yecheng, and in the 3rd month of 759 Shi Siming came to its relief, broke the siege and soon afterwards killed An Qingxu."
+ },
+ "capital:蔡州（秦宗权）": {
+  "old": "Caizhou (Qin Zongquan)",
+  "mod": "Runan, Henan",
+  "note": "Qin Zongquan proclaimed himself emperor at Caizhou in 885 and sent his officers out to plunder in all directions; in 887 he was badly defeated at Bianxiao Village outside Bianzhou, in 888 his officer Shen Cong seized him, and the next year he was sent to Chang'an and beheaded."
+ },
+ "battle:汴州之战": {
+  "old": "Battle of Bianzhou",
+  "mod": "Kaifeng, Henan",
+  "yt": "776",
+  "sides": "Tang (allied fanzhen) defeated Li Lingyao and Weibo",
+  "cmd": "Li Zhongchen and Ma Sui vs. Li Lingyao and Tian Yue",
+  "note": "Li Lingyao, acting military governor of Biansong, revolted at Bianzhou, and Tian Chengsi of Weibo sent his nephew Tian Yue to help him; troops of several fanzhen, among them Li Zhongchen of Huaixi and Ma Sui of Heyang, routed Tian Yue under the walls of Bianzhou and broke into the city, and Li Lingyao fled and was captured. Li Zhengji of Ziqing took the chance to seize the five prefectures of Caozhou, Puzhou, Xuzhou, Yanzhou and Yunzhou, changing the balance of power in Henan."
+ },
+ "battle:神川之战": {
+  "old": "Battle of Shenchuan",
+  "mod": "Tacheng, Yulong, Yunnan",
+  "yt": "794",
+  "sides": "Nanzhao defeated Tibet",
+  "cmd": "Yimouxun vs. Tibet",
+  "note": "After Nanzhao swore its covenant with the Tang on the Diancang Mountains, Yimouxun pretended to send troops to help Tibet and instead fell on Shenchuan on the Jinsha River, routing the Tibetans and cutting the iron bridge; he received the submission of more than 100,000 tribespeople under Tibetan control and took sixteen towns, Tieqiao City among them. From then on Nanzhao joined the Tang against Tibet."
+ },
+ "battle:交州之陷": {
+  "old": "Fall of Giao Châu",
+  "mod": "Hanoi, Vietnam",
+  "yt": "1st month, 863",
+  "sides": "Nanzhao defeated Tang (city fell)",
+  "cmd": "Yang Sijin and Duan Qiuqian vs. Cai Xi",
+  "note": "Nanzhao, joined by local anti-Tang forces, besieged Giao Châu; Cai Xi, Protector-General of Annan, was cut off from relief; when the city fell he fought on and drowned. His aide Fan Chuo escaped across the river and later wrote the Manshu, an account of Nanzhao's land and customs. The Tang army fell back to Haimen (around modern Hepu, Guangxi), and Nanzhao held Annan for three years."
+ },
+ "battle:边孝村之战": {
+  "old": "Battle of Bianxiao Village",
+  "mod": "north of Kaifeng, Henan",
+  "yt": "5th month, 887",
+  "sides": "Xuanwu, Yicheng, Tianping and Taining defeated Qin Zongquan",
+  "cmd": "Zhu Quanzhong, Zhu Xuan and Zhu Jin vs. Qin Zongquan",
+  "note": "Qin Zongquan massed his troops to besiege Bianzhou; Zhu Quanzhong, joined by Zhu Xuan of Yunzhou and Zhu Jin of Yanzhou, routed the Cai army at Bianxiao Village in the northern outskirts of Bianzhou, taking more than 20,000 heads. Qin Zongquan never recovered: Luoyang, Heyang, Xuzhou, Ruzhou, Zhengzhou, Shanzhou and the other places he held were abandoned one after another, and the next year his officers seized him and handed him over. From then on Zhu Quanzhong was master of Henan."
+ },
+ "battle:宣州之战": {
+  "old": "Battle of Xuanzhou",
+  "mod": "Xuancheng, Anhui",
+  "yt": "6th month, 892",
+  "sides": "Yang Xingmi defeated Sun Ru",
+  "cmd": "Yang Xingmi vs. Sun Ru",
+  "note": "Sun Ru, a former officer of Qin Zongquan, crossed the Yangtze with several hundred thousand men and fought Yang Xingmi for Huainan and Jiangnan, laying a long siege to Xuanzhou; in 892 an epidemic broke out in Sun Ru's army, and Yang Xingmi struck, capturing and beheading Sun Ru. The rest of Sun Ru's army went south under Liu Jianfeng and Ma Yin and later seized Hunan. Yang Xingmi thereby held Huainan and laid the foundation of the state of Wu."
+ },
+ "battle:李克用讨王行瑜": {
+  "old": "Li Keyong's campaign against Wang Xingyu",
+  "mod": "Binzhou, Shaanxi",
+  "yt": "7th–11th month, 895",
+  "sides": "Hedong defeated Binning",
+  "cmd": "Li Keyong vs. Wang Xingyu",
+  "note": "Wang Xingyu, Li Maozhen and Han Jian led troops into Chang'an, killed chief ministers on their own authority and plotted to depose Emperor Zhaozong. Li Keyong led the Hedong army south against them, beat the Binning army again and again at Liyuan Stockade and took Binzhou; Wang Xingyu was killed by his own men as he fled. Li Keyong was invested as Prince of Jin, but once he withdrew he could not control Guanzhong, and the court remained in the grip of Fengxiang and Huazhou."
+ },
+ "battle:鸡踪桥之战": {
+  "old": "Battle of Jizong Bridge",
+  "mod": "south of Guanghan, Sichuan",
+  "yt": "5th month, 932",
+  "sides": "Xichuan defeated Dongchuan",
+  "cmd": "Meng Zhixiang and Zhao Tingyin vs. Dong Zhang",
+  "note": "Dong Zhang led the Dongchuan army in a surprise attack on Xichuan; Meng Zhixiang met him in person with a large army and routed the Dongchuan troops at Jizong Bridge in Hanzhou. Dong Zhang fled back to Zizhou and was killed by his own men, and Meng Zhixiang gained all the lands of the two Chuan; two years later he proclaimed himself emperor and founded Later Shu."
+ },
+ "battle:夏州之战": {
+  "old": "Battle of Xiazhou",
+  "mod": "Baichengzi, Jingbian, Shaanxi",
+  "yt": "933",
+  "sides": "Dingnan defeated Later Tang",
+  "cmd": "Li Yichao vs. An Congjin and Yao Yanchou",
+  "note": "When Li Renfu, military governor of Dingnan, died, his son Li Yichao set himself up; Emperor Mingzong of Later Tang transferred An Congjin to Xiazhou and sent a large army to escort him there. Li Yichao held out in Tongwan City, whose walls were too strong to storm, while the Tangut tribes cut the supply lines; after more than a hundred days the Tang army withdrew with nothing to show for it. From then on the Dingnan Jun held Yinzhou, Xiazhou and its other prefectures as a hereditary domain, the foundation on which the Western Xia state was later built."
+ },
+ "battle:泽州之战": {
+  "old": "Battle of Zezhou",
+  "mod": "Jincheng, Shanxi",
+  "yt": "4th–6th month, 960",
+  "sides": "Song defeated Li Yun",
+  "cmd": "Zhao Kuangyin and Shi Shouxin vs. Li Yun",
+  "note": "Li Yun, the Later Zhou military governor of Zhaoyi, refused to accept the Song, rose at Luzhou and allied with Northern Han; Emperor Taizu of Song took the field in person. Shi Shouxin and others routed Li Yun south of Zezhou and besieged the city; when it fell, Li Yun burned himself to death. Emperor Taizu then put down Li Chongjin at Yangzhou, and the new dynasty was essentially secure."
+ },
+ "battle:三江口之战": {
+  "old": "Battle of Sanjiangkou",
+  "mod": "Yueyang, Hunan",
+  "yt": "3rd month, 963",
+  "sides": "Song defeated Hunan",
+  "cmd": "Murong Yanzhao and Li Chuyun vs. the Hunan army",
+  "note": "On the pretext of putting down Zhang Wenbiao, the Song army asked for passage through Jingnan and took over Jingnan from the Gao family on its way; it then went south into Hunan, routed the Hunan fleet at Sanjiangkou at the mouth of Lake Dongting, took Yuezhou and occupied Langzhou. Zhou Baoquan was captured, Jinghu passed to the Song, and the Song now commanded the middle Yangtze."
+ },
+ "event:河朔复叛": {
+  "old": "Hebei revolts again",
+  "mod": "Beijing",
+  "yt": "7th month, 821",
+  "note": "Emperor Muzong mishandled Hebei: the Youzhou army imprisoned its newly appointed military governor Zhang Hongjing and set up Zhu Kerong; the Chengde army killed Tian Hongzheng and made Wang Tingcou acting military governor; the next year Shi Xiancheng took over Weibo. The gains of Emperor Xianzong's \"Yuanhe Restoration\" were almost all lost within a year."
+ },
+ "event:吴越纳土": {
+  "old": "Wuyue surrenders its lands",
+  "mod": "Hangzhou, Zhejiang",
+  "yt": "5th month, 978",
+  "note": "Qian Chu, King of Wuyue, came to court at Kaifeng and handed over the thirteen prefectures and one jun under his rule, \"surrendering his lands to the Song\". The Qian family, five rulers over three generations, had held Liangzhe for more than seventy years, keeping their state safe and their people at peace and building the seawall against the tides, and Hangzhou prospered as a result."
+ },
+ "route:黄巢转战": {
+  "old": "Huang Chao's campaigns",
+  "mod": "Heze, Shandong – Guangzhou, Guangdong – Xi'an, Shaanxi – Laiwu District, Jinan, Shandong",
+  "yt": "875–884",
+  "note": "In Qianfu 2 (875) Huang Chao rose at Yuanqu in support of Wang Xianzhi and fought his way through Shandong, Henan and Huainan. After Wang Xianzhi was defeated and killed in 878, Huang Chao took the title Heaven-Storming General, crossed the Yangtze and went south, cutting a mountain road of seven hundred li over the Xianxia Range into Fujian, and in the 9th month of 879 he took Guangzhou. With disease spreading in his army he turned back north through Guizhou and Tanzhou to Jiangling; checked at Jingmen, he went east through Raozhou, Xinzhou and other prefectures, crossed the Yangtze at Caishi in the 7th month of 880 and the Huai in the 9th month, took Luoyang in the 11th month, and in the 12th month broke through Tong Pass and entered Chang'an. Driven out of Chang'an in 883, he went east to Caizhou and besieged Chenzhou for nearly three hundred days; he was defeated in 884 and died in the 6th month at Langhu Valley near Mount Tai.",
+  "p": {
+   "冤句": "Yuanqu",
+   "郓州": "Yunzhou",
+   "沂州": "Yizhou",
+   "亳州": "Bozhou",
+   "宣州": "Xuanzhou",
+   "衢州": "Quzhou",
+   "仙霞岭": "Xianxia Range",
+   "建州": "Jianzhou",
+   "福州": "Fuzhou",
+   "广州": "Guangzhou",
+   "桂州": "Guizhou",
+   "潭州": "Tanzhou",
+   "江陵": "Jiangling",
+   "荆门": "Jingmen",
+   "鄂州": "Ezhou",
+   "饶州": "Raozhou",
+   "信州": "Xinzhou",
+   "采石": "Caishi",
+   "天长": "Tianchang",
+   "泗州": "Sizhou",
+   "汝州": "Ruzhou",
+   "洛阳": "Luoyang",
+   "潼关": "Tong Pass",
+   "长安": "Chang'an",
+   "蓝田": "Lantian",
+   "商州": "Shangzhou",
+   "蔡州": "Caizhou",
+   "陈州": "Chenzhou",
+   "王满渡": "Wangman Ford",
+   "狼虎谷": "Langhu Valley"
+  }
  }
 }

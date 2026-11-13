@@ -310,7 +310,7 @@
  },
  "范阳": {
   "n": "Fanyang",
-  "note": "The Fanyang military governorship (Youzhou military governorship), with its seat at Youzhou, controlling nine armies including the Jinglüe, Weiwu and Qingyi armies, over 90,000 men, to guard against the Xi and the Khitans. From 744 An Lushan held it concurrently, and in 755 he rose in rebellion here. After the rebellion it was renamed the Lulong military governorship."
+  "note": "The Fanyang military governorship (Youzhou military governorship), with its seat at Youzhou, controlling nine jun, including the Jinglüe, Weiwu and Qingyi Jun, over 90,000 men, to guard against the Xi and the Khitans. From 744 An Lushan held it concurrently, and in 755 he rose in rebellion here. In the 12th month of 757 Shi Siming surrendered to the Tang with Fanyang and twelve other commanderies, and in 758 he rebelled again. After the rebellion it was renamed the Lulong military governorship."
  },
  "河北道": {
   "n": "Hebei Circuit",
@@ -378,7 +378,7 @@
  },
  "淄青": {
   "n": "Ziqing",
-  "note": "The Pinglu–Ziqing military governorship, with its seat at Qingzhou. In 761 the Pinglu army crossed the sea southward; in 765 Li Zhengji drove out Hou Xiyi and set himself up, expanding to fifteen prefectures. Li Zhengji, Li Na, Li Shigu and Li Shidao held it in four successions for over fifty years, controlling the profits of salt and iron and repeatedly sending assassins. In 819 Emperor Xianzong put down Li Shidao and divided the fanzhen into the three fanzhen of Tianping, Pinglu and Yanhai."
+  "note": "The Pinglu–Ziqing military governorship, with its seat at Qingzhou (moved to Yunzhou in 776). In 761 the Pinglu army crossed the sea southward; in 765 Li Zhengji drove out Hou Xiyi and set himself up, and in 776 he expanded to fifteen prefectures. Li Zhengji, Li Na, Li Shigu and Li Shidao held it in four successions for over fifty years, controlling the profits of salt and iron and repeatedly sending assassins. In 819 Emperor Xianzong put down Li Shidao and divided the fanzhen into the three fanzhen of Tianping, Pinglu and Yanhai."
  },
  "汴宋": {
   "n": "Biansong",
@@ -575,5 +575,13 @@
  "东川·董": {
   "n": "Dongchuan (Dong Zhang)",
   "note": "In 925 Later Tang made Dong Zhang military governor of Dongchuan. In 930 he and Meng Zhixiang together defied the court; in 932 the two Chuan turned on each other, and Dong Zhang was defeated and died."
+ },
+ "深赵": {
+  "n": "Shenzhao",
+  "note": "In 782 the court split Chengde into three fanzhen and made Kang Rizhi military training and surveillance commissioner of Shenzhao, with his seat at Zhaozhou. Shenzhou was soon seized by Zhu Tao, leaving Kang Rizhi only Zhaozhou; after Wang Wujun submitted in 784, Shenzhou and Zhaozhou went back to Chengde."
+ },
+ "庞勋": {
+  "n": "Pang Xun",
+  "note": "In the 7th month of 868, eight hundred Xuzhou soldiers garrisoning Guizhou, whose tour of duty had been extended again and again, killed their commander and marched home north under the grain-and-fodder clerk Pang Xun. Sweeping up followers along the way, they took Xuzhou in the 10th month and held Xuzhou, Suzhou, Haozhou and other prefectures, with as many as 200,000 men, cutting the Jiang–Huai canal route. The court made Kang Chengxun military governor of Yicheng and commander-in-chief of the Xu–Si field army and, with troops borrowed from the Shatuo leader Zhuye Chixin, crushed the rising; in the 9th month of 869 Pang Xun was killed in battle at Qi County. After the campaign Zhuye Chixin was given the name Li Guochang, and the power of the Shatuo began to rise."
  }
 }

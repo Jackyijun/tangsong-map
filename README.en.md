@@ -2,7 +2,7 @@
 
 [![中文](https://img.shields.io/badge/lang-%E4%B8%AD%E6%96%87-red.svg)](README.md) [![English](https://img.shields.io/badge/lang-English-blue.svg)](README.en.md)
 
-An interactive historical map from the An Lushan Rebellion to the early Song (755–979): the territories of fanzhen (military circuits) and states at 18 snapshots, historical and modern names for 382 prefectures and towns, a dedicated outline of the Sixteen Prefectures of Yan and Yun, and 62 capitals, 53 battles, 26 passes, 32 events, 44 mountain ranges, more than a hundred rivers and lakes, and the peoples on the periphery. The interface is in Chinese and English, switched with "中 | EN" at the top right of the map.
+An interactive historical map from the An Lushan Rebellion to the early Song (755–979): the territories of fanzhen (military circuits) and states at 39 snapshots, historical and modern names for 382 prefectures and towns, a dedicated outline of the Sixteen Prefectures of Yan and Yun, the route of Huang Chao's campaigns, and 64 capitals, 63 battles, 26 passes, 34 events, 44 mountain ranges, more than a hundred rivers and lakes, and the peoples on the periphery. The interface is in Chinese and English, switched with "中 | EN" at the top right of the map.
 
 ---
 
@@ -10,7 +10,7 @@ An interactive historical map from the An Lushan Rebellion to the early Song (75
 
 Double-click **`docs/index.html`** and open it in any modern browser (Chrome, Edge, Safari, Firefox).
 
-The file is about 1 MB with all data, styles and scripts embedded: no network, no server and no external libraries. You can copy it to a USB stick, send it to someone, or put it on your own website.
+The file is about 1.5 MB with all data, styles and scripts embedded: no network, no server and no external libraries. You can copy it to a USB stick, send it to someone, or put it on your own website.
 
 It opens in Chinese; click "EN" at the top right of the map to switch to English, or add `#en` to the end of the URL to open the English version directly.
 
@@ -59,6 +59,8 @@ A full build takes about a minute; when it finishes, the newly built `docs/index
 | `python run.py --open` | Open the result in a browser when done |
 | `python run.py --preview 805,820` | Also draw territory sketches of these snapshots to `build/preview.png`, to check that allegiances are filled in correctly |
 | `python tools/preview.py 895,907 100,125,20,42` | Draw sketches only, optionally for a longitude–latitude box |
+| `python tools/snapcheck.py 903` | Without a full build, list in a second which prefectures each unit holds in these snapshots |
+| `python tools/snapcheck.py --diff saved.json` | Compare with a result saved earlier with `--dump`, to confirm that inserting snapshots has not shifted the existing ones |
 | `python tools/i18n.py status` | How many English entries are missing or out of date |
 | `python tools/screenshot.py` | (Optional, needs Playwright) take headless-browser screenshots and check for script errors |
 
@@ -90,14 +92,16 @@ tangsong-map/
 │   └── .nojekyll          lets GitHub Pages publish the files as they are
 ├── content/               ★ historical content (hand-written; most edits happen here)
 │   ├── seeds.txt          457 points (312 prefectures, 70 towns, 75 helper points): historical names, coordinates, modern locations, name changes
-│   ├── snaps.txt          18 snapshots: which fanzhen and which state each prefecture belongs to in that year
-│   ├── units.py           names and descriptions of 141 states, fanzhen and tribes
-│   ├── items.py           capitals, battles, passes, events, peoples, mountains, rivers, canals, deserts, key regions (the Sixteen Prefectures)
+│   ├── snaps.txt          39 snapshots: which fanzhen and which state each prefecture belongs to in that year
+│   ├── units.py           names and descriptions of 143 states, fanzhen and tribes
+│   ├── items.py           capitals, battles, passes, events, peoples, mountains, rivers, canals, deserts, key regions (the Sixteen Prefectures), campaign routes
+│   ├── colors.lock.json   colors of published units, locked (adding snapshots or units leaves existing colors unchanged)
 │   └── en/                English translations (*.json), Chinese fingerprints zh.lock.json, naming conventions GLOSSARY.md
 ├── src/
 │   ├── config.py          ★ all tunable parameters (grid, costs, smoothing, colors…)
 │   ├── fetch_data.py      download the Natural Earth base map
 │   ├── build.py           compute territories; writes build/geo.json and build/data.json
+│   ├── snapdsl.py         parser for the snapshot language of snaps.txt (shared by build.py and tools/snapcheck.py)
 │   ├── i18n.py            merge in the English, check for missing and out-of-date text
 │   ├── assemble.py        inject the data and the English into the template; writes docs/index.html
 │   └── template.html      front end: page structure, styles, interaction script
@@ -107,6 +111,7 @@ tangsong-map/
 ├── tools/
 │   ├── preview.py         matplotlib territory sketches
 │   ├── i18n.py            English maintenance: status / todo / lock / table
+│   ├── snapcheck.py       inspect and compare the allegiances of each snapshot without building
 │   └── screenshot.py      Playwright screenshot check
 └── build/                 intermediate files (safe to delete)
 ```
@@ -152,12 +157,13 @@ There is no ready-made boundary data for the Tang fanzhen or the Five Dynasties 
    - three lightness levels × 24 hues are preset in the OKLCH color space, with chroma only 0.065–0.075, so all colors are muted;
    - Tang, Tibet, the Uyghurs, Nanzhao, Balhae, the Khitan, Silla and Song have fixed colors;
    - the remaining units are colored greedily from "the adjacencies that occur in any snapshot", the units with the most neighbors first, each taking the color most different from its already colored neighbors;
+   - the colors of published units are recorded in `content/colors.lock.json` and take precedence at build time: adding snapshots or units only picks colors for the new units, and existing colors (including those shared with the 979 snapshot of the Song–Liao–Xia–Jin–Yuan map) stay the same;
    - the dark theme lightens them all.
 8. **Base map and items**:
    - coasts, modern borders, lakes and deserts come from Natural Earth;
    - rivers are mapped to their Tang names through `items.NE_RIVERS`, e.g. Huang → 河 (the River), Hong → 富良江;
    - the Tang–Song course of the Yellow River, the ancient Ji River, the old lower Huai and the canals are hand-drawn polylines, and the modern lower Yellow River east of Zhengzhou is drawn dashed;
-   - coordinates are multiplied by 100, rounded and delta-encoded. The base map plus 18 snapshots of territory come to about 570 KB (from 31 MB of source data).
+   - coordinates are multiplied by 100, rounded and delta-encoded. The base map plus 39 snapshots of territory come to about 1 MB (from 31 MB of source data).
 
 ### 3. The front end (`src/template.html`)
 
@@ -169,13 +175,14 @@ There is no ready-made boundary data for the Tang fanzhen or the Five Dynasties 
   - drag, scroll or pinch to zoom; hover for a tooltip, click to select;
   - the index on the right is linked to the map;
   - search matches historical names, modern names and name changes, in both Chinese and English, and English searches ignore diacritics (typing ngo quyen finds Ngô Quyền);
-  - the timeline can be played; the ← → keys step through snapshots and Esc clears the selection;
+  - the timeline can be played (switch between 1× and 2× speed below the play button); the ← → keys step through snapshots and Esc clears the selection;
   - coloring switches between "Fanzhen / States", and each layer can be turned on and off;
   - there are also Timeline and Gazetteer views.
-- **Markers that change over time**: each snapshot covers the years after the previous snapshot up to its own year (the 851 snapshot covers 821–851, for example).
-  - Only battles and events in the current period are shown; the battles of the period are listed under the timeline and can be clicked to locate them.
+- **Markers that change over time**: each snapshot covers the years after the previous snapshot up to its own year (the 851 snapshot covers 845–851, for example).
+  - Only battles, events and campaign routes in the current period are shown; the battles of the period are listed under the timeline and can be clicked to locate them.
   - Clicking a battle from another period in the index moves the timeline to that period.
   - Only current capitals and former capitals are shown; places that became capitals later do not appear early.
+- **Campaign routes**: Huang Chao's campaigns (875–884) record the year of arrival at each point, and the map draws the route only up to the current snapshot: the stretch covered in this period as a solid line with arrows, earlier stretches as a dashed line. Clicking the route, or the "Campaign" button under the timeline, fits the whole route into view, and the index lists every stop. Add an entry to `items.ROUTES` in the same format to draw other routes.
 - **The Sixteen Prefectures**: from the 938 snapshot onwards a red dashed line outlines the sixteen prefectures, a dotted line separates the seven prefectures south of the mountains from the nine north of them, and from 959 the return of Ying and Mo to Zhou is marked.
   - The outline is traced from the union of the grid cells of the sixteen prefectures (plus the area of the Waqiao and Yijin passes), by the same algorithm as the territories.
   - Clicking the outline, the "Region" button under the timeline or "Key regions" in the index selects it: the whole area is highlighted, all sixteen prefectures show their names and modern locations, and the panel on the right gives the history of the cession and the full list.
@@ -207,22 +214,24 @@ The template has four placeholders: `__GEO__`, `__DATA__`, `__UCSS_LIGHT__` and 
 
 **Rename a prefecture**: add `N=0:old-name,year:new-name` to its line in `seeds.txt`, e.g. `N=0:汴州,907:开封府`.
 
-**Add a snapshot** (763, say): insert between `@757` and `@765` in `snaps.txt`:
+**Add a snapshot** (790, say): insert between `@787` and `@794` in `snaps.txt`:
 
 ```
-@763 | 广德元年 | 安史之乱平定 | description……
-卢龙{幽州}: 幽州 蓟州 ……
+@790 | 贞元六年 | 北庭陷没 | description……
+吐蕃: 庭州 轮台 弓月城 准噶尔
 ```
 
-The front end adds a tick automatically.
+The front end adds a tick automatically. Because every snapshot inherits from the one before, an inserted snapshot changes the starting point of the next one: before inserting, save the current result with `python tools/snapcheck.py --dump build/snap-before.json`, and afterwards compare with `--diff build/snap-before.json`; if an existing snapshot changed where it should not have, write the allegiance, label (an empty `[]` deletes it) or seat back in the next snapshot.
 
 **Add a battle, pass or event**: add a tuple in the same format to `BATTLES`, `PASSES` or `EVENTS` in `items.py`. Battles and events are assigned to snapshots by year automatically; for an event lasting several years, give its end year in `EVENT_END`.
+
+**Add a campaign route**: add an entry to `ROUTES` in `items.py`: name, modern places, dates, description, and the points as `[longitude, latitude, year of arrival, place name]`. The route is assigned to periods by the years of arrival automatically.
 
 **Add a state or fanzhen**: add `S(...)` (state), `Z(...)` (fanzhen) or `T(...)` (tribe) to `units.py`, then use its key in `snaps.txt`.
 
 **Stop a border from crossing a mountain range**: add the range's ridgeline coordinates to `items.RANGES`, with `1` as the last field (main range, higher cost).
 
-**Change colors**: edit `PRESET_COLORS` in `src/config.py`, or adjust the lightness and chroma in `PALETTE_LEVELS`.
+**Change colors**: change the unit's three OKLCH numbers in `content/colors.lock.json`, or delete its line to let it pick a new color; `PRESET_COLORS` and `PALETTE_LEVELS` in `src/config.py` only affect units not in the lock.
 
 **Change only the page's look or interaction**: edit `src/template.html`, then run `python run.py --html`.
 
@@ -235,6 +244,7 @@ The front end adds a tick automatically.
 unit: prefecture prefecture                     assign these prefectures to the unit
 unit[label]{seat}>state: prefecture …           also set this period's label, seat and overlord (all optional)
 unit[new label]:                                only rename, without changing territory
+unit[]:                                         delete a label set earlier and go back to the default name
 unit: @other-unit                               take over every prefecture that belonged to other-unit at the start of this snapshot
 unit: @other-unit@year                          take over the prefectures that belonged to other-unit at the end of that year's snapshot
 ·: prefecture prefecture                        make unclaimed
@@ -255,7 +265,7 @@ Chinese is the source text. Every piece of Chinese that is displayed has a key, 
 | `units.json` | states, fanzhen, tribes: full name `n`, short map name `s` (optional), description `note` | unit key |
 | `labels.json` | period labels from snapshots, such as "魏博（罗弘信）" | Chinese label |
 | `seeds.json` | prefectures and towns: modern location `mod`, names in each period `n` | point ID |
-| `items.json` | items: `old` `mod` `note` `yt` `sides` `cmd`, subdivisions of the Sixteen Prefectures `g` | `category:historical-name`, with `@year` added for items of the same name |
+| `items.json` | items: `old` `mod` `note` `yt` `sides` `cmd`, subdivisions of the Sixteen Prefectures `g`, campaign route place names `p` | `category:historical-name`, with `@year` added for items of the same name |
 | `snaps.json` | snapshots: reign era `era`, title `t`, description `d` | year |
 | `misc.json` | modern province names | Chinese name |
 
@@ -298,7 +308,7 @@ To see the result first, use `python run.py --html --draft`; missing text tempor
 - **Limitations**:
   - Borders are indicative lines inferred from the allegiance of prefectures, not researched historical boundaries.
   - Points are sparse in the Western Regions, on the Tibetan plateau, north of the Gobi and in the northeast, so borders there are especially rough.
-  - There are only 18 snapshots; changes between them are not drawn.
+  - There are 39 snapshots; years with no change in territory get no snapshot (822–844, for example), and year-by-year changes between snapshots are not drawn.
   - Old river courses are drawn by hand following written sources and are approximate.
   - Disputed matters are marked "one account says" in the item notes: the allegiance of the cities of the Western Regions in the late 8th and early 9th centuries, the prefectures of Yiwu and Henghai in 784, the area actually controlled by the Liao army in the Central Plains in 947, and others.
   - The English is translated from the Chinese; the naming conventions are in `content/en/GLOSSARY.md`. Months are Chinese lunar months and are not converted to the Western calendar.

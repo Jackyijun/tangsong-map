@@ -6,7 +6,7 @@
   units.json    政权、藩镇、部族         {"魏博": {"n": 全称, "s": 地图短名（可省）, "note": 说明}}
   labels.json   节点里的当年别名         {"魏博（罗弘信）": "Weibo (Luo Hongxin)"}
   seeds.json    州府城邑                 {"汴州": {"mod": 今地, "n": {"汴州": …, "开封府": …}}}
-  items.json    条目（键为 类别:古名）    {"battle:高梁河之战": {"old", "mod", "note", "yt", "sides", "cmd", "g": {分区名: …}}}
+  items.json    条目（键为 类别:古名）    {"battle:高梁河之战": {"old", "mod", "note", "yt", "sides", "cmd", "g": {分区名: …}, "p": {路线地名: …}}}
                 同名条目（如两次太原之战）在键后加 @年份 或 @今名 区分：battle:太原之战@757
   snaps.json    时间节点（键为年份）      {"979": {"era": 年号, "t": 标题, "d": 说明}}
   misc.json     今省名                   {"prov": {"河南": …}}
@@ -78,6 +78,9 @@ def required(geo, data):
     for R in geo.get("regions", []):
         k = keys[R["it"]]
         for g in R["groups"]: req.append(("items", (k, "g", g["n"]), g["n"]))
+    for R in geo.get("routes", []):
+        k = keys[R["it"]]
+        for p in dict.fromkeys(p[3] for p in R["pts"]): req.append(("items", (k, "p", p), p))
     for s in geo["snaps"]:
         y = str(s["y"])
         for f in ("era", "t", "d"):
@@ -130,6 +133,9 @@ def attach(geo, data, en=None):
     for R in geo.get("regions", []):
         k = keys[R["it"]]
         for gr in R["groups"]: gr["ne"] = g("items", k, "g", gr["n"]) or gr["n"]
+    for R in geo.get("routes", []):
+        k = keys[R["it"]]
+        R["pe"] = [g("items", k, "p", p[3]) or p[3] for p in R["pts"]]
     for s in geo["snaps"]:
         y = str(s["y"])
         s["erae"] = g("snaps", y, "era") or s.get("era", "")

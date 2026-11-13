@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """唐宋之际形势图 · 数据构建。
 
-读 content/ 的史料与 geodata/ 的底图，算出 18 个时间节点的疆域多边形，
+读 content/ 的史料与 geodata/ 的底图，算出每个时间节点的疆域多边形，
 写出 build/geo.json（几何）和 build/data.json（条目与说明）。
 
 流程：
@@ -94,55 +94,8 @@ UNITS = UM.U
 UK = {u["k"]: i for i, u in enumerate(UNITS)}
 assert len(UK) == len(UNITS), "units.py 中有重复的键"
 
-SNAPS = []
-state = dict(own={}, lab={}, pol={}, seat={}, hatch=set())
-cur = None
-history = {}
-def snapshot(): return dict(own=dict(state["own"]), lab=dict(state["lab"]), pol=dict(state["pol"]), seat=dict(state["seat"]), hatch=set(state["hatch"]))
-
-for raw in open(C.CONTENT / "snaps.txt", encoding="utf8"):
-    line = raw.rstrip("\n")
-    if not line.strip() or line.lstrip().startswith("#"): continue
-    if line.startswith("@"):
-        if cur: history[cur["y"]] = snapshot(); SNAPS.append(dict(cur, st=history[cur["y"]]))
-        parts = [p.strip() for p in line[1:].split("|")]
-        cur = dict(y=int(parts[0]), era=parts[1], t=parts[2], d=parts[3])
-        start = dict(own=dict(state["own"]))      # @单位 引用的是“本节点开始时”的归属
-        continue
-    head, _, body = line.partition(":")
-    head = head.strip(); toks = body.split()
-    if head == "割据":
-        state["hatch"] = set(toks)
-        for k in toks: assert k in UK, ("割据行里的单位不存在", k)
-        continue
-    if head == "·":
-        for tk in toks:
-            assert tk in SID, ("未知州府", tk, cur["y"]); state["own"][tk] = None
-        continue
-    m = re.match(r"^([^\[\]{}>]+)(?:\[([^\]]*)\])?(?:\{([^}]*)\})?(?:>(.+))?$", head)
-    assert m, ("无法解析的行", head)
-    uk, lab, seat, pol = m.group(1).strip(), m.group(2), m.group(3), m.group(4)
-    assert uk in UK, ("units.py 里没有这个单位", uk, cur["y"])
-    if lab is not None: state["lab"][uk] = lab
-    if seat is not None:
-        assert seat in SID, ("治所不在 seeds.txt", seat); state["seat"][uk] = seat
-    if pol is not None:
-        assert pol.strip() in UK, ("所属政权不存在", pol); state["pol"][uk] = pol.strip()
-    for tk in toks:
-        if tk.startswith("@"):
-            ref = tk[1:]
-            if "@" in ref:   # @单位@年份：取该年节点结束时该单位的州
-                rk, ry = ref.split("@"); src = history[int(ry)]["own"]
-                lst = [s for s, u in src.items() if u == rk]
-            else:
-                rk = ref; lst = [s for s, u in start["own"].items() if u == rk]
-            assert rk in UK, ("引用的单位不存在", rk)
-            if not lst: print("  WARN empty ref", tk, "in", cur["y"])
-            for s in lst: state["own"][s] = uk
-        else:
-            assert tk in SID, ("未知州府", tk, cur["y"], uk); state["own"][tk] = uk
-history[cur["y"]] = snapshot()
-SNAPS.append(dict(cur, st=history[cur["y"]]))
+import snapdsl
+SNAPS = snapdsl.parse(C.CONTENT / "snaps.txt", SID, UK)
 print("snaps", [s["y"] for s in SNAPS])
 
 for sn in SNAPS:
@@ -371,6 +324,10 @@ nbr = {i: set() for i in range(len(UNITS))}
 for a, b in ADJ_Z | ADJ_P:
     nbr[a].add(b); nbr[b].add(a)
 color = {UK[k]: v for k, v in C.PRESET_COLORS.items()}
+# 已发布单位的颜色锁定在 content/colors.lock.json：补节点、加单位不会改动原有颜色（与宋元 979 衔接的颜色也因此不变）
+LOCKED = json.load(open(C.COLOR_LOCK, encoding="utf8")) if C.COLOR_LOCK.exists() else {}
+for k, v in LOCKED.items():
+    if k in UK: color[UK[k]] = tuple(v)
 usage = {}
 for u in sorted(range(len(UNITS)), key=lambda u: -len(nbr[u])):   # 邻居多的先挑
     if u in color: continue
@@ -386,6 +343,7 @@ DARK = {}
 for u in range(len(UNITS)):
     L, Cc, h = color.get(u, FALLBACK)
     DARK[u] = oklch_to_rgb(min(C.DARK_L_MAX, L + C.DARK_L_LIFT), Cc + C.DARK_C_LIFT, h)
+json.dump({UNITS[u]["k"]: [round(x, 6) for x in color[u]] for u in sorted(color)}, open(C.BUILD / "colors.json", "w", encoding="utf8"), ensure_ascii=False, indent=0)
 mind = min([np.linalg.norm(lab_of_pal(color[a]) - lab_of_pal(color[b])) for a, b in ADJ_Z] or [0])
 print("min neighbour colour distance", round(mind, 3))
 
@@ -515,6 +473,14 @@ for nm, mod, lo, la, y, yt, note in IM.EVENTS:
 for nm, lo, la, y0, y1, note in IM.PEOPLES:
     add_item(dict(c="people", old=nm, mod="", lon=lo, lat=la, y0=y0, y1=y1, note=note))
 
+# 行军路线：每条一组 [经, 纬, 到达年, 地名]，前端按节点年份画出已走过的一段
+ROUTES = []
+for R in getattr(IM, "ROUTES", []):
+    pts = [list(p) for p in R["pts"]]
+    it = add_item(dict(c="route", old=R["name"], mod=R["mod"], note=R["note"], y=pts[0][2], y1=pts[-1][2],
+                       yt=R.get("yt", f"{pts[0][2]}—{pts[-1][2]}"), anc=pts[len(pts) // 2][:2]))
+    ROUTES.append(dict(it=it, pts=pts))
+
 # 重要地域（如燕云十六州）：由成员州的栅格并集描出范围线，分区之间画分界线
 from scipy.ndimage import map_coordinates
 REG_OUT = []
@@ -562,7 +528,7 @@ print("regions", [(ITEMS[r["it"]]["old"], len(r["rings"]), [(g["n"], len(g["line
 # ======================================================================
 # 输出
 # ======================================================================
-GEO = dict(land=LAND_OUT, prov=PROV, border=BORDER, rivers=RIV_OUT, lakes=LAKES, canals=CAN, deserts=DES, snaps=OUTSN, regions=REG_OUT,
+GEO = dict(land=LAND_OUT, prov=PROV, border=BORDER, rivers=RIV_OUT, lakes=LAKES, canals=CAN, deserts=DES, snaps=OUTSN, regions=REG_OUT, routes=ROUTES,
            ext=[LON0, LON1, LAT0, LAT1], first=C.FIRST)
 UOUT = [dict(k=u["k"], n=u["n"], kind=u["kind"], note=u["note"], cl=LIGHT[i], cd=DARK[i]) for i, u in enumerate(UNITS)]
 SOUT = [dict(id=s["id"], n=s["n"], mod=s["mod"], lon=s["lon"], lat=s["lat"], t=s["t"], **({"nm": s["names"]} if s["names"] else {})) for s in SEEDS]
